@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -20,7 +20,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install hexo --save
-        npx hexo init
+        npx hexo init blog
         npm install
         npx hexo new page --path about/me "About me"
         hexo new page --path about/me
