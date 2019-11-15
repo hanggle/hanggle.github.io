@@ -23,7 +23,7 @@ jobs:
         npx hexo init blog
         npm install
         npx hexo new page --path about/me "About me"
-        hexo new page --path about/me
+        npx hexo new page --path about/me
         npx hexo clean
         npx hexo deploy --generate
         npm ci
