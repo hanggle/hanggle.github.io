@@ -25,6 +25,7 @@ jobs:
         npm install
         hexo generate
         pwd
+        ls -l
         
       env:
         CI: true
