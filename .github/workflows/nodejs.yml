@@ -22,6 +22,6 @@ jobs:
         npm install hexo --save
         npx hexo init blog
         npm install
-        npx hexo -g
+        npx hexo g
       env:
         CI: true
