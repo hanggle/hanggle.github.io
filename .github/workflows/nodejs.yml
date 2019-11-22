@@ -24,6 +24,7 @@ jobs:
         cd blog
         npm install
         hexo g
+        ls -l
         
       env:
         CI: true
@@ -34,4 +35,5 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: master # The branch the action should deploy from.
         BRANCH: release # The branch the action should deploy to.
-        FOLDER: build # The folder the action should deploy.: 
+        FOLDER: public # The folder the action should deploy.: 
+    
