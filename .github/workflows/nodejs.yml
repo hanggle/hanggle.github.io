@@ -36,5 +36,5 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: master # The branch the action should deploy from.
         BRANCH: release # The branch the action should deploy to.
-        FOLDER: public # The folder the action should deploy.: 
+        FOLDER: blog/public # The folder the action should deploy.: 
     
