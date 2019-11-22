@@ -24,6 +24,7 @@ jobs:
         cd blog
         npm install
         hexo g
+        pwd
         ls -l
         
       env:
