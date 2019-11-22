@@ -21,12 +21,9 @@ jobs:
       run: |
         npm install -g hexo-cli
         npx hexo init blog
-        npm config set registry http://registry.npm.taobao.org/
         cd blog
         npm install
-        hexo generate
-        pwd
-        ls -l
+        hexo g
         
       env:
         CI: true
