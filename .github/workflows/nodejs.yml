@@ -26,9 +26,9 @@ jobs:
         npx hexo init blog
         cd blog
         npm install
-        rm -rf /theme/*
+        rm -rf /themes/*
         ls -l
-        cd theme
+        cd themes
         ls -l
         git clone https://github.com/hanggle/hanggle.theme.git
         cd ..
