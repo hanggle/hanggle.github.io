@@ -23,15 +23,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install -g hexo-cli
-        npx hexo init blog
-        cd blog
         npm install
-        rm -rf /themes/*
-        ls -l
-        cd themes
-        ls -l
-        git clone https://github.com/hanggle/hanggle.theme.git
-        cd ..
         hexo g
         
       env:
