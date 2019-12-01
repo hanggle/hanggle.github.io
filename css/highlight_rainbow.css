@@ -54,6 +54,11 @@
 .hljs-emphasis {
 	font-style: italic
 }
+/*样式覆盖*/
+.content {
+	margin-left: 2.5rem;
+	margin-right: 2.5rem;
+}
 
 .content pre {
 	 padding: 0em 0em;
