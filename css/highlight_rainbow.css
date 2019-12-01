@@ -1,7 +1,7 @@
 .hljs {
 	display: block;
 	overflow-x: auto;
-	padding: 0.5em;
+	padding: 0.8em;
 	background: #474949;
 	color: #d1d9e1
 }
@@ -53,4 +53,8 @@
 
 .hljs-emphasis {
 	font-style: italic
+}
+
+.content pre {
+	 padding: 0em 0em;
 }
