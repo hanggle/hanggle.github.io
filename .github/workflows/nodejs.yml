@@ -1,9 +1,9 @@
 name: Node CI
 
-on: 
+on:
   push:
-    branches: 
-      - master
+    branches:
+      - work
 
 jobs:
   build:
@@ -15,26 +15,25 @@ jobs:
         node-version: [10.x]
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
-      run: |
-        npm install -g hexo-cli
-        npm install
-        hexo g
-        
-      env:
-        CI: true
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm install, build, and test
+        run: |
+          npm install -g hexo-cli
+          npm install
+          hexo g
 
+        env:
+          CI: true
 
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: master # The branch the action should deploy from.
-        BRANCH: release # The branch the action should deploy to.
-        FOLDER: public # The folder the action should deploy.: 
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BASE_BRANCH: work # The branch the action should deploy from.
+          BRANCH: master # The branch the action should deploy to.
+          FOLDER: public # The folder the action should deploy.:
     
