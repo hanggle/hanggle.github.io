@@ -3,13 +3,66 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
+# title: hanggle
+# subtitle: 'hanggle blog'
+# description: '日常学习与兴趣交流'
+# keywords: hanggle,spring,spring boot,分布式,数据库
+# author: hanggle
+# language: cn
+# timezone: ''
+
+# 语言
+language: zh-cn
+
+# 博客的标题
 title: hanggle
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: cn
-timezone: ''
+
+# banner显示的子标题
+subtitle: hanggle blog
+
+# banner显示的简短介绍
+subtitle_desc: 日常学习与兴趣交流
+
+# seo关键字
+keywords: hanggle,spring,spring boot,分布式,数据库,java
+
+# 博客介绍（同时用于seo）
+description: 日常学习与兴趣交流的个人博客
+
+# 个人介绍
+introduction: 不思量，自难忘！
+
+# 博客的favicon图标，支持本地及在线两种方式，本地请将图标放置于 themes/hexo-theme-skapp/source/img 目录下
+favicon_ico: /img/favicon.ico
+
+# 博客的左上角logo图标，支持本地及在线两种方式
+logo: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
+
+# 头像/二维码（用于显示在底部）二选一
+avatar: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
+# qrcode: http://oo12ugek5.bkt.clouddn.com/images/qrcode.png
+
+# 文章的默认封面
+default_cover: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
+
+# header 的背景图
+header_cover: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
+
+# 404 页面的背景图
+error_page_bg: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
+
+# 页面加载loading图标
+loader_img: /img/loading.gif
+
+# 站长信息
+author:
+  name: hanggle
+  link: https://github.com/hanggle
+# 用于页面 footer 的站长信息
+about:
+  info: 本站是基于 Hexo 搭建的静态资源博客，主要用于分享日常学习、生活及工作的一些心得总结，欢迎点击右下角订阅 rss。
+  address: Hangzhou, China
+  email: hanggle@qq.com
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -18,7 +71,8 @@ root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing index.html from permalinks
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -44,10 +98,10 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
+  enable: false
+  line_number: false
   auto_detect: false
-  tab_replace: ''
+  tab_replace: false
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -90,9 +144,14 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hanggle.theme
+theme: hanggle-theme
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+
+menu:
+  home: /
+  archive: /SpringBoot
+  about: /About
