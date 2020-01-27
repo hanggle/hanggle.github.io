@@ -46,7 +46,7 @@ avatar: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
 default_cover: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
 
 # header 的背景图
-header_cover: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
+header_cover: /img/cover.png
 
 # 404 页面的背景图
 error_page_bg: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
@@ -66,7 +66,7 @@ about:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://blog.hanggle.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
