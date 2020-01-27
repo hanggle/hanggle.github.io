@@ -22,9 +22,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm install, build, and test
         run: |
+          npm install --save mime-db
           npm install -g hexo-cli
           npm install
-          npm install --save mime-db object-assign lunr hexo-renderer-sass
+          npm install --save object-assign lunr hexo-renderer-sass
           hexo g
 
         env:
