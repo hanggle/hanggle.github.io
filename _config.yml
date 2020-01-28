@@ -46,7 +46,7 @@ avatar: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
 default_cover: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
 
 # header 的背景图
-header_cover: /img/cover.png
+header_cover: ''
 
 # 404 页面的背景图
 error_page_bg: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png

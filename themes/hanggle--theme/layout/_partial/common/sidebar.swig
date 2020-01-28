@@ -12,13 +12,14 @@
         </label>
     </form>
 
+{#
     {% if get_setting('description') %}
         <div class="sidebar__block">
             <h3 class="block__title">{{ __('aside.introduction') }}</h3>
             <p class="block__text">{{ get_setting('description') }}</p>
         </div>
     {% endif %}
-
+ #}
     <div class="sidebar__block">
         <h3 class="block__title">{{ __('aside.categorie') }}</h3>
         {{ list_categories({ order: -1, class: 'block' }) }}
