@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>Hello World | hanggle blog</title>
+        <title>xshell 主题及命令行配色(centos 7) | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/2020/01/28/hello-world/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2020/01/30/xshell-colour/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -114,7 +114,7 @@
     
 
     <header class="post__info">
-        <h1 class="post__title">Hello World</h1>
+        <h1 class="post__title">xshell 主题及命令行配色(centos 7)</h1>
 
         <div class="post__mark">
             <div class="mark__block">
@@ -122,7 +122,7 @@
                 <ul class="mark__list clearfix">
                     
                         <li class="mark__item">
-                            <a href="/">undefined</a>
+                            <a href="https://www.github.com/BruceYuj" target="_blank" rel="noopener">hanggle</a>
                         </li>
                     
                 </ul>
@@ -131,13 +131,21 @@
             <div class="mark__block">
                 <i class="mark__icon iconfont icon-time"></i>
                 <ul class="mark__list clearfix">
-                    <li class="mark__item"><span>2020-01-28</span></li>
+                    <li class="mark__item"><span>2020-01-30</span></li>
                 </ul>
             </div>
 
             <div class="mark__block">
                 <i class="mark__icon iconfont icon-tab"></i>
                 <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+                        </li>
+                    
+                        <li class="mark__item">
+                            <a href="/tags/shell/">Shell</a>
+                        </li>
                     
                 </ul>
             </div>
@@ -147,38 +155,40 @@
     </header>
 
     <div class="post__content">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure>
+        <h2 id="主题导入"><a href="#主题导入" class="headerlink" title="主题导入"></a>主题导入</h2><p>主题下载地址</p>
+<p><a href="https://files.cnblogs.com/files/oskyhg/skycolor.zip" target="_blank" rel="noopener">https://files.cnblogs.com/files/oskyhg/skycolor.zip</a></p>
+<p>导入主题</p>
+<p><img src="https://img2018.cnblogs.com/blog/997786/202001/997786-20200105131513995-1519160410.png" alt="1547310588479"></p>
+<h2 id="Linux-的-PS1设置"><a href="#Linux-的-PS1设置" class="headerlink" title="Linux 的 PS1设置"></a>Linux 的 PS1设置</h2><p>（1）临时方案：<br>命令行直接运行： </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">PS1='[\[\e[37;40m\]\u@\h \w]$ \[\e[0m\]'</span></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure>
+<p>（2）永久方案（需要修改主机配置，生产环境或容器中不建议修改）</p>
+<p>编辑.bashrc文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">vi /root/.bashrc</span></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo generate</span></pre></td></tr></table></figure>
+<p>然后运行命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">PS1='[\[\e[37;40m\]\u@\h \w]$ \[\e[0m\]'</span></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>效果如下</p>
+<p><img src="https://img2018.cnblogs.com/blog/997786/202001/997786-20200105125838067-673369601.png" alt="1547310588473"></p>
+<p> 备注：配色PS1相关参数配置及含义请自行google</p>
 
 
         
         <div class="post-announce">
             感谢您的阅读，本文由
             <a href="https://blog.hanggle.com">hanggle</a>
-            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2020/01/28/hello-world/">https://blog.hanggle.com/2020/01/28/hello-world/</a>）
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2020/01/30/xshell-colour/">https://blog.hanggle.com/2020/01/30/xshell-colour/</a>）
         </div>
         
 
         <div class="post__prevs">
             <div class="post__prev">
                 
-                <a href="/2020/01/28/init/" title="多线程基础"><i class="iconfont icon-prev"></i>多线程基础</a>
+                <a href="/2020/01/28/hello-world/" title="Hello World"><i class="iconfont icon-prev"></i>Hello World</a>
                 
             </div>
             <div class="post__prev post__prev--right">
-                
-                <a href="/2020/01/30/xshell-colour/" title="xshell 主题及命令行配色(centos 7)">xshell 主题及命令行配色(centos 7)<i class="iconfont icon-next"></i></a>
                 
             </div>
         </div>
