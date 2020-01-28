@@ -21,6 +21,7 @@
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-sass": "^0.4.0",
     "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0"
+    "hexo-server": "^1.0.0",
+    "lunr": "^0.7.1"
   }
 }
