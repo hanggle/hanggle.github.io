@@ -2,7 +2,7 @@
 # title为文章的标题
 title: xshell 主题及命令行配色(centos 7)
 # cover为文章的首图和缩略图
-cover: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/article/xshell.png
+cover: http://oss.hanggle.top/article/xshell.png?x-oss-process=style/watermark
 # 作者信息，多作者则设置为数组
 author: 
   nick: hanggle
