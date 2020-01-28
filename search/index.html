@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>hanggle blog</title>
+        <title>search | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/archives/2020/01/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/search/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -59,7 +59,7 @@
 
     
     
-    <link rel="stylesheet" href="/scss/views/page/archive.css">
+    <link rel="stylesheet" href="/scss/views/page/search.css">
 
 </head>
 <body ontouchstart>
@@ -71,7 +71,7 @@
     <div id="page" class="page js-hidden">
         
     <!-- 页头 -->
-<header class="page__small-header page__header--small">
+<header id="page-header" class="page__header" style="background-image: url('');">
     <nav class="page__navbar">
         <div class="page__container navbar-container">
             <a class="page__logo" href="/" title="hanggle" alt="hanggle">
@@ -104,131 +104,21 @@
             </button>
         </div>
     </nav>
+
+    <section class="page__info">
+        <h1 class="info__title">hanggle blog</h1>
+        <hr class="info__hr">
+        <p class="info__desc">日常学习与兴趣交流</p>
+    </section>
 </header>
 
 
         
-    
-<main class="page__container page__main">
-    <div class="page__content">
-        
-        <nav class="mb-main__nav">
-            
-            <a
-                class="nav__item"
-                href="/archives/"
-                alt="2020年">
-                2020年
-            </a>
-        
-        </nav> 
-    
-
-        <div class="page__posts clearfix">
-            
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <div class="mini-article__cover">
-        
-            <img itemprop="image" src="https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png" alt="Hello World"/>
-        
-        
-        <div itemprop="datePublished" content="" class="mini-article__date">
-            <span class="date__day">28</span>
-            
-                <span class="date__month">一月</span>
-            
+    <main class="page__container page__main">
+    <div id="page-content" class="page__content">
+        <div class="search__loader">
+            <i class="iconfont icon-loader"></i>
         </div>
-        <a itemprop="url" class="iconfont icon-enter" href="/2020/01/28/hello-world/"></a>
-    </div>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2020/01/28/hello-world/" title="Hello World">Hello World</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="" target="_blank">
-                        <span itemprop="name"></span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
-                
-            </ul>
-        </div>
-    </div>
-</article>
-
-                </div>
-            
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <div class="mini-article__cover">
-        
-            <img itemprop="image" src="https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png" alt="Hello World"/>
-        
-        
-        <div itemprop="datePublished" content="" class="mini-article__date">
-            <span class="date__day">28</span>
-            
-                <span class="date__month">一月</span>
-            
-        </div>
-        <a itemprop="url" class="iconfont icon-enter" href="/2020/01/28/init/"></a>
-    </div>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2020/01/28/init/" title="Hello World">Hello World</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="" target="_blank">
-                        <span itemprop="name"></span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
-                
-                    <li class="tags__item">
-                        <a href="/tags/%E5%9F%BA%E7%A1%80/">基础</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-</article>
-
-                </div>
-            
-        </div>
-
-        
-            
-        <nav class="page__paginator">
-            <ul class="paginator__list clearfix">
-                
-            <li class="paginator__item">
-                <span>1</span>
-            </li>
-        
-            </ul>
-        </nav>
-    
-        
     </div>
 
     <aside class="page__sidebar">
@@ -367,7 +257,12 @@
     <!-- endbuild -->
 
     
-    
+    <!-- build:js /js/search.js -->
+        <script type="text/javascript" src="/js/libs/axios.min.js"></script>
+        <script type="text/javascript" src="/js/libs/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/page/search.js"></script>
+    <!-- endbuild -->
+
 
     
     
