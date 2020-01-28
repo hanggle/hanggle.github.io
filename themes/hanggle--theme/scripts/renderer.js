@@ -91,14 +91,14 @@ hexo.extend.generator.register('lunr', function(locals){
                 });
             }
             bodyText = lunrConfig.fulltext ? post.content : post.excerpt;
-            /*searchIdx.add({
+            searchIdx.add({
                 title: post.title,
                 desc: post.subtitle || "",
                 body: bodyText || "",
                 tags: tags.join(','),
                 cates: cates.join(','),
                 href: '/' + post.path
-            });*/
+            });
 
             store['/' + post.path] = {
                 url: '/' + post.path,
@@ -130,7 +130,7 @@ hexo.extend.generator.register('lunr', function(locals){
         finalData.push({
             path: pathFn.join(lunrPath, yearKey + ".json"),
             data: JSON.stringify({
-                // index: searchIdx.toJSON(),
+                index: searchIdx.toJSON(),
                 store: store
             }) 
         });

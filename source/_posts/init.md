@@ -1,7 +1,7 @@
 ---
 title: Hello World
 tag: 基础
-Categories: java
+categories: java
 ---
 
 # 多线程基础
