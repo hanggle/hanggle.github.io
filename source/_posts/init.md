@@ -2,7 +2,7 @@
 # title为文章的标题
 title: 多线程基础
 # cover为文章的首图和缩略图
-cover: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
+cover: http://img.blog.csdn.net/20150309140927553
 # 作者信息，多作者则设置为数组
 author: 
   nick: hanggle
@@ -12,7 +12,7 @@ author:
 #  name: Minfive
 #  link: https://www.github.com/Mrminfive
 # 首页每篇文章的子标题
-subtitle: your subtitle
+subtitle: 编程的正确方法是：首先要保证代码正确的运行，然后提高代码的速度。即便如此，最好也只是当性能测试结果和应用需求告诉你必须提高性能，以及测试结果表明这种优化在实际环境中确实能带来性能提升是，才进行优化。
 tag: 基础,多线程
 categories: java
 ---
