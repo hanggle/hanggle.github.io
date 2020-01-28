@@ -36,10 +36,10 @@ introduction: 不思量，自难忘！
 favicon_ico: /img/favicon.ico
 
 # 博客的左上角logo图标，支持本地及在线两种方式
-logo: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
+logo: /img/avatar.png
 
 # 头像/二维码（用于显示在底部）二选一
-avatar: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
+avatar: ""
 # qrcode: http://oo12ugek5.bkt.clouddn.com/images/qrcode.png
 
 # 文章的默认封面
