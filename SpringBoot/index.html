@@ -88,7 +88,7 @@
                     
                         
                         <li class="nav__item">
-                            <a href="/SpringBoot" alt="归档" title="归档">归档</a>
+                            <a href="/SpringBoot" alt="SpringBoot" title="SpringBoot">SpringBoot</a>
                         </li>
                     
                         
@@ -147,7 +147,7 @@
     </header>
 
     <div class="post__content">
-        
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ComponentScan</span>(basePackages = &#123;<span class="string">"com.hanggle"</span>&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">		<span class="comment">//第一种启动方式</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">		<span class="comment">// SpringApplication.run(Application.class, args);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">		<span class="comment">//第二种启动方式自定义配置</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">		SpringApplication app = <span class="keyword">new</span> SpringApplication(Application<span class="class">.<span class="keyword">class</span>)</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		app.setBannerMode(Banner.Mode.OFF);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">		app.run(args);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 
         
         <div class="post-announce">
@@ -185,7 +185,7 @@
 
     <div class="sidebar__block">
         <h3 class="block__title">文章分类</h3>
-        
+        <ul class="block-list"><li class="block-list-item"><a class="block-list-link" href="/categories/java/">java</a><span class="block-list-count">1</span></li></ul>
     </div>
     
     <div class="sidebar__block">
@@ -206,12 +206,12 @@
                     </li>
                 
                     <li class="latest-post-item">
-                        <a href="/2020/01/28/init/" title="Hello World">
+                        <a href="/2020/01/28/init/" title="多线程基础">
                             <div class="item__cover">
-                                <img src="https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png" alt="Hello World" />
+                                <img src="https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png" alt="多线程基础" />
                             </div>
                             <div class="item__info">
-                                <h3 class="item__title">Hello World</h3>
+                                <h3 class="item__title">多线程基础</h3>
                                 <span class="item__text">2020-01-28</span>
                             </div>
                         </a>
@@ -227,7 +227,7 @@
         <ul class="block-list tag-list clearfix">
             
                     <li class="tag-item">
-                        <a class="tag-link" href="/tags/%E5%9F%BA%E7%A1%80/">基础</a>
+                        <a class="tag-link" href="/tags/%E5%9F%BA%E7%A1%80-%E5%A4%9A%E7%BA%BF%E7%A8%8B/">基础,多线程</a>
                     </li>  
                 
         </ul>
