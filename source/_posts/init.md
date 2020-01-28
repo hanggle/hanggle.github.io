@@ -1,12 +1,23 @@
 ---
-title: Hello World
-tag: 基础
+# title为文章的标题
+title: 多线程基础
+# cover为文章的首图和缩略图
+cover: https://hanggle.oss-cn-hangzhou.aliyuncs.com/blog/common/avatar.png
+# 作者信息，多作者则设置为数组
+author: 
+  nick: hanggle
+  link: https://www.github.com/BruceYuj
+# 如果文章为转载文章，需要多加文章出处项
+#editor:
+#  name: Minfive
+#  link: https://www.github.com/Mrminfive
+# 首页每篇文章的子标题
+subtitle: your subtitle
+tag: 基础,多线程
 categories: java
 ---
 
 # 多线程基础
-
-
 
 有三种方式可以解决多个线程同时访问同一个状态变量时会出现的问题。
 
@@ -18,8 +29,7 @@ categories: java
 
 ![img](http://img.blog.csdn.net/20150309140927553)
 
-
-> > **1、新建状态（New）：**新创建了一个线程对象。
+> **1、新建状态（New）：**新创建了一个线程对象。
 >
 > **2、就绪状态（Runnable）：**线程对象创建后，其他线程调用了该对象的start()方法。该状态的线程位于可运行线程池中，变得可运行，等待获取CPU的使用权。
 >
