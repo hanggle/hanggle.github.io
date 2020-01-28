@@ -24,6 +24,7 @@ jobs:
         run: |
           npm install --save mime-db
           npm install -g hexo-cli
+          npm install lunr
           npm install
           hexo g
 
