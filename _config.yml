@@ -153,5 +153,5 @@ deploy:
 
 menu:
   home: /
-  archive: /SpringBoot
+  SpringBoot: /SpringBoot
   about: /About
