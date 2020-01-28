@@ -34,19 +34,19 @@ https://files.cnblogs.com/files/oskyhg/skycolor.zip
 ## Linux 的 PS1设置
 （1）临时方案：
 命令行直接运行： 
-```shell script
+```shell
 PS1='[\[\e[37;40m\]\u@\h \w]$ \[\e[0m\]'
 ```
 
 （2）永久方案（需要修改主机配置，生产环境或容器中不建议修改）
 
 编辑.bashrc文件
-```shell script
+```shell
 vi /root/.bashrc
 ```
 
 然后运行命令
-```shell script
+```shell
 PS1='[\[\e[37;40m\]\u@\h \w]$ \[\e[0m\]'
 ```
 
