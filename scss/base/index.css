@@ -172,7 +172,7 @@ body {
 
 @media screen and (min-width: 736px) {
   body .page__main {
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 80px; } }
 
 @media screen and (min-width: 980px) {
