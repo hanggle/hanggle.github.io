@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>hanggle blog</title>
+        <title>xshell 主题及命令行配色(centos 7) | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/categories/java/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2020/01/30/xshell%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -41,9 +41,6 @@
 
 
 
-    
-    
-
 
 
 
@@ -62,7 +59,7 @@
 
     
     
-    <link rel="stylesheet" href="/scss/views/page/category.css">
+    <link rel="stylesheet" href="/scss/views/page/post.css">
 
 </head>
 <body ontouchstart>
@@ -113,71 +110,93 @@
         
     <main class="page__container page__main">
     <div class="page__content">
-        <div class="page__posts clearfix">
+        <article class="page__post">
+    
+
+    <header class="post__info">
+        <h1 class="post__title">xshell 主题及命令行配色(centos 7)</h1>
+
+        <div class="post__mark">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-write"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="https://www.github.com/BruceYuj" target="_blank" rel="noopener">hanggle</a>
+                        </li>
+                    
+                </ul>
+            </div>
             
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <div class="mini-article__cover">
-        
-        
-            <img itemprop="image" src="http://img.blog.csdn.net/20150309140927553" alt="多线程基础"/>
-        
-        <div itemprop="datePublished" content="" class="mini-article__date">
-            <span class="date__day">28</span>
-            
-                <span class="date__month">一月</span>
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-time"></i>
+                <ul class="mark__list clearfix">
+                    <li class="mark__item"><span>2020-01-30</span></li>
+                </ul>
+            </div>
+
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-tab"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+                        </li>
+                    
+                        <li class="mark__item">
+                            <a href="/tags/shell/">Shell</a>
+                        </li>
+                    
+                </ul>
+            </div>
+
             
         </div>
-        <a itemprop="url" class="iconfont icon-enter" href="/2020/01/28/init/"></a>
-    </div>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2020/01/28/init/" title="多线程基础">多线程基础</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/BruceYuj" target="_blank">
-                        <span itemprop="name">Hanggle</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            编程的正确方法是：首先要保证代码正确的运行，然后提高代码的速度。即便如此，最好也只是当性能测试结果和应用需求告诉你必须提高性能，以及测试结果表明这种优化在实际环境中确实能带来性能提升是，才进行优化。
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
+    </header>
+
+    <div class="post__content">
+        <h2 id="主题导入"><a href="#主题导入" class="headerlink" title="主题导入"></a>主题导入</h2><p>主题下载地址</p>
+<p><a href="https://files.cnblogs.com/files/oskyhg/skycolor.zip" target="_blank" rel="noopener">https://files.cnblogs.com/files/oskyhg/skycolor.zip</a></p>
+<p>导入主题</p>
+<p><img src="https://img2018.cnblogs.com/blog/997786/202001/997786-20200105131513995-1519160410.png" alt="1547310588479"></p>
+<h2 id="Linux-的-PS1设置"><a href="#Linux-的-PS1设置" class="headerlink" title="Linux 的 PS1设置"></a>Linux 的 PS1设置</h2><p>（1）临时方案：<br>命令行直接运行： </p>
+<figure class="highlight shell"><figcaption><span>script</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">PS1='[\[\e[37;40m\]\u@\h \w]$ \[\e[0m\]'</span></pre></td></tr></table></figure>
+
+<p>（2）永久方案（需要修改主机配置，生产环境或容器中不建议修改）</p>
+<p>编辑.bashrc文件</p>
+<figure class="highlight shell"><figcaption><span>script</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">vi /root/.bashrc</span></pre></td></tr></table></figure>
+
+<p>然后运行命令</p>
+<figure class="highlight shell"><figcaption><span>script</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">PS1='[\[\e[37;40m\]\u@\h \w]$ \[\e[0m\]'</span></pre></td></tr></table></figure>
+
+<p>效果如下</p>
+<p><img src="https://img2018.cnblogs.com/blog/997786/202001/997786-20200105125838067-673369601.png" alt="1547310588473"></p>
+<p> 备注：配色PS1相关参数配置及含义请自行google</p>
+
+
+        
+        <div class="post-announce">
+            感谢您的阅读，本文由
+            <a href="https://blog.hanggle.com">hanggle</a>
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2020/01/30/xshell%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88/">https://blog.hanggle.com/2020/01/30/xshell%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88/</a>）
+        </div>
+        
+
+        <div class="post__prevs">
+            <div class="post__prev">
                 
-                    <li class="tags__item">
-                        <a href="/tags/%E5%9F%BA%E7%A1%80/">基础</a>
-                    </li>
+                <a href="/2020/01/28/hello-world/" title="Hello World"><i class="iconfont icon-prev"></i>Hello World</a>
                 
-                    <li class="tags__item">
-                        <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
-                    </li>
+            </div>
+            <div class="post__prev post__prev--right">
                 
-            </ul>
+            </div>
         </div>
     </div>
 </article>
 
-                </div>
-            
-        </div>
         
         
-        <nav class="page__paginator">
-            <ul class="paginator__list clearfix">
-                
-            <li class="paginator__item">
-                <span>1</span>
-            </li>
-        
-            </ul>
-        </nav>
-    
     </div>
 
     <aside class="page__sidebar">
@@ -340,10 +359,19 @@
     <!-- endbuild -->
 
     
-    
+    <script src="/js/page/post.js"></script>
+
 
     
     
+
+
+
+    <!-- 不蒜子统计 -->
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
 
      
 
