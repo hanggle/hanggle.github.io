@@ -13,8 +13,6 @@ categories: docker
 date: 2019-12-05 22:14:31
 ---
 
-#  docker-compose 
-##  docker-compose 安装
 
 1. 下载安装包
 
