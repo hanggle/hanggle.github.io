@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>hanggle blog</title>
+        <title>spring boot 扫描不到自定义Controller | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/tags/shell/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2017/04/09/springboot_record_1/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -43,9 +43,6 @@
 
 
 
-    
-    
-
 
 <!-- CSS -->
 <link rel="stylesheet" href="/scss/base/index.css">
@@ -62,7 +59,7 @@
 
     
     
-    <link rel="stylesheet" href="/scss/views/page/tag.css">
+    <link rel="stylesheet" href="/scss/views/page/post.css">
 
 </head>
 <body ontouchstart>
@@ -113,71 +110,113 @@
         
     <main class="page__container page__main">
     <div class="page__content">
-        <div class="page__posts clearfix">
+        <article class="page__post">
+    
+
+    <header class="post__info">
+        <h1 class="post__title">spring boot 扫描不到自定义Controller</h1>
+
+        <div class="post__mark">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-write"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="https://www.github.com/hanggle" target="_blank" rel="noopener">hanggle</a>
+                        </li>
+                    
+                </ul>
+            </div>
             
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <div class="mini-article__cover">
-        
-        
-            <img itemprop="image" src="http://oss.hanggle.top/article/xshell.png?x-oss-process=style/watermark" alt="xshell 主题及命令行配色(centos 7)"/>
-        
-        <div itemprop="datePublished" content="" class="mini-article__date">
-            <span class="date__day">5</span>
-            
-                <span class="date__month">一月</span>
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-time"></i>
+                <ul class="mark__list clearfix">
+                    <li class="mark__item"><span>2017-04-09</span></li>
+                </ul>
+            </div>
+
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-tab"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="/tags/Spring/">Spring</a>
+                        </li>
+                    
+                        <li class="mark__item">
+                            <a href="/tags/SpringBoot/">SpringBoot</a>
+                        </li>
+                    
+                </ul>
+            </div>
+
             
         </div>
-        <a itemprop="url" class="iconfont icon-enter" href="/2020/01/05/xshell_colour/"></a>
-    </div>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2020/01/05/xshell_colour/" title="xshell 主题及命令行配色(centos 7)">xshell 主题及命令行配色(centos 7)</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
-                        <span itemprop="name">Hanggle</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            舒适的配色方案更有利于我们敲命令，当然逼格更高:)
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
+    </header>
+
+    <div class="post__content">
+        <p>在springboot官网照着给的介绍写了个springboot程序</p>
+<p>pom.xml</p>
+<p>复制代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;parent&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    &lt;artifactId&gt;spring-boot-starter-parent&lt;&#x2F;artifactId&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &lt;version&gt;1.5.2.RELEASE&lt;&#x2F;version&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;parent&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&lt;dependencies&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &lt;dependency&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        &lt;artifactId&gt;spring-boot-starter-web&lt;&#x2F;artifactId&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    &lt;&#x2F;dependency&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;dependencies&gt;</span></pre></td></tr></table></figure>
+
+<p>复制代码</p>
+<p>java文件</p>
+<p>复制代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">package hello;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">import org.springframework.boot.*;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">import org.springframework.boot.autoconfigure.*;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">import org.springframework.stereotype.*;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">import org.springframework.web.bind.annotation.*;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">@Controller</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">@EnableAutoConfiguration</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">public class Application&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    @RequestMapping(&quot;&#x2F;&quot;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    @ResponseBody</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    String home() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">        return &quot;Hello World!&quot;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    public static void main(String[] args) throws Exception &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        SpringApplication.run(SampleController.class, args);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>然后自己写了个Controller<br><img src="https://images2015.cnblogs.com/blog/997786/201704/997786-20170409005618644-1487234010.png" alt="1"></p>
+<p>但是无论如何也无法扫描到自己定义的Controller（如果用的是idea，能明显看出来，如果扫描到会有的图标）。访问结果结果如下：</p>
+<p>报错的原因是找不到对应的映射路径，即Controller没有被扫描到 ，。</p>
+<p>郁闷至极，到晚上搜的结果说的是LoginController 方的位置不对，应该让启动类和Controller的包在同一级目录下，然而对我却没有效果。</p>
+<p><strong>官方建议application.java放的位置</strong>：<br><img src="https://images2015.cnblogs.com/blog/997786/201704/997786-20170409005618644-1487234010.png" alt="2"></p>
+<p>最后尝试了下修改下Application上的注解，我本来复制官方的代码用的是@Controller和@EnableAutoConfiguration，试着换成了<strong>@SpringBootApplication</strong> 注解，出乎意外的可以扫描到Controller<br><img src="https://images2015.cnblogs.com/blog/997786/201704/997786-20170409005618644-1487234010.png" alt="3"></p>
+<p><img src="https://images2015.cnblogs.com/blog/997786/201704/997786-20170409005618644-1487234010.png" alt="4"></p>
+<p><img src="https://images2015.cnblogs.com/blog/997786/201704/997786-20170409005618644-1487234010.png" alt="5"></p>
+<p>又查了下官方的文档终于找到原因了，原因是：</p>
+<blockquote>
+<p>如果使用@Controller和@EnableAutoConfiguration 注解还应该再加上一个注解：@ComponentScan  就可以了。@Controller和@EnableAutoConfiguration没&gt;有扫描注解的功能，而@ComponentScan是<br>springboot专门用来扫描@Component, @Service, @Repository, @Controller等注解的注解</p>
+</blockquote>
+<p><strong>总结：</strong></p>
+<p>使用springboot启动类配置扫描的两种注解配置方式：</p>
+<p>1、@Controller</p>
+<p>　  @EnableAutoConfiguration</p>
+<p>　  @ComponentScan</p>
+<p>2、@SpringBootApplication</p>
+<p>@SpringBootApplication注解等价于@Configuration, @EnableAutoConfiguration and @ComponentScan</p>
+<p>另外application.java（启动类）也应该按照官方的建议放在root目录下，这样才能扫描到Service和dao，不然还会引起，扫描不到注解的问题。</p>
+<p><strong>— 更新日期：2018-10-14 —</strong></p>
+<p>最近用了最新的springboot 2.0.5.RELEASE 版本 多了一种新的扫描注解，新版的springboot application可以放在任意位置，只要加上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">@ComponentScan(basePackages &#x3D; &#123;&quot;com.oskyhang&quot;, &quot;com.frames&quot;&#125;)</span></pre></td></tr></table></figure>
+
+<p>注解就可以，注解指定扫描的包，就可以扫描到，更灵活方便。</p>
+
+
+        
+        <div class="post-announce">
+            感谢您的阅读，本文由
+            <a href="https://blog.hanggle.com">hanggle</a>
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2017/04/09/springboot_record_1/">https://blog.hanggle.com/2017/04/09/springboot_record_1/</a>）
+        </div>
+        
+
+        <div class="post__prevs">
+            <div class="post__prev">
                 
-                    <li class="tags__item">
-                        <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
-                    </li>
+                <a href="/2017/03/05/init/" title="多线程基础"><i class="iconfont icon-prev"></i>多线程基础</a>
                 
-                    <li class="tags__item">
-                        <a href="/tags/shell/">shell</a>
-                    </li>
+            </div>
+            <div class="post__prev post__prev--right">
                 
-            </ul>
+                <a href="/2019/05/03/Docker/" title="Docker基础">Docker基础<i class="iconfont icon-next"></i></a>
+                
+            </div>
         </div>
     </div>
 </article>
 
-                </div>
-            
-        </div>
         
         
-        <nav class="page__paginator">
-            <ul class="paginator__list clearfix">
-                
-            <li class="paginator__item">
-                <span>1</span>
-            </li>
-        
-            </ul>
-        </nav>
-    
     </div>
 
     <aside class="page__sidebar">
@@ -376,10 +415,19 @@
     <!-- endbuild -->
 
     
-    
+    <script src="/js/page/post.js"></script>
+
 
     
     
+
+
+
+    <!-- 不蒜子统计 -->
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
 
      
 
