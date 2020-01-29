@@ -43,13 +43,13 @@ avatar: ""
 # qrcode: http://oo12ugek5.bkt.clouddn.com/images/qrcode.png
 
 # 文章的默认封面
-default_cover: http://oss.hanggle.top/blog/common/avatar.png
+default_cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/default_cover.png
 
 # header 的背景图
 header_cover: /img/header_cover.jpg
 
 # 404 页面的背景图
-error_page_bg: http://oss.hanggle.top/blog/common/avatar.png
+error_page_bg:  https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/default_cover.png
 
 # 页面加载loading图标
 loader_img: /img/loading.gif
