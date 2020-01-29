@@ -6,7 +6,7 @@ cover: http://oss.hanggle.top/article/Docker-Logo-White.png
 # 作者信息，多作者则设置为数组
 author: 
   nick: hanggle
-  link: https://www.github.com/BruceYuj
+  link: https://www.github.com/hanggle
 # 如果文章为转载文章，需要多加文章出处项
 #editor:
 #  name: Minfive
