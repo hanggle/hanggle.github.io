@@ -28,21 +28,21 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 **容器**是镜像的运行时实例 - 实际执行时镜像会在内存中变成什么。默认情况下，它完全独立于主机环境运行，仅在配置为访问主机文件和端口的情况下才执行此操作。
 
-![image-20200129095715589](img/Docker/image-20200129095715589.png)
+![image-20200129095715589](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-1.png)
 
 
 
 #### Docker和虚拟机比较
 
-![image-20200129095942662](img/Docker/image-20200129095942662.png)
+![image-20200129095942662](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-3.png)
 
-![image-20200129095959223](img/Docker/image-20200129095959223.png)
+![image-20200129095959223](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-4.png)
 
 
 
 #### 架构
 
-![image-20200129095833450](img/Docker/image-20200129095833450.png)
+![image-20200129095833450](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-2.png)
 
 
 
@@ -109,7 +109,7 @@ systemctl enable docker
 
 ```json
 {
-  "registry-mirrors": ["https://av57nxi9.mirror.aliyuncs.com"]
+  "registry-mirrors": ["https://自己申请的url.mirror.aliyuncs.com"]
 }
 ```
 
