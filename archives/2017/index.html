@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/tags/shell/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/archives/2017/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -43,9 +43,6 @@
 
 
 
-    
-    
-
 
 <!-- CSS -->
 <link rel="stylesheet" href="/scss/base/index.css">
@@ -62,7 +59,7 @@
 
     
     
-    <link rel="stylesheet" href="/scss/views/page/tag.css">
+    <link rel="stylesheet" href="/scss/views/page/archive.css">
 
 </head>
 <body ontouchstart>
@@ -111,28 +108,56 @@
 
 
         
-    <main class="page__container page__main">
+    
+<main class="page__container page__main">
     <div class="page__content">
+        
+        <nav class="mb-main__nav">
+            
+            <a
+                class="nav__item"
+                href="/archives/"
+                alt="2020年">
+                2020年
+            </a>
+        
+            <a
+                class="nav__item"
+                href="/archives/2019/"
+                alt="2019年">
+                2019年
+            </a>
+        
+            <a
+                class="nav__item nav__item--selected"
+                href="javascript:void(0)"
+                alt="2017年">
+                2017年
+            </a>
+        
+        </nav> 
+    
+
         <div class="page__posts clearfix">
             
                 <div class="page__post">
                     <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
     <div class="mini-article__cover">
         
+            <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/default_cover.png" alt="多线程基础"/>
         
-            <img itemprop="image" src="http://oss.hanggle.top/article/xshell.png?x-oss-process=style/watermark" alt="xshell 主题及命令行配色(centos 7)"/>
         
         <div itemprop="datePublished" content="" class="mini-article__date">
             <span class="date__day">5</span>
             
-                <span class="date__month">一月</span>
+                <span class="date__month">三月</span>
             
         </div>
-        <a itemprop="url" class="iconfont icon-enter" href="/2020/01/05/xshell-colour/"></a>
+        <a itemprop="url" class="iconfont icon-enter" href="/2017/03/05/init/"></a>
     </div>
     <div class="mini-article__info">
         <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2020/01/05/xshell-colour/" title="xshell 主题及命令行配色(centos 7)">xshell 主题及命令行配色(centos 7)</a>
+            <a itemprop="url" href="/2017/03/05/init/" title="多线程基础">多线程基础</a>
         </h3>
         <p class="mini-article__author">by 
             
@@ -144,18 +169,68 @@
             
         </p>
         <p itemprop="articleSection" class="min-article__desc">
-            舒适的配色方案更有利于我们敲命令，当然逼格更高:)
+            编程的正确方法是：首先要保证代码正确的运行，然后提高代码的速度。即便如此，最好也只是当性能测试结果和应用需求告诉你必须提高性能，以及测试结果表明这种优化在实际环境中确实能带来性能提升是，才进行优化。
         </p>
         <div class="min-article__tags">
             <i class="iconfont icon-tab"></i>
             <ul class="tags__list clearfix">
                 
                     <li class="tags__item">
-                        <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+                        <a href="/tags/%E5%9F%BA%E7%A1%80/">基础</a>
                     </li>
                 
                     <li class="tags__item">
-                        <a href="/tags/shell/">shell</a>
+                        <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</article>
+
+                </div>
+            
+                <div class="page__post">
+                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
+    <div class="mini-article__cover">
+        
+        
+            <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/java.jpg" alt="Java8 方法引用"/>
+        
+        <div itemprop="datePublished" content="" class="mini-article__date">
+            <span class="date__day">5</span>
+            
+                <span class="date__month">三月</span>
+            
+        </div>
+        <a itemprop="url" class="iconfont icon-enter" href="/2017/03/05/java8_method_references/"></a>
+    </div>
+    <div class="mini-article__info">
+        <h3 itemprop="name" class="mini-article__title">
+            <a itemprop="url" href="/2017/03/05/java8_method_references/" title="Java8 方法引用">Java8 方法引用</a>
+        </h3>
+        <p class="mini-article__author">by 
+            
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
+                        <span itemprop="name">Hanggle</span>
+                    </a>
+                </span>
+            
+        </p>
+        <p itemprop="articleSection" class="min-article__desc">
+            对象引用：不同对象可以操作同一块内容。方法引用：指为一个方法设置一个别名。
+        </p>
+        <div class="min-article__tags">
+            <i class="iconfont icon-tab"></i>
+            <ul class="tags__list clearfix">
+                
+                    <li class="tags__item">
+                        <a href="/tags/%E5%9F%BA%E7%A1%80/">基础</a>
+                    </li>
+                
+                    <li class="tags__item">
+                        <a href="/tags/java8/">java8</a>
                     </li>
                 
             </ul>
@@ -166,8 +241,9 @@
                 </div>
             
         </div>
+
         
-        
+            
         <nav class="page__paginator">
             <ul class="paginator__list clearfix">
                 
@@ -178,6 +254,7 @@
             </ul>
         </nav>
     
+        
     </div>
 
     <aside class="page__sidebar">
