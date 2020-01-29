@@ -2,7 +2,7 @@
 # title为文章的标题
 title: 多线程基础
 # cover为文章的首图和缩略图
-cover: http://img.blog.csdn.net/20150309140927553
+# cover: http://img.blog.csdn.net/20150309140927553
 # 作者信息，多作者则设置为数组
 author: 
   nick: hanggle
