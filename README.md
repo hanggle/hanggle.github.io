@@ -1,4 +1,4 @@
 # hanggle.github.io
 
-welcome! This is myself blog.
+Welcome! This is myself blog.
 
