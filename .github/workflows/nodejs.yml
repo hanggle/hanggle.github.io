@@ -32,10 +32,8 @@ jobs:
           CI: true
 
       - name: Build and Deploy
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          target_branch: master
-          build_dir: public
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          branch: master # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
     
