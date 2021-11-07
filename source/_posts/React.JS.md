@@ -2,7 +2,7 @@
 # title为文章的标题
 title: React.js
 # cover为文章的首图和缩略图
-cover: http://oss.hanggle.top/article/Docker-Logo-White.png
+cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107220732380.png
 # 作者信息，多作者则设置为数组
 author: 
   nick: hanggle
@@ -23,8 +23,6 @@ date: 2021-09-07 22:14:31
 ## React是什么
 
 React勇于构建用户界面的JavaScript库
-
-
 
 ## React特点
 
@@ -72,6 +70,8 @@ React 使创建交互式 UI 变得轻而易举。为你应用的每一个状态�
 
 ![image-20211107115056793](D:\MySpace\hanggle.github.io\source\img\image-20211107115056793.png)
 
+
+
 ### 组件的state
 
 状态的三个操作：
@@ -82,5 +82,5 @@ React 使创建交互式 UI 变得轻而易举。为你应用的每一个状态�
 
 3、 更新状态
 
-
+![11111](https:\\hanggle.github.io\img\image-20211107224056383.png)
 
