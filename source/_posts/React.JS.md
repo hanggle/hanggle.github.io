@@ -2,7 +2,7 @@
 # title为文章的标题
 title: React.js
 # cover为文章的首图和缩略图
-cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107220732380.png
+cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107231014316.png
 # 作者信息，多作者则设置为数组
 author: 
   nick: hanggle
@@ -81,8 +81,3 @@ React 使创建交互式 UI 变得轻而易举。为你应用的每一个状态�
 2、 读取状态
 
 3、 更新状态
-
-![image-20211107225110737](https://hanggle.github.io/img/image-20211107225110737.png)
-
-![image-11111](https://hanggle.github.io/img/image-20211107224056383.png)
-
