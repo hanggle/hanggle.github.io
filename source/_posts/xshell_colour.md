@@ -2,10 +2,10 @@
 # title为文章的标题
 title: xshell 主题及命令行配色(centos 7)
 # cover为文章的首图和缩略图
-cover: https://hanggle.github.io/img/image-20211107222354624.pngprocess=style/watermark
+cover: https://hanggle.github.io/img/image-20211107230248331.png
 # 作者信息，多作者则设置为数组
 author: 
-  nick: hanggle
+  nick: hanggleW
   link: https://www.github.com/hanggle
 # 如果文章为转载文章，需要多加文章出处项
 #editor:
@@ -26,6 +26,8 @@ date: 2020-01-05 22:14:31
 https://files.cnblogs.com/files/oskyhg/skycolor.zip
 
 
+
+![image-20211107230248331](https://hanggle.github.io/img/image-20211107230248331.png)
 
 导入主题
 
