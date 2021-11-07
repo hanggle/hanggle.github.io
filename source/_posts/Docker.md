@@ -2,7 +2,7 @@
 # title为文章的标题
 title: Docker基础
 # cover为文章的首图和缩略图
-cover: http://oss.hanggle.top/article/Docker-Logo-White.png
+cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107232458797.png
 # 作者信息，多作者则设置为数组
 author: 
   nick: hanggle
