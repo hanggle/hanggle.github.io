@@ -17,7 +17,7 @@ tags:
     - https
     - tomcat
 categories: java
-date: 2021-07-05 21:14:31
+date: 2021-07-05 21:34:31
 ---
 
 # HTTPS 证书配置
@@ -39,6 +39,10 @@ keytool -genkey -storetype PKCS12 -alias tomcat -keyalg RSA -keysize 2048 -keyst
 ### 2、修改conf/server.xml文件，打开如下配置
 
 ![1031555-20191205155038434-1506707704](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/1031555-20191205155038434-1506707704.png)
+
+ certificateKeystoreFile：证书位置；certificateKeystorePassword：密码
+
+![img](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/1031555-20191210150849466-503596145.png)
 
 ### 3、现在我们就可以使用https进行访问了
 
