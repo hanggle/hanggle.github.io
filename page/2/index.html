@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/archives/2019/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/page/2/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -38,6 +38,11 @@
 
 
 <!-- Prefetch -->
+
+    
+    
+        
+    
 
 
 
@@ -59,7 +64,7 @@
 
     
     
-    <link rel="stylesheet" href="/scss/views/page/archive.css">
+    <link rel="stylesheet" href="/scss/views/page/index.css">
 
 </head>
 <body ontouchstart>
@@ -70,8 +75,8 @@
 
     <div id="page" class="page js-hidden">
         
-    <!-- 页头 -->
-<header class="page__small-header page__header--small">
+            <!-- 页头 -->
+<header id="page-header" class="page__header" style="background-image: url('/img/header_cover.jpg');">
     <nav class="page__navbar">
         <div class="page__container navbar-container">
             <a class="page__logo" href="/" title="hanggle" alt="hanggle">
@@ -104,67 +109,38 @@
             </button>
         </div>
     </nav>
+
+    <section class="page__info">
+        <h1 class="info__title">hanggle blog</h1>
+        <hr class="info__hr">
+        <p class="info__desc">日常学习与兴趣交流</p>
+    </section>
 </header>
-
+        
 
         
-    
-<main class="page__container page__main">
+    <main class="page__container page__main">
     <div class="page__content">
-        
-        <nav class="mb-main__nav">
-            
-            <a
-                class="nav__item"
-                href="/archives/"
-                alt="2021年">
-                2021年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2020/"
-                alt="2020年">
-                2020年
-            </a>
-        
-            <a
-                class="nav__item nav__item--selected"
-                href="javascript:void(0)"
-                alt="2019年">
-                2019年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2017/"
-                alt="2017年">
-                2017年
-            </a>
-        
-        </nav> 
-    
-
         <div class="page__posts clearfix">
             
                 <div class="page__post">
                     <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
     <div class="mini-article__cover">
         
+            <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/default_cover.png" alt="多线程基础"/>
         
-            <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-compose.png" alt="docker-compose 安装"/>
         
         <div itemprop="datePublished" content="" class="mini-article__date">
             <span class="date__day">5</span>
             
-                <span class="date__month">十二月</span>
+                <span class="date__month">三月</span>
             
         </div>
-        <a itemprop="url" class="iconfont icon-enter" href="/2019/12/05/docker_compose_base/"></a>
+        <a itemprop="url" class="iconfont icon-enter" href="/2017/03/05/init/"></a>
     </div>
     <div class="mini-article__info">
         <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2019/12/05/docker_compose_base/" title="docker-compose 安装">docker-compose 安装</a>
+            <a itemprop="url" href="/2017/03/05/init/" title="多线程基础">多线程基础</a>
         </h3>
         <p class="mini-article__author">by 
             
@@ -176,110 +152,18 @@
             
         </p>
         <p itemprop="articleSection" class="min-article__desc">
-            docker-compose离线安装
+            编程的正确方法是：首先要保证代码正确的运行，然后提高代码的速度。即便如此，最好也只是当性能测试结果和应用需求告诉你必须提高性能，以及测试结果表明这种优化在实际环境中确实能带来性能提升是，才进行优化。
         </p>
         <div class="min-article__tags">
             <i class="iconfont icon-tab"></i>
             <ul class="tags__list clearfix">
                 
                     <li class="tags__item">
-                        <a href="/tags/docker/">docker</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-</article>
-
-                </div>
-            
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <div class="mini-article__cover">
-        
-        
-            <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/mongobd.png" alt="MongoDB(一)"/>
-        
-        <div itemprop="datePublished" content="" class="mini-article__date">
-            <span class="date__day">5</span>
-            
-                <span class="date__month">十月</span>
-            
-        </div>
-        <a itemprop="url" class="iconfont icon-enter" href="/2019/10/05/mongodb(%E4%B8%80)/"></a>
-    </div>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2019/10/05/mongodb(%E4%B8%80)/" title="MongoDB(一)">MongoDB(一)</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
-                        <span itemprop="name">Hanggle</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            MogoDB是一款强大、灵活且易于拓展的通用型数据库。
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
-                
-                    <li class="tags__item">
-                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                        <a href="/tags/%E5%9F%BA%E7%A1%80/">基础</a>
                     </li>
                 
                     <li class="tags__item">
-                        <a href="/tags/mongodb/">mongodb</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-</article>
-
-                </div>
-            
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <div class="mini-article__cover">
-        
-        
-            <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107232458797.png" alt="Docker基础"/>
-        
-        <div itemprop="datePublished" content="" class="mini-article__date">
-            <span class="date__day">3</span>
-            
-                <span class="date__month">五月</span>
-            
-        </div>
-        <a itemprop="url" class="iconfont icon-enter" href="/2019/05/03/Docker/"></a>
-    </div>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2019/05/03/Docker/" title="Docker基础">Docker基础</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
-                        <span itemprop="name">Hanggle</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
-                
-                    <li class="tags__item">
-                        <a href="/tags/docker/">docker</a>
+                        <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
                     </li>
                 
             </ul>
@@ -290,20 +174,26 @@
                 </div>
             
         </div>
-
         
-            
+        
         <nav class="page__paginator">
             <ul class="paginator__list clearfix">
                 
             <li class="paginator__item">
-                <span>1</span>
+                <a href="/" title="上一页"><i class="iconfont icon-prev"></i></a>
+            </li>
+        
+            <li class="paginator__item">
+                <a href="/" >1</a>
+            </li>
+        
+            <li class="paginator__item">
+                <span>2</span>
             </li>
         
             </ul>
         </nav>
     
-        
     </div>
 
     <aside class="page__sidebar">
@@ -340,18 +230,6 @@
                     </li>
                 
                     <li class="latest-post-item">
-                        <a href="/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-1/" title="HTTPS证书配置-1">
-                            <div class="item__cover">
-                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211108091304669.png" alt="HTTPS证书配置-1" />
-                            </div>
-                            <div class="item__info">
-                                <h3 class="item__title">HTTPS证书配置-1</h3>
-                                <span class="item__text">2021-07-05</span>
-                            </div>
-                        </a>
-                    </li>
-                
-                    <li class="latest-post-item">
                         <a href="/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-2/" title="HTTPS证书配置-2">
                             <div class="item__cover">
                                 <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211108091304669.png" alt="HTTPS证书配置-2" />
@@ -370,6 +248,18 @@
                             </div>
                             <div class="item__info">
                                 <h3 class="item__title">HTTPS证书配置-3</h3>
+                                <span class="item__text">2021-07-05</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-1/" title="HTTPS证书配置-1">
+                            <div class="item__cover">
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211108091304669.png" alt="HTTPS证书配置-1" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">HTTPS证书配置-1</h3>
                                 <span class="item__text">2021-07-05</span>
                             </div>
                         </a>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>React.js | hanggle blog</title>
+        <title>HTTPS证书配置-2 | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/2021/09/07/React.JS/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-2/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -114,7 +114,7 @@
     
 
     <header class="post__info">
-        <h1 class="post__title">React.js</h1>
+        <h1 class="post__title">HTTPS证书配置-2</h1>
 
         <div class="post__mark">
             <div class="mark__block">
@@ -131,7 +131,7 @@
             <div class="mark__block">
                 <i class="mark__icon iconfont icon-time"></i>
                 <ul class="mark__list clearfix">
-                    <li class="mark__item"><span>2021-09-07</span></li>
+                    <li class="mark__item"><span>2021-07-05</span></li>
                 </ul>
             </div>
 
@@ -140,7 +140,11 @@
                 <ul class="mark__list clearfix">
                     
                         <li class="mark__item">
-                            <a href="/tags/React/">React</a>
+                            <a href="/tags/https/">Https</a>
+                        </li>
+                    
+                        <li class="mark__item">
+                            <a href="/tags/tomcat/">Tomcat</a>
                         </li>
                     
                 </ul>
@@ -151,58 +155,36 @@
     </header>
 
     <div class="post__content">
-        <h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h2 id="React是什么"><a href="#React是什么" class="headerlink" title="React是什么"></a>React是什么</h2><p>React勇于构建用户界面的JavaScript库</p>
-<h2 id="React特点"><a href="#React特点" class="headerlink" title="React特点"></a>React特点</h2><ul>
-<li>声明式</li>
-</ul>
-<p>React 使创建交互式 UI 变得轻而易举。为你应用的每一个状态设计简洁的视图，当数据改变时 React 能有效地更新并正确地渲染组件。</p>
-<p>以声明式编写 UI，可以让你的代码更加可靠，且方便调试。</p>
-<ul>
-<li>组件化</li>
-</ul>
-<blockquote>
-<p>创建拥有各自状态的组件，再由这些组件构成更加复杂的 UI。</p>
-<p>组件逻辑使用 JavaScript 编写而非模板，因此你可以轻松地在应用中传递数据，并使得状态与 DOM 分离。</p>
-</blockquote>
-<ul>
-<li>一次学习，随处编写</li>
-</ul>
-<blockquote>
-<p>无论你现在正在使用什么技术栈，你都可以随时引入 React 来开发新特性，而不需要重写现有代码。</p>
-<p>React 还可以使用 Node 进行服务器渲染，或使用 React Native 开发原生移动应用。</p>
-</blockquote>
-<ul>
-<li>高效</li>
-</ul>
-<blockquote>
-<p>1）虚拟DOM不总是直接操作DOM</p>
-<p>2）DOM Diff算法，最小化页面重绘</p>
-</blockquote>
-<h1 id="React面向组件编程"><a href="#React面向组件编程" class="headerlink" title="React面向组件编程"></a>React面向组件编程</h1><h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><p>首字母必须大写，可以自己定义  </p>
-<h3 id="定义组件的两种方法"><a href="#定义组件的两种方法" class="headerlink" title="定义组件的两种方法"></a>定义组件的两种方法</h3><p>1)  工厂函数模式（有state时，不能用此方法创建组件）</p>
-<p>2) ES6类组件</p>
-<p><img src="D:%5CMySpace%5Changgle.github.io%5Csource%5Cimg%5Cimage-20211107115056793.png" alt="image-20211107115056793"></p>
-<h3 id="组件的state"><a href="#组件的state" class="headerlink" title="组件的state"></a>组件的state</h3><p>状态的三个操作：</p>
-<p>1、 初始化状态</p>
-<p>2、 读取状态</p>
-<p>3、 更新状态</p>
+        <h1 id="HTTPS-证书转换-crt-key-jks-pkcs12"><a href="#HTTPS-证书转换-crt-key-jks-pkcs12" class="headerlink" title="HTTPS 证书转换 crt key jks pkcs12"></a>HTTPS 证书转换 crt key jks pkcs12</h1><p>HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是以安全为目标的 HTTP 通道，在HTTP的基础上通过传输加密和<a href="https://baike.baidu.com/item/身份认证/5294713" target="_blank" rel="noopener">身份认证</a>保证了传输过程的安全性  。HTTPS 在HTTP 的基础下加入<a href="https://baike.baidu.com/item/SSL/320778" target="_blank" rel="noopener">SSL</a>，HTTPS 的安全基础是 SSL，因此加密的详细内容就需要 SSL。 HTTPS 存在不同于 HTTP 的默认端口及一个加密/身份验证层（在 HTTP与 <a href="https://baike.baidu.com/item/TCP/33012" target="_blank" rel="noopener">TCP</a> 之间）。这个系统提供了身份验证与加密通讯方法。它被广泛用于<a href="https://baike.baidu.com/item/万维网/215515" target="_blank" rel="noopener">万维网</a>上安全敏感的通讯，例如交易支付等方面。</p>
+<p>1.crt、key和jks之间的转换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">##.crt和.key转换.jks （tomcat server.xml）</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -export -in  server.crt -inkey  server.key &gt; server.p12</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">[mykey]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">keytool -importkeystore -keyalg EC -srckeystore server.p12 -destkeystore server.jks -srcstoretype pkcs12</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">[mykey]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">##.jks转换.crt和.key</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">1. 从JKS转换到PKCS12keytool</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">keytool -importkeystore -srckeystore D:\server.jks -destkeystore D:\keystore.p12 -srcstoretype JKS -deststoretype PKCS12 -srcstorepass [mykey] -deststorepass [mykey] -srcalias 1 -destalias 1 -srckeypass [mykey] -destkeypass [mykey] –noprompt</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">2.从PKCS12转换成PEM格式openssl pkcs12 (openssl要在linux上使用）</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -in D:\keystore.p12 -out D:\server.pem -passin pass:[mykey] -passout pass:[mykey]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">3. 提取证书</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -in keystore.p12 -nokeys -clcerts -out server-ssl.crt</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -in keystore.p12 -nokeys -cacerts -out gs_intermediate_ca.crt</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">Enter Import Password:[mykey]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">server-ssl.crt是SSL证书,gs_intermediate_ca.crt是中级证书,两个合并到一起才是nginx服务器所需要的证书</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">合并证书: cat server-ssl.crt gs_intermediate_ca.crt &gt;server.crt</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">此时server.crt是一个完成的证书。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">4. 提取私钥</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -in keystore.p12 -nocerts -nodes -out server.key</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">Enter Import Password:[mykey]</span></pre></td></tr></table></figure>
+
+
+
+<p> 2.crt、key和p12之间的转换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">##.crt和.key合成.p12</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">1.先将证书链文件放到证书文件后面：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">cat server-ssl.crt gs_intermediate_ca.crt &gt;server.crt</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">2.用合成后的crt和key转换成PFX格式(.p12)的证书文件</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -export -in  server.crt -inkey  server.key  &gt; server.p12</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">key  [mykey]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">#验证：测试解开后的文件和合成前的文件一一对应：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">##.p12解开成.crt和.key</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">##分离出普通PRIVATE KEY</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">1.分离出ssl证书</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -in server.p12 -nokeys -clcerts -out server-ssl.crt</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">2.分离出证书链</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -in server.p12 -nokeys -cacerts -out gs_intermediate_ca.crt</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">3.分离出.key</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -in server.p12 -nocerts -nodes -out server.key </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">##分离出RSA PRIVATE KEY</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">1.先转换成pem(里面包含证书、证书链和PRIVATE KEY)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -in server.p12 -nodes -out server.pem</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">2.pem分离出证书</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">openssl x509 -in server.pem -out server.crt</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">3.pem分离出RSA key</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">openssl rsa -in server.pem -out server.key</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">writing RSA key</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line"> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">md5验证:得出的字符串相同则crt和key是配对的</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">openssl x509 -noout -modulus -in server.crt | openssl md5</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">openssl rsa -noout -modulus -in server.key | openssl md5</span></pre></td></tr></table></figure>
+
+
+
 
 
         
         <div class="post-announce">
             感谢您的阅读，本文由
             <a href="https://blog.hanggle.com">hanggle</a>
-            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2021/09/07/React.JS/">https://blog.hanggle.com/2021/09/07/React.JS/</a>）
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-2/">https://blog.hanggle.com/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-2/</a>）
         </div>
         
 
         <div class="post__prevs">
             <div class="post__prev">
                 
-                <a href="/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-3/" title="HTTPS证书配置-3"><i class="iconfont icon-prev"></i>HTTPS证书配置-3</a>
+                <a href="/2020/01/05/xshell_colour/" title="xshell 主题及命令行配色(centos 7)"><i class="iconfont icon-prev"></i>xshell 主题及命令行配色(centos 7)</a>
                 
             </div>
             <div class="post__prev post__prev--right">
+                
+                <a href="/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-1/" title="HTTPS证书配置-1">HTTPS证书配置-1<i class="iconfont icon-next"></i></a>
                 
             </div>
         </div>

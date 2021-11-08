@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>hanggle blog</title>
+        <title>HTTPS证书配置-1 | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/archives/2019/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-1/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -59,7 +59,7 @@
 
     
     
-    <link rel="stylesheet" href="/scss/views/page/archive.css">
+    <link rel="stylesheet" href="/scss/views/page/post.css">
 
 </head>
 <body ontouchstart>
@@ -108,201 +108,92 @@
 
 
         
-    
-<main class="page__container page__main">
+    <main class="page__container page__main">
     <div class="page__content">
-        
-        <nav class="mb-main__nav">
-            
-            <a
-                class="nav__item"
-                href="/archives/"
-                alt="2021年">
-                2021年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2020/"
-                alt="2020年">
-                2020年
-            </a>
-        
-            <a
-                class="nav__item nav__item--selected"
-                href="javascript:void(0)"
-                alt="2019年">
-                2019年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2017/"
-                alt="2017年">
-                2017年
-            </a>
-        
-        </nav> 
+        <article class="page__post">
     
 
-        <div class="page__posts clearfix">
+    <header class="post__info">
+        <h1 class="post__title">HTTPS证书配置-1</h1>
+
+        <div class="post__mark">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-write"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="https://www.github.com/hanggle" target="_blank" rel="noopener">hanggle</a>
+                        </li>
+                    
+                </ul>
+            </div>
             
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <div class="mini-article__cover">
-        
-        
-            <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-compose.png" alt="docker-compose 安装"/>
-        
-        <div itemprop="datePublished" content="" class="mini-article__date">
-            <span class="date__day">5</span>
-            
-                <span class="date__month">十二月</span>
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-time"></i>
+                <ul class="mark__list clearfix">
+                    <li class="mark__item"><span>2021-07-05</span></li>
+                </ul>
+            </div>
+
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-tab"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="/tags/https/">Https</a>
+                        </li>
+                    
+                        <li class="mark__item">
+                            <a href="/tags/tomcat/">Tomcat</a>
+                        </li>
+                    
+                </ul>
+            </div>
+
             
         </div>
-        <a itemprop="url" class="iconfont icon-enter" href="/2019/12/05/docker_compose_base/"></a>
-    </div>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2019/12/05/docker_compose_base/" title="docker-compose 安装">docker-compose 安装</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
-                        <span itemprop="name">Hanggle</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            docker-compose离线安装
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
+    </header>
+
+    <div class="post__content">
+        <h1 id="HTTPS-证书生成"><a href="#HTTPS-证书生成" class="headerlink" title="HTTPS 证书生成"></a>HTTPS 证书生成</h1><p>HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是以安全为目标的 HTTP 通道，在HTTP的基础上通过传输加密和<a href="https://baike.baidu.com/item/身份认证/5294713" target="_blank" rel="noopener">身份认证</a>保证了传输过程的安全性  。HTTPS 在HTTP 的基础下加入<a href="https://baike.baidu.com/item/SSL/320778" target="_blank" rel="noopener">SSL</a>，HTTPS 的安全基础是 SSL，因此加密的详细内容就需要 SSL。 HTTPS 存在不同于 HTTP 的默认端口及一个加密/身份验证层（在 HTTP与 <a href="https://baike.baidu.com/item/TCP/33012" target="_blank" rel="noopener">TCP</a> 之间）。这个系统提供了身份验证与加密通讯方法。它被广泛用于<a href="https://baike.baidu.com/item/万维网/215515" target="_blank" rel="noopener">万维网</a>上安全敏感的通讯，例如交易支付等方面。</p>
+<h3 id="Openssl生成自签名证书"><a href="#Openssl生成自签名证书" class="headerlink" title="Openssl生成自签名证书"></a>Openssl生成自签名证书</h3><p>通过openssl生成私钥</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">openssl genrsa -out server.key 1024</span></pre></td></tr></table></figure>
+
+<p>根据私钥生成证书申请文件csr</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">openssl req -new -key server.key -out server.csr</span></pre></td></tr></table></figure>
+
+<p>这里根据命令行向导来进行信息输入：</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/1.png" alt="1"></p>
+<p>ps.Common Name可以输入：*.yourdomain.com，这种方式生成通配符域名证书 使用私钥对证书申请进行签名从而生成证书 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">openssl x509 -req -in server.csr -out server.crt -signkey server</span></pre></td></tr></table></figure>
+
+<p>这样就生成了有效期为：10年的证书文件，对于自己内网服务使用足够</p>
+
+
+        
+        <div class="post-announce">
+            感谢您的阅读，本文由
+            <a href="https://blog.hanggle.com">hanggle</a>
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-1/">https://blog.hanggle.com/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-1/</a>）
+        </div>
+        
+
+        <div class="post__prevs">
+            <div class="post__prev">
                 
-                    <li class="tags__item">
-                        <a href="/tags/docker/">docker</a>
-                    </li>
+                <a href="/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-2/" title="HTTPS证书配置-2"><i class="iconfont icon-prev"></i>HTTPS证书配置-2</a>
                 
-            </ul>
+            </div>
+            <div class="post__prev post__prev--right">
+                
+                <a href="/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-3/" title="HTTPS证书配置-3">HTTPS证书配置-3<i class="iconfont icon-next"></i></a>
+                
+            </div>
         </div>
     </div>
 </article>
 
-                </div>
-            
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <div class="mini-article__cover">
         
-        
-            <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/mongobd.png" alt="MongoDB(一)"/>
-        
-        <div itemprop="datePublished" content="" class="mini-article__date">
-            <span class="date__day">5</span>
-            
-                <span class="date__month">十月</span>
-            
-        </div>
-        <a itemprop="url" class="iconfont icon-enter" href="/2019/10/05/mongodb(%E4%B8%80)/"></a>
-    </div>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2019/10/05/mongodb(%E4%B8%80)/" title="MongoDB(一)">MongoDB(一)</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
-                        <span itemprop="name">Hanggle</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            MogoDB是一款强大、灵活且易于拓展的通用型数据库。
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
-                
-                    <li class="tags__item">
-                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
-                    </li>
-                
-                    <li class="tags__item">
-                        <a href="/tags/mongodb/">mongodb</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-</article>
-
-                </div>
-            
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <div class="mini-article__cover">
-        
-        
-            <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107232458797.png" alt="Docker基础"/>
-        
-        <div itemprop="datePublished" content="" class="mini-article__date">
-            <span class="date__day">3</span>
-            
-                <span class="date__month">五月</span>
-            
-        </div>
-        <a itemprop="url" class="iconfont icon-enter" href="/2019/05/03/Docker/"></a>
-    </div>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2019/05/03/Docker/" title="Docker基础">Docker基础</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
-                        <span itemprop="name">Hanggle</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
-                
-                    <li class="tags__item">
-                        <a href="/tags/docker/">docker</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-</article>
-
-                </div>
-            
-        </div>
-
-        
-            
-        <nav class="page__paginator">
-            <ul class="paginator__list clearfix">
-                
-            <li class="paginator__item">
-                <span>1</span>
-            </li>
-        
-            </ul>
-        </nav>
-    
         
     </div>
 
@@ -340,18 +231,6 @@
                     </li>
                 
                     <li class="latest-post-item">
-                        <a href="/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-1/" title="HTTPS证书配置-1">
-                            <div class="item__cover">
-                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211108091304669.png" alt="HTTPS证书配置-1" />
-                            </div>
-                            <div class="item__info">
-                                <h3 class="item__title">HTTPS证书配置-1</h3>
-                                <span class="item__text">2021-07-05</span>
-                            </div>
-                        </a>
-                    </li>
-                
-                    <li class="latest-post-item">
                         <a href="/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-2/" title="HTTPS证书配置-2">
                             <div class="item__cover">
                                 <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211108091304669.png" alt="HTTPS证书配置-2" />
@@ -370,6 +249,18 @@
                             </div>
                             <div class="item__info">
                                 <h3 class="item__title">HTTPS证书配置-3</h3>
+                                <span class="item__text">2021-07-05</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2021/07/05/https%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE-1/" title="HTTPS证书配置-1">
+                            <div class="item__cover">
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211108091304669.png" alt="HTTPS证书配置-1" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">HTTPS证书配置-1</h3>
                                 <span class="item__text">2021-07-05</span>
                             </div>
                         </a>
@@ -514,10 +405,19 @@
     <!-- endbuild -->
 
     
-    
+    <script src="/js/page/post.js"></script>
+
 
     
     
+
+
+
+    <!-- 不蒜子统计 -->
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
 
      
 
