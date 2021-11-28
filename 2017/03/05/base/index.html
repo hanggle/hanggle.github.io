@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>docker-compose 安装 | hanggle blog</title>
+        <title>多线程基础 | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/2019/12/05/docker_compose_base/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2017/03/05/base/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -114,7 +114,7 @@
     
 
     <header class="post__info">
-        <h1 class="post__title">docker-compose 安装</h1>
+        <h1 class="post__title">多线程基础</h1>
 
         <div class="post__mark">
             <div class="mark__block">
@@ -131,7 +131,7 @@
             <div class="mark__block">
                 <i class="mark__icon iconfont icon-time"></i>
                 <ul class="mark__list clearfix">
-                    <li class="mark__item"><span>2019-12-05</span></li>
+                    <li class="mark__item"><span>2017-03-05</span></li>
                 </ul>
             </div>
 
@@ -140,7 +140,11 @@
                 <ul class="mark__list clearfix">
                     
                         <li class="mark__item">
-                            <a href="/tags/docker/">Docker</a>
+                            <a href="/tags/%E5%9F%BA%E7%A1%80/">基础</a>
+                        </li>
+                    
+                        <li class="mark__item">
+                            <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
                         </li>
                     
                 </ul>
@@ -151,40 +155,41 @@
     </header>
 
     <div class="post__content">
-        <ol>
-<li><p>下载安装包</p>
-<p>下载地址：<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fdocker%2Fcompose%2Freleases" target="_blank" rel="noopener">https://github.com/docker/compose/releases</a></p>
-</li>
-<li><p>上传centos</p>
-</li>
-<li><p>在上传的目录执行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">mv  docker-compose-Linux-x86_64  /usr/local/bin/docker-compose</span></pre></td></tr></table></figure>
-</li>
-<li><p>验证是否安装成功</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker-compose --version</span></pre></td></tr></table></figure>
-
-<p>正确打印版本号，则安装成功</p>
-</li>
-</ol>
+        <h1 id="多线程基础"><a href="#多线程基础" class="headerlink" title="多线程基础"></a>多线程基础</h1><p>有三种方式可以解决多个线程同时访问同一个状态变量时会出现的问题。</p>
+<ul>
+<li>不在线程之间共享该状态变量</li>
+<li>将状态变量修改为不可变的变量</li>
+<li>在访问状态变量是使用同步</li>
+</ul>
+<p>编程的正确方法是：首先要保证代码正确的运行，然后提高代码的速度。即便如此，最好也只是当性能测试结果和应用需求告诉你必须提高性能，以及测试结果表明这种优化在实际环境中确实能带来性能提升是，才进行优化。</p>
+<p><img src="http://img.blog.csdn.net/20150309140927553" alt="img"></p>
+<blockquote>
+<p><strong>1、新建状态（New）：</strong>新创建了一个线程对象。</p>
+<p><strong>2、就绪状态（Runnable）：</strong>线程对象创建后，其他线程调用了该对象的start()方法。该状态的线程位于可运行线程池中，变得可运行，等待获取CPU的使用权。</p>
+<p><strong>3、运行状态（Running）：</strong>就绪状态的线程获取了CPU，执行程序代码。</p>
+<p><strong>4、阻塞状态（Blocked）：阻塞状态是线程因为某种原因放弃CPU使用权，暂时停止运行。直到线程进入就绪状态，才有机会转到运行状态。阻塞的情况分三种：</strong></p>
+<p><strong>（一）、等待阻塞：运行的线程执行wait()方法，JVM会把该线程放入等待池中。(wait会释放持有的锁)</strong></p>
+<p><strong>（二）、同步阻塞：运行的线程在获取对象的同步锁时，若该同步锁被别的线程占用，则JVM会把该线程放入锁池中。</strong></p>
+<p><strong>（三）、其他阻塞：运行的线程执行sleep()或join()方法，或者发出了I/O请求时，JVM会把该线程置为阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入就绪状态。（注意,sleep是不会释放持有的锁）</strong></p>
+<p><strong>5、死亡状态（Dead）：</strong>线程执行完了或者因异常退出了run()方法，该线程结束生命周期。</p>
+</blockquote>
 
 
         
         <div class="post-announce">
             感谢您的阅读，本文由
             <a href="https://blog.hanggle.com">hanggle</a>
-            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2019/12/05/docker_compose_base/">https://blog.hanggle.com/2019/12/05/docker_compose_base/</a>）
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2017/03/05/base/">https://blog.hanggle.com/2017/03/05/base/</a>）
         </div>
         
 
         <div class="post__prevs">
             <div class="post__prev">
                 
-                <a href="/2019/10/05/mongodb(%E4%B8%80)/" title="MongoDB(一)"><i class="iconfont icon-prev"></i>MongoDB(一)</a>
-                
             </div>
             <div class="post__prev post__prev--right">
                 
-                <a href="/2020/01/05/xshell_colour/" title="xshell 主题及命令行配色(centos 7)">xshell 主题及命令行配色(centos 7)<i class="iconfont icon-next"></i></a>
+                <a href="/2017/03/05/java8_method_references/" title="Java8 方法引用">Java8 方法引用<i class="iconfont icon-next"></i></a>
                 
             </div>
         </div>

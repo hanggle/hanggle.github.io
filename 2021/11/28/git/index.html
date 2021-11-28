@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/2021/11/28/init/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2021/11/28/git/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -140,11 +140,7 @@
                 <ul class="mark__list clearfix">
                     
                         <li class="mark__item">
-                            <a href="/tags/%E5%9F%BA%E7%A1%80/">基础</a>
-                        </li>
-                    
-                        <li class="mark__item">
-                            <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+                            <a href="/tags/git/">Git</a>
                         </li>
                     
                 </ul>
@@ -243,13 +239,12 @@
 
 <p>下面给出一组Rebase 的详细示例</p>
 <p>（1）windows 下，输入上述命令之后, 输入i 进入编辑窗口，更改rebase策略。详细解释都有提示，只需根据提示输入即可。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/YJibzamcBJeaCF9YXh67QIMps7rBp0UzuHnGxmkXzRP8ZI5ibjEv3Q3ibu2WCEWhx5ToQnOc0YuiarUzmUtzcvunicw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/1.png" alt="1"></p>
 <p>（2）选好rebase策略之后按Esc推出 输入”：x” 执行 刚才的rebase操作，然后会看到修改提交的信息界面</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/YJibzamcBJeaCF9YXh67QIMps7rBp0UzuicZtlniclSabf908QRrIpj49MIHBg4uwTcd209VUx1ziaKFFjUiaMWaWTQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/2.png" alt="2"></p>
 <p>（3）修改提交信息，按Esc退出，并输入 “：x” 执行rebase操作</p>
 <p>然后看到rebase成功</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/YJibzamcBJeaCF9YXh67QIMps7rBp0UzuKdtXNYKoVoL9WNXf15NuMx7HsULiaF6QEoJVNEdQwicVJFu11LasnXeg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
-<p>e</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/3.png" alt="3"></p>
 <p>以上就是一个简单的rebase操作。</p>
 <h4 id="1-6-log-amp-show"><a href="#1-6-log-amp-show" class="headerlink" title="1.6 log &amp; show"></a>1.6 log &amp; show</h4><p>查看最近的5次提交，按Q就直接退出。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git log -5</span></pre></td></tr></table></figure>
@@ -274,11 +269,11 @@
 <p><strong>Hotfix Branch</strong>（修补分支）：针对与线上出现的紧急问题，从主分支，也就是上一次上线的标签出创建一个Hotfix 分支。当问题解决之后，可能会有一次紧急的上线来解决之前发现的问题。当问题解决之后，会将代码合并到主分支，和开发分支。以便下一次上线也会包含本次的紧急修复代码。</p>
 <p><strong>Support Branch</strong>（备用支撑分支）：这个分支的应用比较灵活，有时候如果项目上线的时候基于各种可能性, (比如某个依赖的系统上线失败，或者其他不必要的特性上线失败) 可能会需要准备多个版本，那么Support Branch 就可以作为一条备用分支来使用。这个分支可以根据项目的实际情况来看是否需要使用！</p>
 <p>各个Branch的示例关系可以看下图</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/YJibzamcBJeaCF9YXh67QIMps7rBp0UzuZB2CHkLlh3ibTY5zkTGGUqyenqUlACCLib4niaQ8aRUPIMrHSJ7s60pjg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/4.png" alt="4"></p>
 <p>我们也可以使用git flow 的一些命令来使用这个工作模式，会有一些既有的命令，使用起来会比较规范，但是也会有一定复杂，项目中可以根据实际情况使用！</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/YJibzamcBJeaCF9YXh67QIMps7rBp0UzuVGGCkaDG7TTg2cHia8uNebzp23ia6rxTibx9LtkSaicAzwDica7Libicuffyw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/5.png" alt="5"></p>
 <p>git flow 相关的一些命令</p>
-<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/6.png" alt="6"></p>
 <h4 id="2-4-Forking-Workflow"><a href="#2-4-Forking-Workflow" class="headerlink" title="2.4 Forking Workflow"></a>2.4 Forking Workflow</h4><p>Forking WorkFlow 相对与上面的几种协同工作方式有较大的不同。</p>
 <p>其主要<strong>公共远程仓库</strong>，<strong>私人远程仓库</strong>，和<strong>本地仓库</strong>。</p>
 <p>开发人员一般会从公共远程仓库Fork一份完全一样的代码仓库到自己的<strong>私人远程仓库</strong>。对于私人远程仓库来说，开发人员是拥有者，拥有所有的权限。开发人员可以在本地仓库提交之后随时push到自己的私人远程仓库，随时进行Revert、Reset、Rebase等操作。</p>
@@ -297,7 +292,7 @@
         <div class="post-announce">
             感谢您的阅读，本文由
             <a href="https://blog.hanggle.com">hanggle</a>
-            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2021/11/28/init/">https://blog.hanggle.com/2021/11/28/init/</a>）
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2021/11/28/git/">https://blog.hanggle.com/2021/11/28/git/</a>）
         </div>
         
 
@@ -340,7 +335,7 @@
         <ul class="block-list latest-post-list">
             
                     <li class="latest-post-item">
-                        <a href="/2021/11/28/init/" title="多线程基础">
+                        <a href="/2021/11/28/git/" title="多线程基础">
                             <div class="item__cover">
                                 <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/git.png" alt="多线程基础" />
                             </div>
@@ -410,6 +405,10 @@
                 
                     <li class="tag-item">
                         <a class="tag-link" href="/tags/docker/">docker</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/git/">git</a>
                     </li>  
                 
                     <li class="tag-item">
