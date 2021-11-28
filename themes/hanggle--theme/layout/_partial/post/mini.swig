@@ -15,7 +15,7 @@
                     <span class="date__month">{{ date(post.date || post.update, 'MMM') }}</span>
                 {% endif %}
             </div>
-            <a itemprop="url" class="iconfont icon-enter"}}"></a>
+          
         </div>   
     </a>
     <div class="mini-article__info">
