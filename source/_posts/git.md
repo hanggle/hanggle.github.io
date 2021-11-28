@@ -1,5 +1,5 @@
 ---
-title: 多线程基础
+title: Git 基础
 cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/git.png
 author: 
   nick: hanggle
@@ -305,12 +305,6 @@ Forking WorkFlow 也是比较推荐的一种方式，开发人员push代码之�
 3. 本地的代码跑完一次测试的时候就可以提交一版，然后在需要push的时候在rebase合并一次。尽量完善自己的commit信息，写好每一次提交记录。
 4. 如果merge有问题可以使用git merge --abort 解除merge， 然后再重新合并。
 5. 多使用Git命令行来进行日常的提交等工作，有助于更好的理解Git的工作原理，这样在不同的IDE上都能比较容易的使用Git插件了。
-
-290 160
-
-80   60
-
-40  30
 
 
 
