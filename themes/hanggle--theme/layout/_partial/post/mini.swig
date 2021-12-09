@@ -6,7 +6,9 @@
             </a>
         {% endif %}
         {% if post.cover %}
-            <img itemprop="image" src="{{ post.cover }}" alt="{{ post.title }}"/>
+            <a itemprop="url" class="iconfont icon-enter" href="{{ url_for(post.path) }}">
+                <img itemprop="image" src="{{ post.cover }}" alt="{{ post.title }}"/>
+            </a>
         {% endif %}
         <div itemprop="datePublished" content="{{ data_xml(post.date || post.update) }}" class="mini-article__date">
             <span class="date__day">{{ date(post.date || post.update, 'D') }}</span>
