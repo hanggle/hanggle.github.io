@@ -6,7 +6,7 @@
             </a>
         {% endif %}
         {% if post.cover %}
-            <a itemprop="url" href="{{ url_for(post.path) }}">
+            <a itemprop="url" class="iconfont icon-enter" href="{{ url_for(post.path) }}">
                 <img itemprop="image" src="{{ post.cover }}" alt="{{ post.title }}"/>
             </a>
         {% endif %}
