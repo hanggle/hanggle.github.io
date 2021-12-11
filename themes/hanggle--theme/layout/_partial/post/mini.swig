@@ -1,15 +1,8 @@
 <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
     <div class="mini-article__cover">
-        {% if not post.cover %}
-            <a itemprop="url" class="iconfont icon-enter" href="{{ url_for(post.path) }}">
-                <img itemprop="image" src="{{ get_setting('default_cover') }}" alt="{{ post.title }}"/>
-            </a>
-        {% endif %}
-        {% if post.cover %}
-            <a itemprop="url" class="iconfont icon-enter" href="{{ url_for(post.path) }}">
-                <img itemprop="image" src="{{ post.cover }}" alt="{{ post.title }}"/>
-            </a>
-        {% endif %}
+        <a itemprop="url" class="iconfont icon-enter" href="{{ url_for(post.path) }}">
+            <img itemprop="image" src="{{ post.cover }}" alt="{{ post.title }}"/>
+        </a>
         <div itemprop="datePublished" content="{{ data_xml(post.date || post.update) }}" class="mini-article__date">
             <span class="date__day">{{ date(post.date || post.update, 'D') }}</span>
             {% if config.language == 'zh-cn' %}
