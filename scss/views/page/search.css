@@ -57,8 +57,7 @@
     display: block;
     color: #fff;
     z-index: 2;
-    font-size: 28px;
-    transition: transform 0.3s, opacity 0.3s; }
+    font-size: 28px; }
     .mini-article__cover > a:hover {
       color: #0e627b; }
 
