@@ -23,7 +23,6 @@
     .page__mini-article:hover .mini-article__cover::before {
       background-color: rgba(30, 200, 252, 0.9); }
     .page__mini-article:hover .mini-article__cover > a {
-      transform: translate(-50%, -50%) rotateX(180deg) rotateZ(-360deg) scale(1);
       opacity: 1; }
 
 .mini-article__cover {
