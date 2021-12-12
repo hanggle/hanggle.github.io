@@ -31,17 +31,6 @@
   overflow: hidden;
   width: 100%;
   height: auto; }
-  .mini-article__cover::before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: transparent;
-    transition: background 0.3s; }
   .mini-article__cover > img {
     display: block;
     width: 100%; }
