@@ -19,8 +19,6 @@ date: 2017-04-09 01:034:31
 
 pom.xml
 
-复制代码
-
 ```
 <parent>
     <groupId>org.springframework.boot</groupId>
@@ -35,12 +33,9 @@ pom.xml
 </dependencies>
 ```
 
-复制代码
- 
 
 java文件
 
-复制代码
 ```
 package hello;
 
