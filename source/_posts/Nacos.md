@@ -19,6 +19,8 @@ Nacos 更敏捷和容易地构建、交付和管理微服务平台。 Nacos 是�
 
   Nacos 支持基于 DNS 和基于 RPC 的服务发现。
 
+  
+
 * **动态配置服务**
 
   动态配置服务可以让您以中心化、外部化和动态化的方式管理所有环境的应用配置和服务配置。
@@ -39,5 +41,5 @@ Nacos 更敏捷和容易地构建、交付和管理微服务平台。 Nacos 是�
 
 
 
-![nacos_arch.jpg](https://cdn.nlark.com/yuque/0/2019/jpeg/338441/1561217892717-1418fb9b-7faa-4324-87b9-f1740329f564.jpeg)
+![nacos_arch.jpg](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/1561217892717-1418fb9b-7faa-4324-87b9-f1740329f564.jpeg)
 
