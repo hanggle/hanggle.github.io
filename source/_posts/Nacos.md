@@ -43,3 +43,8 @@ Nacos 更敏捷和容易地构建、交付和管理微服务平台。 Nacos 是�
 
 ![nacos_arch.jpg](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/1561217892717-1418fb9b-7faa-4324-87b9-f1740329f564.jpeg)
 
+
+
+## Nacos一致性协议
+
+使用Raft 以及 Distro协议，同时运行 CP 协议以及 AP 协议
