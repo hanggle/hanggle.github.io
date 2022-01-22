@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>hanggle blog</title>
+        <title>Flink基础 | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/tags/shell/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2022/01/17/Flink%E5%9F%BA%E7%A1%80/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -43,9 +43,6 @@
 
 
 
-    
-    
-
 
 <!-- CSS -->
 <link rel="stylesheet" href="/scss/base/index.css">
@@ -62,7 +59,7 @@
 
     
     
-    <link rel="stylesheet" href="/scss/views/page/tag.css">
+    <link rel="stylesheet" href="/scss/views/page/post.css">
 
 </head>
 <body ontouchstart>
@@ -113,72 +110,76 @@
         
     <main class="page__container page__main">
     <div class="page__content">
-        <div class="page__posts clearfix">
+        <article class="page__post">
+    
+
+    <header class="post__info">
+        <h1 class="post__title">Flink基础</h1>
+
+        <div class="post__mark">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-write"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="https://www.github.com/hanggle" target="_blank" rel="noopener">hanggle</a>
+                        </li>
+                    
+                </ul>
+            </div>
             
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <a itemprop="url"  href="/2020/01/05/xshell_colour/">    
-        <div class="mini-article__cover">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-time"></i>
+                <ul class="mark__list clearfix">
+                    <li class="mark__item"><span>2022-01-17</span></li>
+                </ul>
+            </div>
+
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-tab"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a>
+                        </li>
+                    
+                </ul>
+            </div>
+
             
-            
-                <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107230849861.png" alt="xshell 主题及命令行配色(centos 7)"/>
-            
-            <div itemprop="datePublished" content="" class="mini-article__date">
-                <span class="date__day">5</span>
+        </div>
+    </header>
+
+    <div class="post__content">
+        <h1 id="Flink是什么"><a href="#Flink是什么" class="headerlink" title="Flink是什么"></a>Flink是什么</h1><h1 id="流计算产品"><a href="#流计算产品" class="headerlink" title="流计算产品"></a>流计算产品</h1><h3 id="数据集成"><a href="#数据集成" class="headerlink" title="数据集成"></a>数据集成</h3><p>侧重解决数据到达时不需要立即执行数据分析的业务情况，但这些业务场景需要在数据到达时立即进行实时的接收，并有一定的数据过滤和数据变化需求。比如ETL，CDD等。数据最终会存储到数据湖或数据仓库等存储系统，供以后对静态数据进行分析。</p>
+<h3 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h3><p>核心是对需要在数据到达时候对数据进行连续的动态分析，并需要可靠的将分析结果供下游业务系统使用。比如电商数据/传感器数据进行实时性强聚合分析，数据预测，进而达成监控预警和智能决策目的。数据分析类场景对流计算产品提出更高的能力要求。</p>
+
+
+        
+        <div class="post-announce">
+            感谢您的阅读，本文由
+            <a href="https://blog.hanggle.com">hanggle</a>
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2022/01/17/Flink%E5%9F%BA%E7%A1%80/">https://blog.hanggle.com/2022/01/17/Flink%E5%9F%BA%E7%A1%80/</a>）
+        </div>
+        
+
+        <div class="post__prevs">
+            <div class="post__prev">
                 
-                    <span class="date__month">一月</span>
+                <a href="/2021/11/28/git/" title="Git 基础"><i class="iconfont icon-prev"></i>Git 基础</a>
                 
             </div>
-        </div>   
-    </a>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2020/01/05/xshell_colour/" title="xshell 主题及命令行配色(centos 7)">xshell 主题及命令行配色(centos 7)</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
-                        <span itemprop="name">hanggleW</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            舒适的配色方案更有利于我们敲命令，当然逼格更高:)
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
+            <div class="post__prev post__prev--right">
                 
-                    <li class="tags__item">
-                        <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
-                    </li>
+                <a href="/2022/01/17/Nacos/" title="Nacos">Nacos<i class="iconfont icon-next"></i></a>
                 
-                    <li class="tags__item">
-                        <a href="/tags/shell/">shell</a>
-                    </li>
-                
-            </ul>
+            </div>
         </div>
     </div>
 </article>
 
-                </div>
-            
-        </div>
         
         
-        <nav class="page__paginator">
-            <ul class="paginator__list clearfix">
-                
-            <li class="paginator__item">
-                <span>1</span>
-            </li>
-        
-            </ul>
-        </nav>
-    
     </div>
 
     <aside class="page__sidebar">
@@ -401,10 +402,19 @@
     <!-- endbuild -->
 
     
-    
+    <script src="/js/page/post.js"></script>
+
 
     
     
+
+
+
+    <!-- 不蒜子统计 -->
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
 
      
 
