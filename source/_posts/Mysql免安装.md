@@ -127,8 +127,10 @@ my.ini文件删除最后一句skip-grant-tables
 # 6 重启mysql服务
 
 ```
+启动服务
 net stop mysql
 
+关闭服务
 net start mysql
 ```
 
