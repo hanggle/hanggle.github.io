@@ -18,3 +18,14 @@ date: 2022-1-27 20:22:34
 
 # Jenkins
 
+
+
+
+
+## 常用的三种构建项目类型：
+
+* 自由风格软件项目（FreeStyle Project）
+* Maven项目（Maven  Project）
+* 流水线项目（Pipeline Project）
+
+### 自由风格项目构建
