@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/archives/2019/12/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/page/3/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -38,6 +38,15 @@
 
 
 <!-- Prefetch -->
+
+    
+    
+        
+    
+        
+        <link rel="prefetch" href="/page/2/" />
+        
+    
 
 
 
@@ -59,7 +68,7 @@
 
     
     
-    <link rel="stylesheet" href="/scss/views/page/archive.css">
+    <link rel="stylesheet" href="/scss/views/page/index.css">
 
 </head>
 <body ontouchstart>
@@ -70,8 +79,8 @@
 
     <div id="page" class="page js-hidden">
         
-    <!-- 页头 -->
-<header class="page__small-header page__header--small">
+            <!-- 页头 -->
+<header id="page-header" class="page__header" style="background-image: url('/img/header_cover.jpg');">
     <nav class="page__navbar">
         <div class="page__container navbar-container">
             <a class="page__logo" href="/" title="hanggle" alt="hanggle">
@@ -104,75 +113,39 @@
             </button>
         </div>
     </nav>
+
+    <section class="page__info">
+        <h1 class="info__title">hanggle blog</h1>
+        <hr class="info__hr">
+        <p class="info__desc">日常学习与兴趣交流</p>
+    </section>
 </header>
-
+        
 
         
-    
-<main class="page__container page__main">
+    <main class="page__container page__main">
     <div class="page__content">
-        
-        <nav class="mb-main__nav">
-            
-            <a
-                class="nav__item"
-                href="/archives/"
-                alt="2022年">
-                2022年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2021/"
-                alt="2021年">
-                2021年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2020/"
-                alt="2020年">
-                2020年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2019/"
-                alt="2019年">
-                2019年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2017/"
-                alt="2017年">
-                2017年
-            </a>
-        
-        </nav> 
-    
-
         <div class="page__posts clearfix">
             
                 <div class="page__post">
                     <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <a itemprop="url"  href="/2019/12/05/docker_compose_base/">    
+    <a itemprop="url"  href="/2017/03/05/base/">    
         <div class="mini-article__cover">
             
+                <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/default_cover.png" alt="多线程基础"/>
             
-                <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-compose.png" alt="docker-compose 安装"/>
             
             <div itemprop="datePublished" content="" class="mini-article__date">
                 <span class="date__day">5</span>
                 
-                    <span class="date__month">十二月</span>
+                    <span class="date__month">三月</span>
                 
             </div>
         </div>   
     </a>
     <div class="mini-article__info">
         <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2019/12/05/docker_compose_base/" title="docker-compose 安装">docker-compose 安装</a>
+            <a itemprop="url" href="/2017/03/05/base/" title="多线程基础">多线程基础</a>
         </h3>
         <p class="mini-article__author">by 
             
@@ -184,14 +157,18 @@
             
         </p>
         <p itemprop="articleSection" class="min-article__desc">
-            docker-compose离线安装
+            编程的正确方法是：首先要保证代码正确的运行，然后提高代码的速度。即便如此，最好也只是当性能测试结果和应用需求告诉你必须提高性能，以及测试结果表明这种优化在实际环境中确实能带来性能提升是，才进行优化。
         </p>
         <div class="min-article__tags">
             <i class="iconfont icon-tab"></i>
             <ul class="tags__list clearfix">
                 
                     <li class="tags__item">
-                        <a href="/tags/docker/">docker</a>
+                        <a href="/tags/%E5%9F%BA%E7%A1%80/">基础</a>
+                    </li>
+                
+                    <li class="tags__item">
+                        <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
                     </li>
                 
             </ul>
@@ -202,20 +179,30 @@
                 </div>
             
         </div>
-
         
-            
+        
         <nav class="page__paginator">
             <ul class="paginator__list clearfix">
                 
             <li class="paginator__item">
-                <span>1</span>
+                <a href="/page/2/" title="上一页"><i class="iconfont icon-prev"></i></a>
+            </li>
+        
+            <li class="paginator__item">
+                <a href="/" >1</a>
+            </li>
+        
+            <li class="paginator__item">
+                <a href="/page/2/" >2</a>
+            </li>
+        
+            <li class="paginator__item">
+                <span>3</span>
             </li>
         
             </ul>
         </nav>
     
-        
     </div>
 
     <aside class="page__sidebar">

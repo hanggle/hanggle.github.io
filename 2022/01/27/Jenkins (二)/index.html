@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>hanggle blog</title>
+        <title>Jenkins | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/archives/2019/12/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2022/01/27/Jenkins%20(%E4%BA%8C)/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -59,7 +59,7 @@
 
     
     
-    <link rel="stylesheet" href="/scss/views/page/archive.css">
+    <link rel="stylesheet" href="/scss/views/page/post.css">
 
 </head>
 <body ontouchstart>
@@ -108,113 +108,112 @@
 
 
         
-    
-<main class="page__container page__main">
+    <main class="page__container page__main">
     <div class="page__content">
-        
-        <nav class="mb-main__nav">
-            
-            <a
-                class="nav__item"
-                href="/archives/"
-                alt="2022年">
-                2022年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2021/"
-                alt="2021年">
-                2021年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2020/"
-                alt="2020年">
-                2020年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2019/"
-                alt="2019年">
-                2019年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2017/"
-                alt="2017年">
-                2017年
-            </a>
-        
-        </nav> 
+        <article class="page__post">
     
 
-        <div class="page__posts clearfix">
+    <header class="post__info">
+        <h1 class="post__title">Jenkins</h1>
+
+        <div class="post__mark">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-write"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="https://www.github.com/hanggle" target="_blank" rel="noopener">hanggle</a>
+                        </li>
+                    
+                </ul>
+            </div>
             
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <a itemprop="url"  href="/2019/12/05/docker_compose_base/">    
-        <div class="mini-article__cover">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-time"></i>
+                <ul class="mark__list clearfix">
+                    <li class="mark__item"><span>2022-01-27</span></li>
+                </ul>
+            </div>
+
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-tab"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="/tags/CI-CD/">CI/CD</a>
+                        </li>
+                    
+                </ul>
+            </div>
+
             
-            
-                <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-compose.png" alt="docker-compose 安装"/>
-            
-            <div itemprop="datePublished" content="" class="mini-article__date">
-                <span class="date__day">5</span>
+        </div>
+    </header>
+
+    <div class="post__content">
+        <h1 id="Jenkins安装（一）"><a href="#Jenkins安装（一）" class="headerlink" title="Jenkins安装（一）"></a>Jenkins安装（一）</h1><p>官方文档地址：<a href="https://www.jenkins.io/zh/doc/" target="_blank" rel="noopener">https://www.jenkins.io/zh/doc/</a></p>
+<h1 id="使用Docker安装"><a href="#使用Docker安装" class="headerlink" title="使用Docker安装"></a>使用Docker安装</h1><p>如果未安装docker，需先安装docker</p>
+<p>从jenkins官方支持的docker镜像中拉取镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker pull jenkins&#x2F;jenkins:lts-jdk11 ？？？</span></pre></td></tr></table></figure>
+
+<p>执行下面命令启动jenkins。</p>
+<ul>
+<li><p>/opt/apache-maven-3.8.4:/usr/local/maven 是将宿主机maven映射到jenkins中。也可以使用jenkins自动下载的，但是速度较慢。</p>
+</li>
+<li><p>/var/jenkins_home:/var/jenkins_home将宿主机的jenkins_home与镜像中的工作目录做映射。</p>
+</li>
+<li><p>/var/run/docker.sock:/var/run/docker.sock <code>agent { docker { ... } }</code> 此选项是必需的</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run --name jenkins -N -p 8088:8080 -p 50000:50000 \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    -v /var/run/docker.sock:/var/run/docker.sock \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    -v /var/jenkins_home:/var/jenkins_home \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	-v /opt/apache-maven-3.8.4:/usr/local/maven \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    -d jenkins/jenkins:lts-jdk11</span></pre></td></tr></table></figure>
+
+<p>执行成功后输入<strong>地址：端口号</strong>进入登录页面。</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129233259826.png" alt="image-20220129233259826"></p>
+<p>默认用户名： admin</p>
+<p>密码：<strong>通过/var/jenkins_home/secrets/initialAdminPassword查看</strong>（不同版本可能会有差异）</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129234127864.png" alt="image-20220129234127864"></p>
+<p>登录成功后进入引导页，选择推荐安装插件</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129235108194.png" alt="image-20220129235108194"></p>
+<p>首页，初始时是没有项目的</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129234606146.png" alt="image-20220129234606146"></p>
+<h1 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h1><p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129234631469.png" alt="image-20220129234631469"></p>
+<p>部分版本只有一个FreeStyle Project，这种情况需要安装插件（比如：Maven Integration plugin、Pipeline)）</p>
+<h2 id="常用的三种构建项目类型："><a href="#常用的三种构建项目类型：" class="headerlink" title="常用的三种构建项目类型："></a>常用的三种构建项目类型：</h2><ul>
+<li>自由风格软件项目（FreeStyle Project）</li>
+<li>Maven项目（Maven  Project）</li>
+<li>流水线项目（Pipeline Project）</li>
+</ul>
+<h3 id="自由风格项目构建"><a href="#自由风格项目构建" class="headerlink" title="自由风格项目构建"></a>自由风格项目构建</h3><p>插件安装</p>
+<p>权限管理插件</p>
+<blockquote>
+<p> Role-based Authorization Strategy</p>
+</blockquote>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1>
+
+        
+        <div class="post-announce">
+            感谢您的阅读，本文由
+            <a href="https://blog.hanggle.com">hanggle</a>
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2022/01/27/Jenkins%20(%E4%BA%8C)/">https://blog.hanggle.com/2022/01/27/Jenkins%20(%E4%BA%8C)/</a>）
+        </div>
+        
+
+        <div class="post__prevs">
+            <div class="post__prev">
                 
-                    <span class="date__month">十二月</span>
+                <a href="/2022/01/27/Jenkins/" title="Jenkins"><i class="iconfont icon-prev"></i>Jenkins</a>
                 
             </div>
-        </div>   
-    </a>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2019/12/05/docker_compose_base/" title="docker-compose 安装">docker-compose 安装</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
-                        <span itemprop="name">Hanggle</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            docker-compose离线安装
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
+            <div class="post__prev post__prev--right">
                 
-                    <li class="tags__item">
-                        <a href="/tags/docker/">docker</a>
-                    </li>
+                <a href="/2022/01/29/Tomcat%E4%B8%8ENginx/" title="Apache vs Nginx">Apache vs Nginx<i class="iconfont icon-next"></i></a>
                 
-            </ul>
+            </div>
         </div>
     </div>
 </article>
 
-                </div>
-            
-        </div>
-
         
-            
-        <nav class="page__paginator">
-            <ul class="paginator__list clearfix">
-                
-            <li class="paginator__item">
-                <span>1</span>
-            </li>
-        
-            </ul>
-        </nav>
-    
         
     </div>
 
@@ -462,10 +461,19 @@
     <!-- endbuild -->
 
     
-    
+    <script src="/js/page/post.js"></script>
+
 
     
     
+
+
+
+    <!-- 不蒜子统计 -->
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
 
      
 

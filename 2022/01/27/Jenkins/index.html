@@ -151,12 +151,34 @@
     </header>
 
     <div class="post__content">
-        <h1 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h1><h2 id="常用的三种构建项目类型："><a href="#常用的三种构建项目类型：" class="headerlink" title="常用的三种构建项目类型："></a>常用的三种构建项目类型：</h2><ul>
-<li>自由风格软件项目（FreeStyle Project）</li>
-<li>Maven项目（Maven  Project）</li>
-<li>流水线项目（Pipeline Project）</li>
+        <h1 id="Jenkins安装（一）"><a href="#Jenkins安装（一）" class="headerlink" title="Jenkins安装（一）"></a>Jenkins安装（一）</h1><p>官方文档地址：<a href="https://www.jenkins.io/zh/doc/" target="_blank" rel="noopener">https://www.jenkins.io/zh/doc/</a></p>
+<h1 id="使用Docker安装"><a href="#使用Docker安装" class="headerlink" title="使用Docker安装"></a>使用Docker安装</h1><p>如果未安装docker，需先安装docker</p>
+<p>从jenkins官方支持的docker镜像中拉取镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker pull jenkins&#x2F;jenkins:lts-jdk11 ？？？</span></pre></td></tr></table></figure>
+
+<p>执行下面命令启动jenkins。</p>
+<ul>
+<li><p>/opt/apache-maven-3.8.4:/usr/local/maven 是将宿主机maven映射到jenkins中。也可以使用jenkins自动下载的，但是速度较慢。</p>
+</li>
+<li><p>/var/jenkins_home:/var/jenkins_home将宿主机的jenkins_home与镜像中的工作目录做映射。</p>
+</li>
+<li><p>/var/run/docker.sock:/var/run/docker.sock <code>agent { docker { ... } }</code> 此选项是必需的</p>
+</li>
 </ul>
-<h3 id="自由风格项目构建"><a href="#自由风格项目构建" class="headerlink" title="自由风格项目构建"></a>自由风格项目构建</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run --name jenkins -N -p 8088:8080 -p 50000:50000 \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    -v /var/run/docker.sock:/var/run/docker.sock \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    -v /var/jenkins_home:/var/jenkins_home \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	-v /opt/apache-maven-3.8.4:/usr/local/maven \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    -d jenkins/jenkins:lts-jdk11</span></pre></td></tr></table></figure>
+
+<p>执行成功后输入<strong>地址：端口号</strong>进入登录页面。</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129233259826.png" alt="image-20220129233259826"></p>
+<p>默认用户名： admin</p>
+<p>密码：<strong>通过/var/jenkins_home/secrets/initialAdminPassword查看</strong>（不同版本可能会有差异）</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129234127864.png" alt="image-20220129234127864"></p>
+<p>登录成功后进入引导页，选择推荐安装插件</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129235108194.png" alt="image-20220129235108194"></p>
+<p>首页，初始时是没有项目的</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129234606146.png" alt="image-20220129234606146"></p>
+<h1 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h1><p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129234631469.png" alt="image-20220129234631469"></p>
+<p>部分版本只有一个FreeStyle Project，这种情况需要安装插件（比如：Maven Integration plugin、Pipeline)）</p>
+<h2 id="安装测试"><a href="#安装测试" class="headerlink" title="安装测试"></a>安装测试</h2>
 
         
         <div class="post-announce">
@@ -174,7 +196,7 @@
             </div>
             <div class="post__prev post__prev--right">
                 
-                <a href="/2022/01/29/Tomcat%E4%B8%8ENginx/" title="Apache vs Nginx">Apache vs Nginx<i class="iconfont icon-next"></i></a>
+                <a href="/2022/01/27/Jenkins%20(%E4%BA%8C)/" title="Jenkins">Jenkins<i class="iconfont icon-next"></i></a>
                 
             </div>
         </div>
@@ -198,7 +220,7 @@
 
     <div class="sidebar__block">
         <h3 class="block__title">文章分类</h3>
-        <ul class="block-list"><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/redis/">redis</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/mysql/">mysql</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/linux/">linux</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/jekins/">jekins</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/java/">java</a><span class="block-list-count">5</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/git/">git</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/docker/">docker</a><span class="block-list-count">2</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/React/">React</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/Flink/">Flink</a><span class="block-list-count">1</span></li></ul>
+        <ul class="block-list"><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/redis/">redis</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/mysql/">mysql</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/linux/">linux</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/jekins/">jekins</a><span class="block-list-count">2</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/java/">java</a><span class="block-list-count">5</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/git/">git</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/docker/">docker</a><span class="block-list-count">2</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/React/">React</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/Flink/">Flink</a><span class="block-list-count">1</span></li></ul>
     </div>
     
     <div class="sidebar__block">
@@ -214,6 +236,18 @@
                             <div class="item__info">
                                 <h3 class="item__title">Apache vs Nginx</h3>
                                 <span class="item__text">2022-01-29</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2022/01/27/Jenkins%20(%E4%BA%8C)/" title="Jenkins">
+                            <div class="item__cover">
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png" alt="Jenkins" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">Jenkins</h3>
+                                <span class="item__text">2022-01-27</span>
                             </div>
                         </a>
                     </li>
@@ -238,18 +272,6 @@
                             <div class="item__info">
                                 <h3 class="item__title">Mysql 免安装</h3>
                                 <span class="item__text">2022-01-23</span>
-                            </div>
-                        </a>
-                    </li>
-                
-                    <li class="latest-post-item">
-                        <a href="/2022/01/22/Flink%E5%9F%BA%E7%A1%80/" title="Flink基础">
-                            <div class="item__cover">
-                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/20220122103730.png" alt="Flink基础" />
-                            </div>
-                            <div class="item__info">
-                                <h3 class="item__title">Flink基础</h3>
-                                <span class="item__text">2022-01-22</span>
                             </div>
                         </a>
                     </li>
