@@ -82,7 +82,30 @@ docker run --name jenkins -N -p 8088:8080 -p 50000:50000 \
 
 
 
-## 安装测试
+## 常用的三种构建项目类型：
+
+* 自由风格软件项目（FreeStyle Project）
+* Maven项目（Maven  Project）
+* 流水线项目（Pipeline Project）
+
+### 自由风格项目构建
 
 
 
+
+
+
+
+插件安装
+
+
+
+权限管理插件
+
+>  Role-based Authorization Strategy
+
+
+
+
+
+# 

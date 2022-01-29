@@ -5,11 +5,11 @@ title: Apache vs Nginx
 cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129085936071.png
 # 作者信息，多作者则设置为数组
 author: 
-  nick: 转载
+  nick: hanggle
   link: https://www.github.com/hanggle
 # 如果文章为转载文章，需要多加文章出处项
 editor:
-  name: Minfive
+  name: linuxmi
   link: https://www.linuxmi.com/apache-vs-nginx-web-server.html
 # 首页每篇文章的子标题
 subtitle: Apache 和 Nginx 是当今为互联网提供动力的最流行的Web 服务器。他们共同负责为互联网上超过 50% 的流量提供服务。但近年来，Apache 出现了下滑，取而代之的是 Nginx。从高层次上讲，这两个平台做的核心事情是相同的：托管和服务web内容。因此，在一个特定的场景中，两者都具有独特之处
@@ -20,7 +20,7 @@ categories: 服务器
 date: 2022-1-29 
 ---
 
-#  **Apache vs Nginx 是当之无愧的话题。如果你对哪款服务器更适合你感到困惑，那么久让我们在本文中找出答案吧。**
+**Apache vs Nginx 是当之无愧的话题。如果你对哪款服务器更适合你感到困惑，那么久让我们在本文中找出答案吧。**
 
 Apache 和 Nginx 是当今为互联网提供动力的最流行的Web 服务器。他们共同负责为互联网上超过 50% 的流量提供服务。但近年来，Apache 出现了下滑，取而代之的是 Nginx。从高层次上讲，这两个平台做的核心事情是相同的：托管和服务web内容。因此，在一个特定的场景中，两者都具有独特之处。
 
