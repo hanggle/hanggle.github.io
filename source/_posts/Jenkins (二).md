@@ -1,5 +1,5 @@
 ---
-title: Jenkins
+title: Jenkins2
 cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png
 author: 
   nick: hanggle
@@ -16,7 +16,7 @@ date: 2022-1-30
 
 
 
-# Jenkins使用（一）
+# Jenkins使用（二）
 
 官方文档地址：https://www.jenkins.io/zh/doc/
 
