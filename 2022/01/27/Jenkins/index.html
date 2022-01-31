@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>Jenkins | hanggle blog</title>
+        <title>Jenkins安装（一） | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -114,7 +114,7 @@
     
 
     <header class="post__info">
-        <h1 class="post__title">Jenkins</h1>
+        <h1 class="post__title">Jenkins安装（一）</h1>
 
         <div class="post__mark">
             <div class="mark__block">
@@ -153,8 +153,13 @@
     <div class="post__content">
         <h1 id="Jenkins安装（一）"><a href="#Jenkins安装（一）" class="headerlink" title="Jenkins安装（一）"></a>Jenkins安装（一）</h1><p>官方文档地址：<a href="https://www.jenkins.io/zh/doc/" target="_blank" rel="noopener">https://www.jenkins.io/zh/doc/</a></p>
 <h1 id="使用Docker安装"><a href="#使用Docker安装" class="headerlink" title="使用Docker安装"></a>使用Docker安装</h1><p>如果未安装docker，需先安装docker</p>
-<p>从jenkins官方支持的docker镜像中拉取镜像</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker pull jenkins&#x2F;jenkins:lts-jdk11 ？？？</span></pre></td></tr></table></figure>
+<p>从jenkins官方支持的docker镜像中拉取镜像(1.25.2可更新为新版本)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker pull jenkinsci&#x2F;blueocean:1.25.2</span></pre></td></tr></table></figure>
+
+
+
+<p>创建Jenkins映射目录，并授权</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">mkdir -p &#x2F;var&#x2F;jenkins_home </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">chmod 777 &#x2F;var&#x2F;jenkins_home</span></pre></td></tr></table></figure>
 
 <p>执行下面命令启动jenkins。</p>
 <ul>
@@ -165,20 +170,35 @@
 <li><p>/var/run/docker.sock:/var/run/docker.sock <code>agent { docker { ... } }</code> 此选项是必需的</p>
 </li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run --name jenkins -N -p 8088:8080 -p 50000:50000 \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    -v /var/run/docker.sock:/var/run/docker.sock \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    -v /var/jenkins_home:/var/jenkins_home \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	-v /opt/apache-maven-3.8.4:/usr/local/maven \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    -d jenkins/jenkins:lts-jdk11</span></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run --name jenkins-N4 -p 8089:8080 -p 50000:50000 \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    -v /var/run/docker.sock:/var/run/docker.sock \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    -v /var/jenkins_home:/var/jenkins_home \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">-v /opt/apache-maven-3.8.4:/usr/local/maven \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    -d jenkinsci/blueocean:1.25.2</span></pre></td></tr></table></figure>
 
 <p>执行成功后输入<strong>地址：端口号</strong>进入登录页面。</p>
-<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129233259826.png" alt="image-20220129233259826"></p>
-<p>默认用户名： admin</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130201233192.png" alt="image-20220130201233192"></p>
 <p>密码：<strong>通过/var/jenkins_home/secrets/initialAdminPassword查看</strong>（不同版本可能会有差异）</p>
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129234127864.png" alt="image-20220129234127864"></p>
 <p>登录成功后进入引导页，选择推荐安装插件</p>
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129235108194.png" alt="image-20220129235108194"></p>
-<p>首页，初始时是没有项目的</p>
-<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129234606146.png" alt="image-20220129234606146"></p>
-<h1 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h1><p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129234631469.png" alt="image-20220129234631469"></p>
+<p>插件自动安装</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130203426103.png" alt="image-20220130203426103"></p>
+<p>创建用户</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130203448641.png" alt="image-20220130203448641"></p>
+<p>一步往下走</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130203535494.png" alt="image-20220130203535494"></p>
+<p>重启后进入欢迎页</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130203803457.png" alt="image-20220130203803457"></p>
+<h1 id="安装测试"><a href="#安装测试" class="headerlink" title="安装测试"></a>安装测试</h1><h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129234631469.png" alt="image-20220129234631469"></p>
 <p>部分版本只有一个FreeStyle Project，这种情况需要安装插件（比如：Maven Integration plugin、Pipeline)）</p>
-<h2 id="安装测试"><a href="#安装测试" class="headerlink" title="安装测试"></a>安装测试</h2>
+<p>输入<strong>MyPipeline</strong>    选择<strong>Pipeline</strong>项目</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130091338701.png" alt="image-20220130091338701"></p>
+<p>输入脚本,保存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">pipeline &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   agent any</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">   stages &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">      stage(&#39;Hello&#39;) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">         steps &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">            echo &#39;Hello World&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">         &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">      &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">   &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>点击 build now开始构建</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130205246446.png" alt="image-20220130205246446"></p>
+<p>点击 <strong>#1</strong>查看项目日志输出</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130204127997.png" alt="image-20220130204127997"></p>
+<p>至此，jenkins初始安装已经完成。</p>
+
 
         
         <div class="post-announce">
@@ -196,7 +216,7 @@
             </div>
             <div class="post__prev post__prev--right">
                 
-                <a href="/2022/01/27/Jenkins%20(%E4%BA%8C)/" title="Jenkins">Jenkins<i class="iconfont icon-next"></i></a>
+                <a href="/2022/01/29/Tomcat%E4%B8%8ENginx/" title="Apache vs Nginx">Apache vs Nginx<i class="iconfont icon-next"></i></a>
                 
             </div>
         </div>
@@ -229,6 +249,18 @@
         <ul class="block-list latest-post-list">
             
                     <li class="latest-post-item">
+                        <a href="/2022/01/30/Jenkins%20(%E4%BA%8C)/" title="Jenkins">
+                            <div class="item__cover">
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png" alt="Jenkins" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">Jenkins</h3>
+                                <span class="item__text">2022-01-30</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
                         <a href="/2022/01/29/Tomcat%E4%B8%8ENginx/" title="Apache vs Nginx">
                             <div class="item__cover">
                                 <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129085936071.png" alt="Apache vs Nginx" />
@@ -241,24 +273,12 @@
                     </li>
                 
                     <li class="latest-post-item">
-                        <a href="/2022/01/27/Jenkins%20(%E4%BA%8C)/" title="Jenkins">
+                        <a href="/2022/01/27/Jenkins/" title="Jenkins安装（一）">
                             <div class="item__cover">
-                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png" alt="Jenkins" />
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png" alt="Jenkins安装（一）" />
                             </div>
                             <div class="item__info">
-                                <h3 class="item__title">Jenkins</h3>
-                                <span class="item__text">2022-01-27</span>
-                            </div>
-                        </a>
-                    </li>
-                
-                    <li class="latest-post-item">
-                        <a href="/2022/01/27/Jenkins/" title="Jenkins">
-                            <div class="item__cover">
-                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png" alt="Jenkins" />
-                            </div>
-                            <div class="item__info">
-                                <h3 class="item__title">Jenkins</h3>
+                                <h3 class="item__title">Jenkins安装（一）</h3>
                                 <span class="item__text">2022-01-27</span>
                             </div>
                         </a>
