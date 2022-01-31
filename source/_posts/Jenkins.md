@@ -1,5 +1,6 @@
 ---
-title: Jenkins
+
+title: Jenkins安装（一）
 cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png
 author: 
   nick: hanggle
@@ -24,10 +25,20 @@ date: 2022-1-27 20:22:34
 
 如果未安装docker，需先安装docker
 
-从jenkins官方支持的docker镜像中拉取镜像
+从jenkins官方支持的docker镜像中拉取镜像(1.25.2可更新为新版本)
 
 ```
-docker pull jenkins/jenkins:lts-jdk11 ？？？
+docker pull jenkinsci/blueocean:1.25.2
+```
+
+
+
+创建Jenkins映射目录，并授权
+
+```
+mkdir -p /var/jenkins_home 
+
+chmod 777 /var/jenkins_home
 ```
 
 执行下面命令启动jenkins。
@@ -39,18 +50,16 @@ docker pull jenkins/jenkins:lts-jdk11 ？？？
 * /var/run/docker.sock:/var/run/docker.sock `agent { docker { ... } }` 此选项是必需的
 
 ```shell
-docker run --name jenkins -N -p 8088:8080 -p 50000:50000 \
+docker run --name jenkins-N4 -p 8089:8080 -p 50000:50000 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /var/jenkins_home:/var/jenkins_home \
-	-v /opt/apache-maven-3.8.4:/usr/local/maven \
-    -d jenkins/jenkins:lts-jdk11 
+-v /opt/apache-maven-3.8.4:/usr/local/maven \
+    -d jenkinsci/blueocean:1.25.2 
 ```
 
 执行成功后输入**地址：端口号**进入登录页面。
 
-![image-20220129233259826](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129233259826.png)
-
-默认用户名： admin
+![image-20220130201233192](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130201233192.png)
 
 密码：**通过/var/jenkins_home/secrets/initialAdminPassword查看**（不同版本可能会有差异）
 
@@ -60,19 +69,31 @@ docker run --name jenkins -N -p 8088:8080 -p 50000:50000 \
 
 ![image-20220129235108194](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129235108194.png)
 
+插件自动安装
+
+![image-20220130203426103](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130203426103.png)
+
+创建用户
+
+![image-20220130203448641](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130203448641.png)
+
+一步往下走
+
+![image-20220130203535494](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130203535494.png)
+
+重启后进入欢迎页
+
+![image-20220130203803457](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130203803457.png)
 
 
-首页，初始时是没有项目的
-
-![image-20220129234606146](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129234606146.png)
 
 
 
 
 
+# 安装测试
 
-
-# 新建项目
+### 新建项目
 
 ![image-20220129234631469](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220129234631469.png)
 
@@ -80,9 +101,32 @@ docker run --name jenkins -N -p 8088:8080 -p 50000:50000 \
 
 部分版本只有一个FreeStyle Project，这种情况需要安装插件（比如：Maven Integration plugin、Pipeline)）
 
+输入**MyPipeline**    选择**Pipeline**项目
 
+![image-20220130091338701](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130091338701.png)
 
-## 安装测试
+输入脚本,保存
 
+```
+pipeline {
+   agent any
 
+   stages {
+      stage('Hello') {
+         steps {
+            echo 'Hello World'
+         }
+      }
+   }
+}
+```
 
+点击 build now开始构建
+
+![image-20220130205246446](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130205246446.png)
+
+点击 **#1**查看项目日志输出
+
+![image-20220130204127997](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130204127997.png)
+
+至此，jenkins初始安装已经完成。
