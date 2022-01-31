@@ -2,7 +2,7 @@
 # title为文章的标题
 title: git自动提交到github
 # cover为文章的首图和缩略图
-# cover: http://img.blog.csdn.net/20150309140927553
+cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/git.png
 # 作者信息，多作者则设置为数组
 author: 
   nick: hanggle
