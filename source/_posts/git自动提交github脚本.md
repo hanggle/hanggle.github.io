@@ -20,8 +20,6 @@ categories: git
 date: 2022-1-31
 ---
 
-# git自动提交到github
-
 自动提交到github的shell脚本，解决github访问不稳定，频繁出现无法提交的问题。
 
 ```shell

@@ -15,10 +15,6 @@ date: 2022-1-27 20:22:34
 
 
 
-
-
-# Jenkins安装（一）
-
 官方文档地址：https://www.jenkins.io/zh/doc/
 
 # 使用Docker安装
@@ -129,4 +125,35 @@ pipeline {
 
 ![image-20220130204127997](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130204127997.png)
 
+
+
 至此，jenkins初始安装已经完成。
+
+
+
+# 其它
+
+## 替换插件下载地址为国内地址
+
+```
+cd /opt/jenkins_home/updates
+sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsinghua.edu.cn\/jenkins/g' default.json && \
+sed -i 's/http:\/\/www.google.com/https:\/\/www.baidu.com/g' default.json
+
+docker restart jenkins
+```
+
+
+
+## 时区不对可以在页面进行设置
+
+```
+System.setProperty('org.apache.commons.jelly.tags.fmt.timeZone', 'Asia/Shanghai')
+```
+
+![image-20220131150853092](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220131150853092.png)
+
+系统管理->脚本命令行
+
+![image-20220131151004969](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220131151004969.png)
+
