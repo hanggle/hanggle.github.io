@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>hanggle blog</title>
+        <title>Jenkins使用-部署war包到tomcat（二） | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/archives/2019/05/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2022/01/31/Jenkins%20(%E4%B8%89)%20/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -59,7 +59,7 @@
 
     
     
-    <link rel="stylesheet" href="/scss/views/page/archive.css">
+    <link rel="stylesheet" href="/scss/views/page/post.css">
 
 </head>
 <body ontouchstart>
@@ -108,113 +108,79 @@
 
 
         
-    
-<main class="page__container page__main">
+    <main class="page__container page__main">
     <div class="page__content">
-        
-        <nav class="mb-main__nav">
-            
-            <a
-                class="nav__item"
-                href="/archives/"
-                alt="2022年">
-                2022年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2021/"
-                alt="2021年">
-                2021年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2020/"
-                alt="2020年">
-                2020年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2019/"
-                alt="2019年">
-                2019年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2017/"
-                alt="2017年">
-                2017年
-            </a>
-        
-        </nav> 
+        <article class="page__post">
     
 
-        <div class="page__posts clearfix">
+    <header class="post__info">
+        <h1 class="post__title">Jenkins使用-部署war包到tomcat（二）</h1>
+
+        <div class="post__mark">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-write"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="https://www.github.com/hanggle" target="_blank" rel="noopener">hanggle</a>
+                        </li>
+                    
+                </ul>
+            </div>
             
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <a itemprop="url"  href="/2019/05/03/Docker/">    
-        <div class="mini-article__cover">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-time"></i>
+                <ul class="mark__list clearfix">
+                    <li class="mark__item"><span>2022-01-31</span></li>
+                </ul>
+            </div>
+
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-tab"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="/tags/CI-CD/">CI/CD</a>
+                        </li>
+                    
+                </ul>
+            </div>
+
             
-            
-                <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107232458797.png" alt="Docker基础"/>
-            
-            <div itemprop="datePublished" content="" class="mini-article__date">
-                <span class="date__day">3</span>
+        </div>
+    </header>
+
+    <div class="post__content">
+        <p>官方文档地址：<a href="https://www.jenkins.io/zh/doc/" target="_blank" rel="noopener">https://www.jenkins.io/zh/doc/</a></p>
+<p>前置条件：</p>
+<ol>
+<li>jenkins安装好maven</li>
+<li>tomcat已配置好用户名密码</li>
+</ol>
+
+
+        
+        <div class="post-announce">
+            感谢您的阅读，本文由
+            <a href="https://blog.hanggle.com">hanggle</a>
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2022/01/31/Jenkins%20(%E4%B8%89)%20/">https://blog.hanggle.com/2022/01/31/Jenkins%20(%E4%B8%89)%20/</a>）
+        </div>
+        
+
+        <div class="post__prevs">
+            <div class="post__prev">
                 
-                    <span class="date__month">五月</span>
+                <a href="/2022/01/31/git%E8%87%AA%E5%8A%A8%E6%8F%90%E4%BA%A4github%E8%84%9A%E6%9C%AC/" title="git自动提交到github"><i class="iconfont icon-prev"></i>git自动提交到github</a>
                 
             </div>
-        </div>   
-    </a>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2019/05/03/Docker/" title="Docker基础">Docker基础</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
-                        <span itemprop="name">Hanggle</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
+            <div class="post__prev post__prev--right">
                 
-                    <li class="tags__item">
-                        <a href="/tags/docker/">docker</a>
-                    </li>
-                
-            </ul>
+            </div>
         </div>
     </div>
 </article>
 
-                </div>
-            
-        </div>
-
         
-            
-        <nav class="page__paginator">
-            <ul class="paginator__list clearfix">
-                
-            <li class="paginator__item">
-                <span>1</span>
-            </li>
-        
-            </ul>
-        </nav>
-    
         
     </div>
 
@@ -466,10 +432,19 @@
     <!-- endbuild -->
 
     
-    
+    <script src="/js/page/post.js"></script>
+
 
     
     
+
+
+
+    <!-- 不蒜子统计 -->
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
 
      
 

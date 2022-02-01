@@ -151,7 +151,7 @@
     </header>
 
     <div class="post__content">
-        <h1 id="Jenkins安装（一）"><a href="#Jenkins安装（一）" class="headerlink" title="Jenkins安装（一）"></a>Jenkins安装（一）</h1><p>官方文档地址：<a href="https://www.jenkins.io/zh/doc/" target="_blank" rel="noopener">https://www.jenkins.io/zh/doc/</a></p>
+        <p>官方文档地址：<a href="https://www.jenkins.io/zh/doc/" target="_blank" rel="noopener">https://www.jenkins.io/zh/doc/</a></p>
 <h1 id="使用Docker安装"><a href="#使用Docker安装" class="headerlink" title="使用Docker安装"></a>使用Docker安装</h1><p>如果未安装docker，需先安装docker</p>
 <p>从jenkins官方支持的docker镜像中拉取镜像(1.25.2可更新为新版本)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker pull jenkinsci&#x2F;blueocean:1.25.2</span></pre></td></tr></table></figure>
@@ -198,6 +198,15 @@
 <p>点击 <strong>#1</strong>查看项目日志输出</p>
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130204127997.png" alt="image-20220130204127997"></p>
 <p>至此，jenkins初始安装已经完成。</p>
+<h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><h2 id="替换插件下载地址为国内地址"><a href="#替换插件下载地址为国内地址" class="headerlink" title="替换插件下载地址为国内地址"></a>替换插件下载地址为国内地址</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">cd &#x2F;opt&#x2F;jenkins_home&#x2F;updates</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sed -i &#39;s&#x2F;http:\&#x2F;\&#x2F;updates.jenkins-ci.org\&#x2F;download&#x2F;https:\&#x2F;\&#x2F;mirrors.tuna.tsinghua.edu.cn\&#x2F;jenkins&#x2F;g&#39; default.json &amp;&amp; \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">sed -i &#39;s&#x2F;http:\&#x2F;\&#x2F;www.google.com&#x2F;https:\&#x2F;\&#x2F;www.baidu.com&#x2F;g&#39; default.json</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">docker restart jenkins</span></pre></td></tr></table></figure>
+
+
+
+<h2 id="时区不对可以在页面进行设置"><a href="#时区不对可以在页面进行设置" class="headerlink" title="时区不对可以在页面进行设置"></a>时区不对可以在页面进行设置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">System.setProperty(&#39;org.apache.commons.jelly.tags.fmt.timeZone&#39;, &#39;Asia&#x2F;Shanghai&#39;)</span></pre></td></tr></table></figure>
+
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220131150853092.png" alt="image-20220131150853092"></p>
+<p>系统管理-&gt;脚本命令行</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220131151004969.png" alt="image-20220131151004969"></p>
 
 
         
@@ -240,7 +249,7 @@
 
     <div class="sidebar__block">
         <h3 class="block__title">文章分类</h3>
-        <ul class="block-list"><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/redis/">redis</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/mysql/">mysql</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/linux/">linux</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/jekins/">jekins</a><span class="block-list-count">2</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/java/">java</a><span class="block-list-count">5</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/git/">git</a><span class="block-list-count">2</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/docker/">docker</a><span class="block-list-count">2</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/React/">React</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/Flink/">Flink</a><span class="block-list-count">1</span></li></ul>
+        <ul class="block-list"><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/redis/">redis</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/mysql/">mysql</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/linux/">linux</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/jekins/">jekins</a><span class="block-list-count">3</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/java/">java</a><span class="block-list-count">6</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/git/">git</a><span class="block-list-count">2</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/docker/">docker</a><span class="block-list-count">2</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/React/">React</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/Flink/">Flink</a><span class="block-list-count">1</span></li></ul>
     </div>
     
     <div class="sidebar__block">
@@ -248,6 +257,18 @@
         
         <ul class="block-list latest-post-list">
             
+                    <li class="latest-post-item">
+                        <a href="/2022/01/31/Jenkins%20(%E4%B8%89)%20/" title="Jenkins使用-部署war包到tomcat（二）">
+                            <div class="item__cover">
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png" alt="Jenkins使用-部署war包到tomcat（二）" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">Jenkins使用-部署war包到tomcat（二）</h3>
+                                <span class="item__text">2022-01-31</span>
+                            </div>
+                        </a>
+                    </li>
+                
                     <li class="latest-post-item">
                         <a href="/2022/01/31/git%E8%87%AA%E5%8A%A8%E6%8F%90%E4%BA%A4github%E8%84%9A%E6%9C%AC/" title="git自动提交到github">
                             <div class="item__cover">
@@ -261,12 +282,12 @@
                     </li>
                 
                     <li class="latest-post-item">
-                        <a href="/2022/01/30/Jenkins%20(%E4%BA%8C)/" title="Jenkins2">
+                        <a href="/2022/01/30/Jenkins%20(%E4%BA%8C)/" title="Jenkins使用-Maven（二）">
                             <div class="item__cover">
-                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png" alt="Jenkins2" />
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png" alt="Jenkins使用-Maven（二）" />
                             </div>
                             <div class="item__info">
-                                <h3 class="item__title">Jenkins2</h3>
+                                <h3 class="item__title">Jenkins使用-Maven（二）</h3>
                                 <span class="item__text">2022-01-30</span>
                             </div>
                         </a>
@@ -280,18 +301,6 @@
                             <div class="item__info">
                                 <h3 class="item__title">Apache vs Nginx</h3>
                                 <span class="item__text">2022-01-29</span>
-                            </div>
-                        </a>
-                    </li>
-                
-                    <li class="latest-post-item">
-                        <a href="/2022/01/27/Jenkins/" title="Jenkins安装（一）">
-                            <div class="item__cover">
-                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png" alt="Jenkins安装（一）" />
-                            </div>
-                            <div class="item__info">
-                                <h3 class="item__title">Jenkins安装（一）</h3>
-                                <span class="item__text">2022-01-27</span>
                             </div>
                         </a>
                     </li>
@@ -359,6 +368,10 @@
                 
                     <li class="tag-item">
                         <a class="tag-link" href="/tags/shell/">shell</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/spring-boot/">spring boot</a>
                     </li>  
                 
                     <li class="tag-item">
