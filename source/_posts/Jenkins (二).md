@@ -1,5 +1,5 @@
 ---
-title: Jenkins使用-Maven（二）
+title: Jenkins使用（二）-Maven
 cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png
 author: 
   nick: hanggle
