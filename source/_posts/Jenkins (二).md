@@ -20,7 +20,7 @@ date: 2022-1-30
 
 默认没有Maven项目，需要新增maven插件（Maven Integration plugin），截图已安装
 
-![image-20220130205503553](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220130205503553.png)
+![image-20220204172719057](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204172719057.png)
 
 然后配置maven目录，此处配置的是映射到宿主机上安装的maven
 
