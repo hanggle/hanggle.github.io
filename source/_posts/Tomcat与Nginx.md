@@ -16,7 +16,7 @@ subtitle: Apache 和 Nginx 是当今为互联网提供动力的最流行的Web �
 tags: 
     - tocmat
     - nginx
-categories: 服务器
+categories: server
 date: 2022-1-29 
 ---
 

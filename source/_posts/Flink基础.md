@@ -9,7 +9,7 @@ subtitle: Apache Flink is a framework and distributed processing engine for stat
 tags: 
     - 大数据
     - Flink
-categories: Flink
+categories: 大数据
 date: 2022-01-22 21:59:12
 ---
 

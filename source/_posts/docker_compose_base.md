@@ -9,7 +9,7 @@ author:
 #  link: https://www.github.com/Mrminfive
 subtitle: docker-compose离线安装
 tag:  docker
-categories: docker
+categories: CI/CD
 date: 2019-12-05 22:14:31
 ---
 

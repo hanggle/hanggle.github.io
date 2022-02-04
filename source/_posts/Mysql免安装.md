@@ -7,8 +7,9 @@ author:
 subtitle: 
 
 tags: 
+    - 数据库
     - mysql
-categories: mysql
+categories: DB
 date: 2022-1-23 15:01:43
 ---
 
