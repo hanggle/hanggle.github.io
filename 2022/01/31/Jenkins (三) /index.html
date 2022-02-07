@@ -157,7 +157,7 @@
 <li>tomcat环境已配置好</li>
 <li>一个可以访问的git的springboot项目</li>
 </ol>
-<h4 id="tomcat配置好用户名密码及角色"><a href="#tomcat配置好用户名密码及角色" class="headerlink" title="tomcat配置好用户名密码及角色"></a>tomcat配置好用户名密码及角色</h4><p>配置tomcat远程部署账号，在tomcat目录下conf文件内tomcat-users.xml 文件增加以下配置</p>
+<h4 id="1-tomcat配置好用户名密码及角色"><a href="#1-tomcat配置好用户名密码及角色" class="headerlink" title="1. tomcat配置好用户名密码及角色"></a>1. tomcat配置好用户名密码及角色</h4><p>配置tomcat远程部署账号，在tomcat目录下conf文件内tomcat-users.xml 文件增加以下配置</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;role rolename="manager-gui"/&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&lt;role rolename="manager-script"/&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&lt;user username="你定义的用户名" password="你定义的密码" roles="manager-gui,manager-script"/&gt;</span></pre></td></tr></table></figure>
 
 <p>配置完后验证是否生效，启动tomcat后点击Manager App（webapps中应包含tomcat解压出来的manager项目）</p>
@@ -165,15 +165,15 @@
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204184942041.png" alt="image-20220204184942041"></p>
 <p>输入配置的帐密，登录成功则表示设置成功。</p>
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204185104982.png" alt="image-20220204185104982"></p>
-<h4 id="1-新建任务"><a href="#1-新建任务" class="headerlink" title="1. 新建任务"></a>1. 新建任务</h4><p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190256886.png" alt="image-20220204190256886"></p>
-<h4 id="2-配置代码"><a href="#2-配置代码" class="headerlink" title="2. 配置代码"></a>2. 配置代码</h4><p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190401086.png" alt="image-20220204190401086"></p>
+<h4 id="2-新建任务"><a href="#2-新建任务" class="headerlink" title="2. 新建任务"></a>2. 新建任务</h4><p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190256886.png" alt="image-20220204190256886"></p>
+<h4 id="3-配置代码"><a href="#3-配置代码" class="headerlink" title="3. 配置代码"></a>3. 配置代码</h4><p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190401086.png" alt="image-20220204190401086"></p>
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190550468.png" alt="image-20220204190550468"></p>
-<h4 id="3-配置代码发布位置"><a href="#3-配置代码发布位置" class="headerlink" title="3. 配置代码发布位置"></a>3. 配置代码发布位置</h4><p>添加tomcat远程访问凭据（tomcat中配置的帐户密码）</p>
+<h4 id="4-配置代码发布位置"><a href="#4-配置代码发布位置" class="headerlink" title="4. 配置代码发布位置"></a>4. 配置代码发布位置</h4><p>添加tomcat远程访问凭据（tomcat中配置的帐户密码）</p>
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190730855.png" alt="image-20220204190730855"></p>
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190706350.png" alt="image-20220204190706350"></p>
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190653473.png" alt="image-20220204190653473"></p>
-<h4 id="4-执行构建发布"><a href="#4-执行构建发布" class="headerlink" title="4.执行构建发布"></a>4.执行构建发布</h4><p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190909109.png" alt="image-20220204190909109"></p>
-<h4 id="5-验证发布内容"><a href="#5-验证发布内容" class="headerlink" title="5. 验证发布内容"></a>5. 验证发布内容</h4><p>访问tomcat8080端口。新发布的程序会发不到服务器的ROOT项目中</p>
+<h4 id="5-执行构建发布"><a href="#5-执行构建发布" class="headerlink" title="5.执行构建发布"></a>5.执行构建发布</h4><p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190909109.png" alt="image-20220204190909109"></p>
+<h4 id="6-验证发布是否成功"><a href="#6-验证发布是否成功" class="headerlink" title="6. 验证发布是否成功"></a>6. 验证发布是否成功</h4><p>新发布的程序会发不到服务器的ROOT项目中。访问发布的位置</p>
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204191102135.png" alt="image-20220204191102135"></p>
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204191001818.png" alt="image-20220204191001818"></p>
 
