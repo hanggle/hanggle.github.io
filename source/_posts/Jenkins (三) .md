@@ -24,7 +24,7 @@ date: 2022-1-31
 
 
 
-#### tomcat配置好用户名密码及角色
+#### 1. tomcat配置好用户名密码及角色
 
 配置tomcat远程部署账号，在tomcat目录下conf文件内tomcat-users.xml 文件增加以下配置
 
@@ -46,17 +46,17 @@ date: 2022-1-31
 
 
 
-#### 1. 新建任务
+#### 2. 新建任务
 
 ![image-20220204190256886](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190256886.png)
 
-#### 2. 配置代码
+#### 3. 配置代码
 
 ![image-20220204190401086](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190401086.png)
 
 ![image-20220204190550468](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190550468.png)
 
-#### 3. 配置代码发布位置
+#### 4. 配置代码发布位置
 
 添加tomcat远程访问凭据（tomcat中配置的帐户密码）
 
@@ -66,13 +66,13 @@ date: 2022-1-31
 
 ![image-20220204190653473](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190653473.png)
 
-#### 4.执行构建发布
+#### 5.执行构建发布
 
 ![image-20220204190909109](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204190909109.png)
 
-#### 5. 验证发布内容
+#### 6. 验证发布是否成功
 
-访问tomcat8080端口。新发布的程序会发不到服务器的ROOT项目中
+新发布的程序会发不到服务器的ROOT项目中。访问发布的位置
 
 ![image-20220204191102135](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220204191102135.png)
 
