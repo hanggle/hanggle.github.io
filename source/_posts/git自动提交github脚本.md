@@ -24,7 +24,25 @@ date: 2022-1-31
 
 ```shell
 #!/bin/bash
-cd D:\\MySpace\\hanggle.github.io
+echo "请输入->
+1： hanggle.github.io
+2： qg"
+
+#读取控制台输入一个 item 值，在 10 秒内输,不输入自动向下执行
+read -t 10 -p  "请选择同步的项目 = " item
+
+path="D:\\MySpace\\hanggle.github.io"
+case $item in
+	1 )
+		path='D:\\MySpace\\hanggle.github.io' ;;
+	2 )
+		path='D:\MySpace\qg' ;;
+	*)
+		echo "默认选择 hanggle.github.io "
+esac
+
+echo "path:${path} "
+cd ${path}
 git add .
 #写个sleep 2s 是为了解决并发导致卡壳
 sleep 2s
