@@ -10,7 +10,7 @@ author:
 subtitle: Elasticsearch是一个面向文档型数据库，一条数据就是一个文档。
 tag:  大数据
 categories: ES
-date: 2022-2-21
+date: 2022-3-21
 ---
 
 官网下载地址：

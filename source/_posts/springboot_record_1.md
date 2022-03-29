@@ -61,28 +61,25 @@ public class Application{
 ```
 
 然后自己写了个Controller
-![1](https://images2015.cnblogs.com/blog/997786/201704/997786-20170409005618644-1487234010.png)
+![img](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/997786-20170409005618644-1487234010.png)
 
 但是无论如何也无法扫描到自己定义的Controller（如果用的是idea，能明显看出来，如果扫描到会有的图标）。访问结果结果如下：
 
-
+![img](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/997786-20170409005517644-1213300216.png)
 
 报错的原因是找不到对应的映射路径，即Controller没有被扫描到 ，。
 
 郁闷至极，到晚上搜的结果说的是LoginController 方的位置不对，应该让启动类和Controller的包在同一级目录下，然而对我却没有效果。
 
 **官方建议application.java放的位置**：
-![2](https://images2015.cnblogs.com/blog/997786/201704/997786-20170409005618644-1487234010.png)
-
+![img](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/997786-20170409004634847-1050076443.png)
 
 最后尝试了下修改下Application上的注解，我本来复制官方的代码用的是@Controller和@EnableAutoConfiguration，试着换成了**@SpringBootApplication** 注解，出乎意外的可以扫描到Controller 
-![3](https://images2015.cnblogs.com/blog/997786/201704/997786-20170409005618644-1487234010.png)
+![img](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/997786-20170409010006191-38718118.png)
 
-![4](https://images2015.cnblogs.com/blog/997786/201704/997786-20170409005618644-1487234010.png)
+ ![img](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/997786-20170409010021238-427644219.png)
 
-![5](https://images2015.cnblogs.com/blog/997786/201704/997786-20170409005618644-1487234010.png)
-
- 
+![img](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/997786-20170409010114410-919234476.png)
 
 又查了下官方的文档终于找到原因了，原因是：
 
