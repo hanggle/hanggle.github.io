@@ -15,15 +15,24 @@ date: 2022-3-29
 
 
 
-#### 条件查询（全文检索）
+#### 映射关系
 
 ```
-GET http://localhost:9200/test/_search
+PUT http://localhost:9200/user/_mapping
 
 {
-    "query": {
-        "match": {
-            "name": "李四"
+    "properties":{
+        "name":{
+            "type":"text", //text 表示文本，可以分词
+            "index":true 
+        },
+        "sex":{
+            "type":"keyword", //keyword 表示文本，可以不能分词
+            "index":true
+        },
+        "tel":{
+            "type":"keyword",
+            "index":false // 不添加索引，无法用此列搜索
         }
     }
 }
@@ -31,33 +40,7 @@ GET http://localhost:9200/test/_search
 
 ```
 {
-    "took": 36,
-    "timed_out": false,
-    "_shards": {
-        "total": 1,
-        "successful": 1,
-        "skipped": 0,
-        "failed": 0
-    },
-    "hits": {
-        "total": {
-            "value": 1,
-            "relation": "eq"
-        },
-        "max_score": 1.3260207,
-        "hits": [
-            {
-                "_index": "test",
-                "_type": "_doc",
-                "_id": "1001",
-                "_score": 1.3260207,
-                "_source": {
-                    "id": 2,
-                    "name": "李四 is lisi-update"
-                }
-            }
-        ]
-    }
+    "acknowledged": true
 }
 ```
 
