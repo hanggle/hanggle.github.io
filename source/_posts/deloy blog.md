@@ -7,7 +7,7 @@ author:
 #editor:
 #  name: Minfive
 #  link: https://www.github.com/Mrminfive
-#subtitle: docker-compose离线安装
+subtitle: 博客定时任务自动同步
 tag:  shell
 categories: shell
 date: 2022-4-19 22:39:04
