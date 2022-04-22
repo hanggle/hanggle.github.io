@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>hanggle blog</title>
+        <title>Kubernetes概述 | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/archives/2019/12/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2022/01/27/K8s-1/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -59,7 +59,7 @@
 
     
     
-    <link rel="stylesheet" href="/scss/views/page/archive.css">
+    <link rel="stylesheet" href="/scss/views/page/post.css">
 
 </head>
 <body ontouchstart>
@@ -108,160 +108,77 @@
 
 
         
-    
-<main class="page__container page__main">
+    <main class="page__container page__main">
     <div class="page__content">
-        
-        <nav class="mb-main__nav">
-            
-            <a
-                class="nav__item"
-                href="/archives/"
-                alt="2022年">
-                2022年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2021/"
-                alt="2021年">
-                2021年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2020/"
-                alt="2020年">
-                2020年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2019/"
-                alt="2019年">
-                2019年
-            </a>
-        
-            <a
-                class="nav__item"
-                href="/archives/2017/"
-                alt="2017年">
-                2017年
-            </a>
-        
-        </nav> 
+        <article class="page__post">
     
 
-        <div class="page__posts clearfix">
+    <header class="post__info">
+        <h1 class="post__title">Kubernetes概述</h1>
+
+        <div class="post__mark">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-write"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="https://www.kubernetes.org.cn/k8s" target="_blank" rel="noopener">Kubernetes中文社区</a>
+                        </li>
+                    
+                </ul>
+            </div>
             
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <a itemprop="url"  href="/2019/12/05/docker_compose_base/">    
-        <div class="mini-article__cover">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-time"></i>
+                <ul class="mark__list clearfix">
+                    <li class="mark__item"><span>2022-01-27</span></li>
+                </ul>
+            </div>
+
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-tab"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="/tags/k8s/">K8s</a>
+                        </li>
+                    
+                </ul>
+            </div>
+
             
-            
-                <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-compose.png" alt="docker-compose 安装"/>
-            
-            <div itemprop="datePublished" content="" class="mini-article__date">
-                <span class="date__day">5</span>
+        </div>
+    </header>
+
+    <div class="post__content">
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><a href="https://www.kubernetes.org.cn/" target="_blank" rel="noopener"><strong>Kubernetes</strong></a>是一个开源的，用于管理云平台中多个主机上的容器化的应用，Kubernetes的目标是让部署容器化的应用简单并且高效（powerful）,Kubernetes提供了应用部署，规划，更新，维护的一种机制。</p>
+<p>Kubernetes一个核心的特点就是能够自主的管理容器来保证云平台中的容器按照用户的期望状态运行着（比如用户想让apache一直运行，用户不需要关心怎么去做，Kubernetes会自动去监控，然后去重启，新建，总之，让apache一直提供服务），管理员可以加载一个微型服务，让规划器来找到合适的位置，同时，Kubernetes也系统提升工具以及人性化方面，让用户能够方便的部署自己的应用（就像canary deployments）。</p>
+
+
+        
+        <div class="post-announce">
+            感谢您的阅读，本文由
+            <a href="https://blog.hanggle.com">hanggle</a>
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2022/01/27/K8s-1/">https://blog.hanggle.com/2022/01/27/K8s-1/</a>）
+        </div>
+        
+
+        <div class="post__prevs">
+            <div class="post__prev">
                 
-                    <span class="date__month">十二月</span>
+                <a href="/2022/01/23/Mysql%E5%85%8D%E5%AE%89%E8%A3%85/" title="Mysql 免安装"><i class="iconfont icon-prev"></i>Mysql 免安装</a>
                 
             </div>
-        </div>   
-    </a>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2019/12/05/docker_compose_base/" title="docker-compose 安装">docker-compose 安装</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
-                        <span itemprop="name">Hanggle</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            docker-compose离线安装
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
+            <div class="post__prev post__prev--right">
                 
-                    <li class="tags__item">
-                        <a href="/tags/docker/">docker</a>
-                    </li>
+                <a href="/2022/01/27/Jenkins/" title="Jenkins安装（一）">Jenkins安装（一）<i class="iconfont icon-next"></i></a>
                 
-            </ul>
+            </div>
         </div>
     </div>
 </article>
 
-                </div>
-            
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <a itemprop="url"  href="/2019/12/05/a/">    
-        <div class="mini-article__cover">
-            
-                <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/default_cover.png" alt="demo"/>
-            
-            
-            <div itemprop="datePublished" content="" class="mini-article__date">
-                <span class="date__day">5</span>
-                
-                    <span class="date__month">十二月</span>
-                
-            </div>
-        </div>   
-    </a>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2019/12/05/a/" title="demo">demo</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
-                        <span itemprop="name">Hanggle</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
-                
-                    <li class="tags__item">
-                        <a href="/tags/demo/">demo</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-</article>
-
-                </div>
-            
-        </div>
-
         
-            
-        <nav class="page__paginator">
-            <ul class="paginator__list clearfix">
-                
-            <li class="paginator__item">
-                <span>1</span>
-            </li>
-        
-            </ul>
-        </nav>
-    
         
     </div>
 
@@ -530,10 +447,19 @@
     <!-- endbuild -->
 
     
-    
+    <script src="/js/page/post.js"></script>
+
 
     
     
+
+
+
+    <!-- 不蒜子统计 -->
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
 
      
 
