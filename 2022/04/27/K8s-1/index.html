@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>github博客自动同步到服务器 | hanggle blog</title>
+        <title>Jenkins安装（一） | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/2022/04/19/deloy%20blog/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2022/04/27/K8s-1/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -114,7 +114,7 @@
     
 
     <header class="post__info">
-        <h1 class="post__title">github博客自动同步到服务器</h1>
+        <h1 class="post__title">Jenkins安装（一）</h1>
 
         <div class="post__mark">
             <div class="mark__block">
@@ -131,7 +131,7 @@
             <div class="mark__block">
                 <i class="mark__icon iconfont icon-time"></i>
                 <ul class="mark__list clearfix">
-                    <li class="mark__item"><span>2022-04-19</span></li>
+                    <li class="mark__item"><span>2022-04-27</span></li>
                 </ul>
             </div>
 
@@ -140,7 +140,7 @@
                 <ul class="mark__list clearfix">
                     
                         <li class="mark__item">
-                            <a href="/tags/shell/">Shell</a>
+                            <a href="/tags/jekins/">Jekins</a>
                         </li>
                     
                 </ul>
@@ -151,41 +151,25 @@
     </header>
 
     <div class="post__content">
-        <h3 id="docker创建nginx"><a href="#docker创建nginx" class="headerlink" title="docker创建nginx"></a>docker创建nginx</h3><p>配置nginx映射的配置和日志文件，静态网页文件路径</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run -p 80:80 --name mynginx -v &#x2F;home&#x2F;data&#x2F;nginx&#x2F;html:&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html:ro -v &#x2F;home&#x2F;data&#x2F;nginx&#x2F;conf&#x2F;extra&#x2F;:&#x2F;etc&#x2F;nginx&#x2F;extra -v &#x2F;home&#x2F;data&#x2F;nginx&#x2F;conf&#x2F;nginx.conf:&#x2F;etc&#x2F;nginx&#x2F;nginx.conf -v &#x2F;home&#x2F;data&#x2F;nginx&#x2F;logs:&#x2F;var&#x2F;log&#x2F;nginx --privileged&#x3D;true -d  nginx</span></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="创建脚本，自动拉取最新的文章"><a href="#创建脚本，自动拉取最新的文章" class="headerlink" title="创建脚本，自动拉取最新的文章"></a>创建脚本，自动拉取最新的文章</h3><p>在使用目录新增 deploy.sh</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">rm -rf master.zip</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">wget  https://github.com/hanggle/hanggle.github.io/archive/refs/heads/master.zip  –no-check-certificate</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">unzip master.zip</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">rm -rf html/*</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">mv hanggle.github.io-master/* ./html</span></pre></td></tr></table></figure>
-
-<p>启动Linux的<strong>crontab</strong>定时任务，每隔6个小时拉取一次博客</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">crontab -e</span></pre></td></tr></table></figure>
-
-<p>打开crontab定时任务配置文件，录入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">* *&#x2F;6 * * * &#x2F;home&#x2F;data&#x2F;nginx&#x2F;deploy.sh</span></pre></td></tr></table></figure>
-
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><a href="https://www.kubernetes.org.cn/" target="_blank" rel="noopener"><strong>Kubernetes</strong></a>是一个开源的，用于管理云平台中多个主机上的容器化的应用，Kubernetes的目标是让部署容器化的应用简单并且高效（powerful）,Kubernetes提供了应用部署，规划，更新，维护的一种机制。</p>
+<p>Kubernetes一个核心的特点就是能够自主的管理容器来保证云平台中的容器按照用户的期望状态运行着（比如用户想让apache一直运行，用户不需要关心怎么去做，Kubernetes会自动去监控，然后去重启，新建，总之，让apache一直提供服务），管理员可以加载一个微型服务，让规划器来找到合适的位置，同时，Kubernetes也系统提升工具以及人性化方面，让用户能够方便的部署自己的应用（就像canary deployments）。</p>
 
 
         
         <div class="post-announce">
             感谢您的阅读，本文由
             <a href="https://blog.hanggle.com">hanggle</a>
-            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2022/04/19/deloy%20blog/">https://blog.hanggle.com/2022/04/19/deloy%20blog/</a>）
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2022/04/27/K8s-1/">https://blog.hanggle.com/2022/04/27/K8s-1/</a>）
         </div>
         
 
         <div class="post__prevs">
             <div class="post__prev">
                 
-                <a href="/2022/03/29/ES(4)%20/" title="Elasticsearch 分词"><i class="iconfont icon-prev"></i>Elasticsearch 分词</a>
+                <a href="/2022/04/27/Jenkins%20(copy)/" title="Jenkins安装（一）"><i class="iconfont icon-prev"></i>Jenkins安装（一）</a>
                 
             </div>
             <div class="post__prev post__prev--right">
-                
-                <a href="/2022/04/27/Jenkins%20(copy)/" title="Jenkins安装（一）">Jenkins安装（一）<i class="iconfont icon-next"></i></a>
                 
             </div>
         </div>
