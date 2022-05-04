@@ -1,6 +1,6 @@
 ---
 # title为文章的标题
-title: Docker基础
+title: Docker基本操作
 # cover为文章的首图和缩略图
 cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107232458797.png
 # 作者信息，多作者则设置为数组
@@ -15,75 +15,23 @@ author:
 subtitle: Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
 tag: docker
 categories: CI/CD
-date: 2019-05-03 22:14:31
+date: 2019-05-03 22:14:31##
 ---
 
-## Docker
-
-#### Docker 是什么
-
-Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。
-
-**镜像**是一种轻量级、可执行的独立软件包，它包含运行某个软件所需的所有内容，包括代码、运行时、库、环境变量和配置文件。
-
-**容器**是镜像的运行时实例 - 实际执行时镜像会在内存中变成什么。默认情况下，它完全独立于主机环境运行，仅在配置为访问主机文件和端口的情况下才执行此操作。
-
-![image-20200129095715589](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-1.png)
 
 
-
-#### Docker和虚拟机比较
-
-![image-20200129095942662](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-3.png)
-
-![image-20200129095959223](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-4.png)
-
-
-
-#### 架构
-
-![image-20200129095833450](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-2.png)
-
-
-
-#### docker 基本命令
-
-
-docker安装
-
-```
-yum install docker
-```
-
-查看docker版本
-
-```
-docker version
-```
-
-查看docker信息
-
-```
-docker info
-```
-
-docker安装成功测试
-
-```
-docker run hello-world
-```
-
-开机启动docker服务
+查看docker对象的底层基础信息
 
 ```shell
-sudo systemctl start docker
+# 语法
+docker inspect [OPTIONS] NAME|ID [NAME|ID...]
+
+# 查看container容器信息(或者使用容器id)
+docker inspect container
+
+# 查看目录挂载信息
+docker inspect --format="{{json .Mounts}}"  container
 ```
-
-docker采用C/S的模式
-
-Docker镜像：Docker镜像运行后变成容器
-
-Docker Registry: Registry是Docker镜像的中央仓库
 
 
 
@@ -95,22 +43,19 @@ docker images
 
 
 
-#### 设置docker开机自动启动
-
-```shell
-systemctl enable docker
-```
-
-
-
 #### 镜像镜像加速
 
 修改 `/etc/docker/daemon.json`, 改为需要加速的仓库，建议使用阿里云镜像加速,比如：
 
 ```json
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
 {
-  "registry-mirrors": ["https://自己申请的url.mirror.aliyuncs.com"]
+  "registry-mirrors": ["https://av57nxi9.mirror.aliyuncs.com"]
 }
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
 ```
 
 然后重启doker
@@ -220,7 +165,3 @@ mymysql:5.6
 
 1. 节约资源
 2. 镜像打包后，在其他环境运行不会出现异常
-
-
-
-![image-20200129100508999](../img/Docker/image-20200129100508999.png)

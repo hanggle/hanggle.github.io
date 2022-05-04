@@ -1,0 +1,65 @@
+---
+
+
+
+
+title: Kubernetes概述
+cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220422222353435.png
+author: 
+  nick: Kubernetes中文社区
+  link: https://www.kubernetes.org.cn/k8s
+subtitle: Kubernetes是一个开源的，用于管理云平台中多个主机上的容器化的应用，Kubernetes的目标是让部署容器化的应用简单并且高效（powerful）,Kubernetes提供了应用部署，规划，更新，维护的一种机制。
+
+tags: 
+    - k8s
+categories: CI/CD
+date: 2022-4-20 20:22:34
+---
+
+
+
+# 概述
+
+[**Kubernetes**](https://www.kubernetes.org.cn/)是一个开源的，用于管理云平台中多个主机上的容器化的应用，Kubernetes的目标是让部署容器化的应用简单并且高效（powerful）,Kubernetes提供了应用部署，规划，更新，维护的一种机制。
+
+Kubernetes一个核心的特点就是能够自主的管理容器来保证云平台中的容器按照用户的期望状态运行着（比如用户想让apache一直运行，用户不需要关心怎么去做，Kubernetes会自动去监控，然后去重启，新建，总之，让apache一直提供服务），管理员可以加载一个微型服务，让规划器来找到合适的位置，同时，Kubernetes也系统提升工具以及人性化方面，让用户能够方便的部署自己的应用（就像canary deployments）。
+
+
+
+### 为什么 Kubernetes 如此有用
+
+![部署演进](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/container_evolution.svg)
+
+
+
+#### Kubernetes优点
+
+- **服务发现和负载均衡**
+
+  Kubernetes 可以使用 DNS 名称或自己的 IP 地址公开容器，如果进入容器的流量很大， Kubernetes 可以负载均衡并分配网络流量，从而使部署稳定。
+
+- **存储编排**
+
+  Kubernetes 允许你自动挂载你选择的存储系统，例如本地存储、公共云提供商等。
+
+- **自动部署和回滚**
+
+  你可以使用 Kubernetes 描述已部署容器的所需状态，它可以以受控的速率将实际状态 更改为期望状态。例如，你可以自动化 Kubernetes 来为你的部署创建新容器， 删除现有容器并将它们的所有资源用于新容器。
+
+- **自动完成装箱计算**
+
+  Kubernetes 允许你指定每个容器所需 CPU 和内存（RAM）。 当容器指定了资源请求时，Kubernetes 可以做出更好的决策来管理容器的资源。
+
+- **自我修复**
+
+  Kubernetes 重新启动失败的容器、替换容器、杀死不响应用户定义的 运行状况检查的容器，并且在准备好服务之前不将其通告给客户端。
+
+- **密钥与配置管理**
+
+  Kubernetes 允许你存储和管理敏感信息，例如密码、OAuth 令牌和 ssh 密钥。 你可以在不重建容器镜像的情况下部署和更新密钥和应用程序配置，也无需在堆栈配置中暴露密钥。
+
+
+
+### K8组件架构
+
+![image-20220501213152803](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220501213152803.png)
