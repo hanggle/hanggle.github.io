@@ -1,10 +1,11 @@
 ---
 title: VirtualBox安装虚拟机
-cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220502235500511.png
+cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220505095902946.png
+
 author: 
   nick: hanggle
   link: https://www.github.com/hanggle
-subtitle: Apache Flink is a framework and distributed processing engine for stateful computations over unbounded and bounded data streams. Flink has been designed to run in all common cluster environments, perform computations at in-memory speed and at any scale.
+subtitle: VirtualBox号称是最强的免费虚拟机软件，它不仅具有丰富的特色，而且性能也很优异。它简单易用，可虚拟的系统包括Windows（从Windows 3.1到Windows 10、Windows Server 2012，所有的Windows系统都支持）、Mac OS X、Linux、OpenBSD、Solaris、IBM OS2甚至Android等操作系统。
 
 tags: 
     - 虚拟机
@@ -17,7 +18,9 @@ date: 2022-5-2
 
 https://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/
 
+https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220502235500511.png
 
+![image-20220505095902946](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220505095902946.png)
 
 ## 新建虚拟机
 
@@ -143,4 +146,39 @@ ip addr
 ![image-20220505001101708](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220505001101708.png)
 
 多台虚拟机可以 在修改ip后类似配置
+
+
+
+### 不同虚拟机时间同步
+
+#### 查找和设置Linux本地时区
+
+```shell
+# 查看当前时区和时间
+timedatectl
+
+# 设置时区为上海
+timedatectl set-timezone "Asia/Shanghai"
+# 或使用
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+# 设置时间（不推荐）
+timedatectl set-time '16:10:40 2015-11-20'
+```
+
+
+
+#### 使用ntpdate同步时间
+
+```
+# 安装ntpdate
+yum install -y ntpdate
+
+# 手动同步时间
+ntpdate us.pool.ntp.org
+
+# 设置定时任务同步时间
+*/10 * * * * /usr/sbin/ntpdate us.pool.ntp.org
+
+```
 
