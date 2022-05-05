@@ -156,6 +156,8 @@
 
     <div class="post__content">
         <h2 id="下载Linux镜像"><a href="#下载Linux镜像" class="headerlink" title="下载Linux镜像"></a>下载Linux镜像</h2><p><a href="https://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/" target="_blank" rel="noopener">https://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/</a></p>
+<p><a href="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220502235500511.png" target="_blank" rel="noopener">https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220502235500511.png</a></p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220505095902946.png" alt="image-20220505095902946"></p>
 <h2 id="新建虚拟机"><a href="#新建虚拟机" class="headerlink" title="新建虚拟机"></a>新建虚拟机</h2><p>控制-&gt;新建</p>
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220504235449193.png" alt="image-20220504235449193"></p>
 <p>跟着提示一步步向下走。</p>
@@ -189,6 +191,12 @@
 <p>此时主机可以ping通虚拟机的ip</p>
 <p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220505001101708.png" alt="image-20220505001101708"></p>
 <p>多台虚拟机可以 在修改ip后类似配置</p>
+<h3 id="不同虚拟机时间同步"><a href="#不同虚拟机时间同步" class="headerlink" title="不同虚拟机时间同步"></a>不同虚拟机时间同步</h3><h4 id="查找和设置Linux本地时区"><a href="#查找和设置Linux本地时区" class="headerlink" title="查找和设置Linux本地时区"></a>查找和设置Linux本地时区</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看当前时区和时间</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">timedatectl</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 设置时区为上海</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">timedatectl set-timezone "Asia/Shanghai"</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 或使用</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 设置时间（不推荐）</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">timedatectl set-time '16:10:40 2015-11-20'</span></pre></td></tr></table></figure>
+
+
+
+<h4 id="使用ntpdate同步时间"><a href="#使用ntpdate同步时间" class="headerlink" title="使用ntpdate同步时间"></a>使用ntpdate同步时间</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"># 安装ntpdate</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">yum install -y ntpdate</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"># 手动同步时间</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">ntpdate us.pool.ntp.org</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"># 设置定时任务同步时间</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">*&#x2F;10 * * * * &#x2F;usr&#x2F;sbin&#x2F;ntpdate us.pool.ntp.org</span></pre></td></tr></table></figure>
+
 
 
         
@@ -240,25 +248,25 @@
         <ul class="block-list latest-post-list">
             
                     <li class="latest-post-item">
-                        <a href="/2022/05/04/Docker-1/" title="Docker基础">
+                        <a href="/2022/05/05/Docker-1/" title="Docker基础">
                             <div class="item__cover">
                                 <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107232458797.png" alt="Docker基础" />
                             </div>
                             <div class="item__info">
                                 <h3 class="item__title">Docker基础</h3>
-                                <span class="item__text">2022-05-04</span>
+                                <span class="item__text">2022-05-05</span>
                             </div>
                         </a>
                     </li>
                 
                     <li class="latest-post-item">
-                        <a href="/2022/05/04/Docker-2/" title="Docker基本操作">
+                        <a href="/2022/05/05/Docker-2/" title="Docker基本操作">
                             <div class="item__cover">
                                 <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107232458797.png" alt="Docker基本操作" />
                             </div>
                             <div class="item__info">
                                 <h3 class="item__title">Docker基本操作</h3>
-                                <span class="item__text">2022-05-04</span>
+                                <span class="item__text">2022-05-05</span>
                             </div>
                         </a>
                     </li>
@@ -278,7 +286,7 @@
                     <li class="latest-post-item">
                         <a href="/2022/05/02/VirtualBox/" title="VirtualBox安装虚拟机">
                             <div class="item__cover">
-                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220502235500511.png" alt="VirtualBox安装虚拟机" />
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220505095902946.png" alt="VirtualBox安装虚拟机" />
                             </div>
                             <div class="item__info">
                                 <h3 class="item__title">VirtualBox安装虚拟机</h3>
