@@ -53,16 +53,43 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 
 
-#### docker 基本命令
 
 
-docker安装
+## Docker 安装
 
+```shell
+# 卸载旧版本（首次安装无需此步骤）
+yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
 ```
-yum install docker-ce
+
+
+
+```shell
+yum install -y yum-utils
+
+#配置docker的yum地址
+sudo yum-config-manager \
+--add-repo \
+http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 ```
 
-查看docker版本
+
+
+```shell
+# 安装docker
+yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+
+
+安装后查看docker版本
 
 ```
 docker version
@@ -100,7 +127,7 @@ systemctl enable docker
 
 
 
-#### docker的好处
+#### Docker的好处
 
 1. 高效的利用资源
 
@@ -116,8 +143,4 @@ systemctl enable docker
 
 4. 持续交付和部署
 
-   > 
-
 5. 更轻松的迁移
-
-2. 
