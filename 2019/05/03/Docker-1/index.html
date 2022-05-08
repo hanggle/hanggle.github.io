@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>Docker基本操作 | hanggle blog</title>
+        <title>Docker基础 | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://blog.hanggle.com/2022/05/05/Docker-2/index.html">
+<link rel="canonical" href="https://blog.hanggle.com/2019/05/03/Docker-1/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -114,7 +114,7 @@
     
 
     <header class="post__info">
-        <h1 class="post__title">Docker基本操作</h1>
+        <h1 class="post__title">Docker基础</h1>
 
         <div class="post__mark">
             <div class="mark__block">
@@ -131,7 +131,7 @@
             <div class="mark__block">
                 <i class="mark__icon iconfont icon-time"></i>
                 <ul class="mark__list clearfix">
-                    <li class="mark__item"><span>2022-05-05</span></li>
+                    <li class="mark__item"><span>2019-05-03</span></li>
                 </ul>
             </div>
 
@@ -151,70 +151,72 @@
     </header>
 
     <div class="post__content">
-        <p>查看docker对象的底层基础信息</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 语法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">docker inspect [OPTIONS] NAME|ID [NAME|ID...]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看container容器信息(或者使用容器id)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">docker inspect container</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看目录挂载信息</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">docker inspect --format="&#123;&#123;json .Mounts&#125;&#125;"  container</span></pre></td></tr></table></figure>
+        <h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><h4 id="Docker-是什么"><a href="#Docker-是什么" class="headerlink" title="Docker 是什么"></a>Docker 是什么</h4><p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。</p>
+<p><strong>镜像</strong>是一种轻量级、可执行的独立软件包，它包含运行某个软件所需的所有内容，包括代码、运行时、库、环境变量和配置文件。</p>
+<p><strong>容器</strong>是镜像的运行时实例 - 实际执行时镜像会在内存中变成什么。默认情况下，它完全独立于主机环境运行，仅在配置为访问主机文件和端口的情况下才执行此操作。镜像（<code>Image</code>）和容器（<code>Container</code>）的关系，就像是面向对象程序设计中的 <code>类</code> 和 <code>实例</code> 一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。容器不应该向其存储层内写入任何数据，容器存储层要保持无状态化。所有的文件写入操作，都应该使用 <a href="">数据卷（Volume）</a>、或者 <a href="">绑定宿主目录</a>，在这些位置的读写会跳过容器存储层，直接对宿主（或网络存储）发生读写，其性能和稳定性更高。</p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-1.png" alt="image-20200129095715589"></p>
+<h4 id="Docker和虚拟机比较"><a href="#Docker和虚拟机比较" class="headerlink" title="Docker和虚拟机比较"></a>Docker和虚拟机比较</h4><p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-3.png" alt="image-20200129095942662"></p>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-4.png" alt="image-20200129095959223"></p>
+<h4 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h4><p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/docker-2.png" alt="image-20200129095833450"></p>
+<ul>
+<li>Docker Damon：dockerd，用来监听 Docker API 的请求和管理 Docker 对象，比如镜像、容器、网络和 Volume。</li>
+<li>Docker Client：docker，docker client 是我们和 Docker 进行交互的最主要的方式方法，比如我们可以通过 docker run 命令来运行一个容器，然后我们的这个 client 会把命令发送给上面的 Dockerd，让他来做真正事情。</li>
+<li>Docker Registry：用来存储 Docker 镜像的仓库，Docker Hub 是 Docker 官方提供的一个公共仓库，而且 Docker 默认也是从 Docker Hub 上查找镜像的，当然你也可以很方便的运行一个私有仓库，当我们使用 docker pull 或者 docker run 命令时，就会从我们配置的 Docker 镜像仓库中去拉取镜像，使用 docker push 命令时，会将我们构建的镜像推送到对应的镜像仓库中。</li>
+<li>Images：镜像，镜像是一个只读模板，带有创建 Docker 容器的说明，一般来说的，镜像会基于另外的一些基础镜像并加上一些额外的自定义功能。比如，你可以构建一个基于 Centos 的镜像，然后在这个基础镜像上面安装一个 Nginx 服务器，这样就可以构成一个属于我们自己的镜像了。</li>
+<li>Containers：容器，容器是一个镜像的可运行的实例，可以使用 Docker REST API 或者 CLI 来操作容器，容器的实质是进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的<a href="https://en.wikipedia.org/wiki/Linux_namespaces" target="_blank" rel="noopener">命名空间</a>。因此容器可以拥有自己的 <strong>root 文件系统、自己的网络配置、自己的进程空间，甚至自己的用户 ID 空间</strong>。容器内的进程是运行在一个隔离的环境里，使用起来，就好像是在一个独立于宿主的系统下操作一样。这种特性使得容器封装的应用比直接在宿主运行更加安全。</li>
+<li>底层技术支持：Namespaces（做隔离）、CGroups（做资源限制）、UnionFS（镜像和容器的分层） the-underlying-technology Docker 底层架构分析</li>
+</ul>
+<h2 id="Docker-安装"><a href="#Docker-安装" class="headerlink" title="Docker 安装"></a>Docker 安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 卸载旧版本（首次安装无需此步骤）</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">yum remove docker \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">                  docker-client \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">                  docker-client-latest \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">                  docker-common \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">                  docker-latest \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">                  docker-latest-logrotate \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">                  docker-logrotate \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">                  docker-engine</span></pre></td></tr></table></figure>
 
 
 
-<h4 id="查看docker所有镜像"><a href="#查看docker所有镜像" class="headerlink" title="查看docker所有镜像"></a>查看docker所有镜像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker images</span></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">配置docker的yum地址</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">sudo yum-config-manager \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">--add-repo \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span></pre></td></tr></table></figure>
 
 
 
-<h4 id="镜像镜像加速"><a href="#镜像镜像加速" class="headerlink" title="镜像镜像加速"></a>镜像镜像加速</h4><p>修改 <code>/etc/docker/daemon.json</code>, 改为需要加速的仓库，建议使用阿里云镜像加速,比如：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-'EOF'</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">"registry-mirrors"</span>: [<span class="string">"https://av57nxi9.mirror.aliyuncs.com"</span>]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">EOF</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">sudo systemctl restart docker</span></pre></td></tr></table></figure>
-
-<p>然后重启doker</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sudo systemctl restart docker</span></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装docker</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin</span></pre></td></tr></table></figure>
 
 
 
-<h4 id="查看容器日志"><a href="#查看容器日志" class="headerlink" title="查看容器日志"></a>查看容器日志</h4><p>可以不加 -f  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker logs -f 4871c4b47f83</span></pre></td></tr></table></figure>
+<p>安装后查看docker版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker version</span></pre></td></tr></table></figure>
 
-<p>进入容器内部</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker exec -it redis &#x2F;bin&#x2F;bash</span></pre></td></tr></table></figure>
+<p>查看docker信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker info</span></pre></td></tr></table></figure>
 
-<p>退出容器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">ctrl+D</span></pre></td></tr></table></figure>
+<p>docker安装成功测试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run hello-world</span></pre></td></tr></table></figure>
+
+<p>启动docker服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">	启动&amp;开机启动docker</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">systemctl enable docker --now</span></pre></td></tr></table></figure>
+
+<p>docker采用C/S的模式</p>
+<p>Docker镜像：Docker镜像运行后变成容器</p>
+<p>Docker Registry: Registry是Docker镜像的中央仓库</p>
+<h4 id="docker加速配置"><a href="#docker加速配置" class="headerlink" title="docker加速配置"></a>docker加速配置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-'EOF'</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  "registry-mirrors": ["你的加速器地址"],</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  "exec-opts": ["native.cgroupdriver=systemd"],</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  "log-driver": "json-file",</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  "log-opts": &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    "max-size": "100m"</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">  &#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">  "storage-driver": "overlay2"</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">EOF</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">sudo systemctl restart docker</span></pre></td></tr></table></figure>
 
 
 
-<h4 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h4><p>拉取镜像</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker pull nginx</span></pre></td></tr></table></figure>
-
-<p>运行nginx</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run --name some-nginx -d -p 8080:80 nginx</span></pre></td></tr></table></figure>
-
+<h4 id="Docker的好处"><a href="#Docker的好处" class="headerlink" title="Docker的好处"></a>Docker的好处</h4><ol>
+<li><p>高效的利用资源</p>
 <blockquote>
-<p>docker run [OPTIONS] IMAGE [COMMAND] [ARG…]</p>
-<p>–name: 生成的容器名字</p>
-<p>-d： 后台运行</p>
-<p>-p：映射端口（映射外部端口：容器内端口）</p>
+<p>docker不需要虚拟硬件以及运行完整的操作系统</p>
 </blockquote>
-<p>运行docker并修改静态文件目录</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run -p 8081:80 --name mynginx -v /home/oskyhang/config/nginx/html:/usr/share/nginx/html:ro --privileged=true -d  nginx</span></pre></td></tr></table></figure>
-
+</li>
+<li><p>一致的运行环境</p>
 <blockquote>
-<p>–privileged=true : centos7中安全模块selinux把权限禁掉了，加上此命令可以开启访问权限，不然会替换失败</p>
+<p> 镜像打包后，在其他环境运行不会出现异常</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run -p 80:80 --name mynginx -v /home/data/nginx/html:/usr/share/nginx/html:ro -v /home/data/nginx/conf/extra/:/etc/nginx/extra -v /home/data/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /home/data/nginx/logs:/var/log/nginx --privileged=true -d  nginx</span></pre></td></tr></table></figure>
-
-
-
-<h4 id="删除image"><a href="#删除image" class="headerlink" title="删除image"></a>删除image</h4><p>先rm正在运行或停止的container，然后再remove镜像,否则会出现下面的异常</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Error response from daemon: conflict: unable to delete fce289e99eb9 (must be forced) - image is being used by stopped container 0fcb6b830ca2</span></pre></td></tr></table></figure>
-
+</li>
+<li><p>更快的启动时间</p>
 <blockquote>
-<p>[root@localhost ~]# docker images<br>REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE<br>docker.io/hello-world   latest              fce289e99eb9        10 days ago         1.84 kB<br>docker.io/nginx         latest              7042885a156a        13 days ago         109 MB</p>
-<p>[root@localhost ~]# docker ps -a<br>CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES<br>4e83ea93731a        hello-world         “/hello”            35 seconds ago      Exited (0) 35 seconds ago                       hungry_volhard<br>0fcb6b830ca2        hello-world         “/hello”            17 minutes ago      Exited (0) 17 minutes ago                       thirsty_pasteur</p>
-<p>[root@localhost ~]# docker rm 4e83ea93731a<br>4e83ea93731a<br>[root@localhost ~]# docker rm 0fcb6b830ca2<br>0fcb6b830ca2</p>
-<p>[root@localhost ~]# docker rmi fce289e99eb9<br>Untagged: docker.io/hello-world:latest<br>Untagged: docker.io/hello-world@sha256:2557e3c07ed1e38f26e389462d03ed943586f744621577a99efb77324b0fe535<br>Deleted: sha256:fce289e99eb9bca977dae136fbe2a82b6b7d4c372474c9235adc1741675f587e<br>Deleted: sha256:af0b15c8625bb1938f1d7b17081031f649fd14e6b233688eea3c5483994a66a3</p>
+<p>相比传统的虚拟机, docker启动速度跟怪,节约了开发测试部署的时间</p>
 </blockquote>
-<h4 id="创建mysql镜像"><a href="#创建mysql镜像" class="headerlink" title="创建mysql镜像"></a>创建mysql镜像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker create --name mymysql -v &#x2F;data&#x2F;mysql-data:&#x2F;var&#x2F;lib&#x2F;mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD&#x3D;root</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">mymysql:5.6</span></pre></td></tr></table></figure>
-
-<h4 id="docker的好处"><a href="#docker的好处" class="headerlink" title="docker的好处"></a>docker的好处</h4><ol>
-<li>节约资源</li>
-<li>镜像打包后，在其他环境运行不会出现异常</li>
+</li>
+<li><p>持续交付和部署</p>
+</li>
+<li><p>更轻松的迁移</p>
+</li>
 </ol>
 
 
@@ -222,19 +224,19 @@
         <div class="post-announce">
             感谢您的阅读，本文由
             <a href="https://blog.hanggle.com">hanggle</a>
-            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2022/05/05/Docker-2/">https://blog.hanggle.com/2022/05/05/Docker-2/</a>）
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://blog.hanggle.com/2019/05/03/Docker-1/">https://blog.hanggle.com/2019/05/03/Docker-1/</a>）
         </div>
         
 
         <div class="post__prevs">
             <div class="post__prev">
                 
-                <a href="/2022/05/02/K8s-2/" title="Kubernetes集群安装"><i class="iconfont icon-prev"></i>Kubernetes集群安装</a>
+                <a href="/2019/05/03/Docker-2/" title="Docker基本操作"><i class="iconfont icon-prev"></i>Docker基本操作</a>
                 
             </div>
             <div class="post__prev post__prev--right">
                 
-                <a href="/2022/05/05/Docker-1/" title="Docker基础">Docker基础<i class="iconfont icon-next"></i></a>
+                <a href="/2019/10/05/mongodb(%E4%B8%80)/" title="MongoDB(一)">MongoDB(一)<i class="iconfont icon-next"></i></a>
                 
             </div>
         </div>
@@ -267,30 +269,6 @@
         <ul class="block-list latest-post-list">
             
                     <li class="latest-post-item">
-                        <a href="/2022/05/05/Docker-1/" title="Docker基础">
-                            <div class="item__cover">
-                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107232458797.png" alt="Docker基础" />
-                            </div>
-                            <div class="item__info">
-                                <h3 class="item__title">Docker基础</h3>
-                                <span class="item__text">2022-05-05</span>
-                            </div>
-                        </a>
-                    </li>
-                
-                    <li class="latest-post-item">
-                        <a href="/2022/05/05/Docker-2/" title="Docker基本操作">
-                            <div class="item__cover">
-                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107232458797.png" alt="Docker基本操作" />
-                            </div>
-                            <div class="item__info">
-                                <h3 class="item__title">Docker基本操作</h3>
-                                <span class="item__text">2022-05-05</span>
-                            </div>
-                        </a>
-                    </li>
-                
-                    <li class="latest-post-item">
                         <a href="/2022/05/02/K8s-2/" title="Kubernetes集群安装">
                             <div class="item__cover">
                                 <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220422222353435.png" alt="Kubernetes集群安装" />
@@ -310,6 +288,30 @@
                             <div class="item__info">
                                 <h3 class="item__title">VirtualBox安装虚拟机</h3>
                                 <span class="item__text">2022-05-02</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2022/04/27/Jenkins%20(copy)/" title="Jenkins安装（一）">
+                            <div class="item__cover">
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220127202146719.png" alt="Jenkins安装（一）" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">Jenkins安装（一）</h3>
+                                <span class="item__text">2022-04-27</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2022/04/24/Docker-3/" title="Docker进阶">
+                            <div class="item__cover">
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20211107232458797.png" alt="Docker进阶" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">Docker进阶</h3>
+                                <span class="item__text">2022-04-24</span>
                             </div>
                         </a>
                     </li>
