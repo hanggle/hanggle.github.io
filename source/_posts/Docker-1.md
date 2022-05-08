@@ -15,7 +15,7 @@ author:
 subtitle: Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
 tag: docker
 categories: CI/CD
-date: 2019-05-03 22:14:31##
+date: 2019-05-03 22:14:31
 ---
 
 ## Docker
@@ -110,7 +110,8 @@ docker run hello-world
 启动docker服务
 
 ```shell
-sudo systemctl start docker
+#	启动&开机启动docker
+systemctl enable docker --now
 ```
 
 docker采用C/S的模式
@@ -119,10 +120,25 @@ Docker镜像：Docker镜像运行后变成容器
 
 Docker Registry: Registry是Docker镜像的中央仓库
 
-#### 设置docker开机自动启动
+
+
+#### docker加速配置
 
 ```shell
-systemctl enable docker
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["你的加速器地址"],
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "storage-driver": "overlay2"
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
 ```
 
 
