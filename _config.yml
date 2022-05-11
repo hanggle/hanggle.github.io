@@ -60,8 +60,8 @@ author:
   link: https://github.com/hanggle
 # 用于页面 footer 的站长信息
 about:
-  info: 本站是基于 Hexo 搭建的静态资源博客，主要用于分享日常学习、生活及工作的一些心得总结，欢迎点击右下角订阅 rss。
-  address: Hangzhou, China
+  #info: 本站是基于 Hexo 搭建的静态资源博客，主要用于分享日常学习、生活及工作的一些心得总结，欢迎点击右下角订阅 rss。
+  address: Zhengzhou, China
   email: hanggle@qq.com
 
 # URL
