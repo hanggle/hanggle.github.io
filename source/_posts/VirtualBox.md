@@ -10,7 +10,7 @@ subtitle: VirtualBox号称是最强的免费虚拟机软件，它不仅具有丰
 tags: 
     - 虚拟机
     - VirtualBox
-categories: 虚拟机
+categories: other
 date: 2022-5-2
 ---
 

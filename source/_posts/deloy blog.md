@@ -9,7 +9,7 @@ author:
 #  link: https://www.github.com/Mrminfive
 subtitle: 博客定时任务自动同步
 tag:  shell
-categories: shell
+categories: other
 date: 2022-4-19 22:39:04
 ---
 

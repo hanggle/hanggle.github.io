@@ -16,7 +16,7 @@ subtitle: Redis 是一个开源（BSD许可）的，内存中的数据结构存�
 tags: 
     - 基础
     - redis
-categories: redis
+categories: 数据库
 date: 2021-11-05 08:14:31
 ---
 

@@ -11,7 +11,7 @@ subtitle: MogoDB是一款强大、灵活且易于拓展的通用型数据库。
 tags: 
     - 数据库
     - mongodb
-categories: DB
+categories: 数据库
 date: 2019-10-05 22:14:31
 ---
 

@@ -16,7 +16,7 @@ subtitle: HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer
 tags: 
     - https
     - tomcat
-categories: server
+categories: other
 date: 2021-07-05 21:34:31
 ---
 

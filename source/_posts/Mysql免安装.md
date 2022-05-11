@@ -9,7 +9,7 @@ subtitle:
 tags: 
     - 数据库
     - mysql
-categories: DB
+categories: 数据库
 date: 2022-1-23 15:01:43
 ---
 
