@@ -1,6 +1,6 @@
 ---
 # title为文章的标题
-title: Java8 方法引用
+title: Java8 函数式编程-方法引用
 # cover为文章的首图和缩略图
 cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/java.jpg
 # 作者信息，多作者则设置为数组
@@ -20,9 +20,9 @@ categories: java
 date: 2017-03-05 22:14:31
 ---
 
-# Java1.8 方法引用
+# Java8 函数式编程-方法引用
 
-####  方法引用基础
+#### 方法引用基础
 
 对象引用：不同对象可以操作同一块内容。
 
@@ -35,12 +35,10 @@ date: 2017-03-05 22:14:31
 3. 引用特定类型的方法： **特定类：：普通方法**
 4. 引用构造方法： **类名称：：new**
 
-
-
 **@FunctionalInterface表示这是一个函数式的接口，这个声明的接口中只能有一个方法。实现方法的引用都要加上这个注解**
 
 1. 引用静态方法
-
+   
    ```java
    /**
     * 实现方法的引用接口
@@ -62,8 +60,9 @@ date: 2017-03-05 22:14:31
        }
    }
    ```
-2. 引用某个对象的方法
 
+2. 引用某个对象的方法
+   
    ```java
    /**
     * 实现方法的引用(普通方法别名)
@@ -85,7 +84,7 @@ date: 2017-03-05 22:14:31
    ```
 
 3. 引用特定类型的方法
-
+   
    ```java
    /**
     * 引用特定类型的方法
@@ -103,10 +102,11 @@ date: 2017-03-05 22:14:31
    
    }
    ```
+   
    ​     
 
 4. 引用构造方法
-
+   
    ```java
    /**
     * 调用构造方法
@@ -142,76 +142,97 @@ date: 2017-03-05 22:14:31
    }
    ```
 
-
    对象的引用是使用不同的名字；而方法的引用是需要有一个函数式的接口，并且设置好参数。
+
+## lambda表达式
+
+```
+//1. lambda表达式的完整形态：有输入参数，有返回值，有代码块。
+(int a, int b) -> {
+ int c = a + b;
+ return c;
+}
+//2. lambda表达式在某些情况也可以省略一部分
+ //2.1 当代码块不需要返回值的 时候可以省略return语句
+  (int a, int b) -> {
+  int c = a + b;
+ }
+ //2.2 当代码块只有一句的时候可以省略大括号
+  //并且这种情况默认返回这一句代码的执行结果
+ (int a, int b) -> a + b; // 同1具有同样的作用
+ //2.3 形参的类型可以根据函数式接口的里面的方法声明自行推断
+  //可以省略形参类型
+ (a, b) -> a + b; // 同1，2.2具有同样的效果
+ //2.4 当只有一个参数的时候可以省略，形参的小括号
+ a -> a * a;
+```
 
 #### java提供的四个核心接口
 
 1. 功能型接口（Function）：
-
+   
    此接口需要接收一个参数，并返回一个处理结果
-
+   
    ```java
    public Interface Function<T,R>{
        R apply(T t);
    }
    ```
+   
    demo:
+   
    ```java
    Function<String, String> function = String::toUpperCase;
    System.out.println(function.apply("hello"));
    ```
 
 2. 消费型接口（Function）：
-
+   
    此接口只负责接收数据（引用数据是不需要返回），并且不返回处理结果
-
+   
    ```java
    public Interface Consumer<T>{
        void accept(T t);
    }
    ```
+   
    demo:
+   
    ```java
    Consumer<String> consumer = System.out::println;
    consumer.accept("hello consumer");
    ```
 
 3. 供给型接口（Supplier）：
-
+   
    此接口不接受参数，但是可以返回结果。
-
+   
    ```java
    public Interface Supplier<T>{
        T get();
    }
    ```
+   
    demo:
+   
    ```java
    Supplier<String> supplier = "hello"::toUpperCase;
    System.out.println(supplier.get());
    ```
 
 4. 断言型接口（Predicate）：
-
+   
    * 进行判断操作使用
-
+   
    ```java
    public Interface Predicate<T>{
        boolean test(T t)；
    }
    ```
+   
    * demo:
-   ```java
-   Predicate<String> predicate = "test"::equals;
-   System.out.println(predicate.test("test2"));
-   ```
-
-
-
-
-
-
-
-
-
+     
+     ```java
+     Predicate<String> predicate = "test"::equals;
+     System.out.println(predicate.test("test2"));
+     ```

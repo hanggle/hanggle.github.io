@@ -84,6 +84,26 @@ service network restart
 ip addr	
 ```
 
+或者使用命令修改
+
+```shell
+#设置静态ip
+sed -i 's/BOOTPROTO=dhcp/BOOTPROTO=static/g' /etc/sysconfig/network-scripts/ifcfg-ifcfg-enp0s8
+sed -i 's/ONBOOT=no/ONBOOT=yes/g' /etc/sysconfig/network-scripts/ifcfg-ifcfg-enp0s8
+
+#设置ip地址
+cat >> /etc/sysconfig/network-scripts/ifcfg-enp0s8 <<-EOF
+IPADDR=192.168.44.100
+NETMASK=255.255.255.0
+GATEWAY=192.168.44.2
+DNS1=114.114.114.114
+EOF
+```
+
+
+
+
+
 此时可以访问外网
 
 ![image-20220505001033323](https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/image-20220505001033323.png)

@@ -15,7 +15,7 @@ author:
 subtitle: Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
 tag: docker
 categories: CI/CD
-date: 2019-05-03 22:14:31
+date: 2019-05-01 22:14:31
 ---
 
 ## Docker
@@ -83,8 +83,16 @@ http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 
 
 ```shell
-# 安装docker
+
+# 安装docker-默认最新稳定版
 yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+#安装指定版本
+#查看稳定版本
+yum list docker-ce --showduplicates | sort -r
+
+#安装指定版本
+sudo yum install docker-ce-<VERSION_STRING> docker-ce-cli-<VERSION_STRING> containerd.io docker-compose-plugin
 ```
 
 
