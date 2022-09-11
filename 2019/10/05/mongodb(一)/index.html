@@ -210,9 +210,9 @@
 </li>
 <li><p>文件存储</p>
 <p>MongoDB支持一种非常易用的协议，用于存储大文件和文件元数据。</p>
+<p>MongoDB不具备一些关系型数据库很普遍的功能，如连接和复杂多行事务。</p>
 </li>
 </ul>
-<p>  MongoDB不具备一些关系型数据库很普遍的功能，如连接和复杂多行事务。</p>
 <h5 id="1-4-卓越的性能"><a href="#1-4-卓越的性能" class="headerlink" title="1.4 卓越的性能"></a>1.4 卓越的性能</h5><p>​    MongoDB的一个主要目标是提供卓越的性能。MongoDB能对文档动态填充，也能预分配数据文件以利用额外的空间换区稳定的性能。MongoDB把尽可能多的内存用作缓存，试图为每次查询自动选择正确的索引。</p>
 <h3 id="MongoDB-安装"><a href="#MongoDB-安装" class="headerlink" title="MongoDB 安装"></a>MongoDB 安装</h3><ol>
 <li><p>下载</p>
@@ -275,8 +275,6 @@
 <p><strong>数据库名+集合名=命名空间</strong></p>
 <h5 id="2-5-启动MongoDB"><a href="#2-5-启动MongoDB" class="headerlink" title="2.5 启动MongoDB"></a>2.5 启动MongoDB</h5><h1 id="mongodb命令"><a href="#mongodb命令" class="headerlink" title="mongodb命令"></a>mongodb命令</h1><p>启动并指定数据库</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">mongod --dbpath  d:&#x2F;devtools&#x2F;mongodb.db</span></pre></td></tr></table></figure>
-
-
 
 <p>启动并指定数据库和端口号</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">mongod --dbpath  d:&#x2F;devtools&#x2F;mongodb.db --port&#x3D;77777</span></pre></td></tr></table></figure>
@@ -434,8 +432,6 @@
 <p>模糊查询数组那么包含“数”的记录</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;course&quot;: &#123;&quot;$regex&quot;:&#x2F;数&#x2F;i&#125;&#125;)</span></pre></td></tr></table></figure>
 
-
-
 <h3 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h3><p>按分数倒序排序（-1），正序排序（1）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find().sort(&#123;&quot;score&quot;: -1&#125;)</span></pre></td></tr></table></figure>
 
@@ -507,8 +503,6 @@
 
 <h3 id="聚合-分组"><a href="#聚合-分组" class="headerlink" title="聚合-分组"></a>聚合-分组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr></table></figure>
 
-
-
 <h3 id="聚合框架"><a href="#聚合框架" class="headerlink" title="聚合框架"></a>聚合框架</h3><h4 id="group"><a href="#group" class="headerlink" title="group"></a>group</h4><p>Group查询都是无序的</p>
 <blockquote>
 <p>db.emps.insert({“name”:”AAA”, “dept”:”部门A”, “tel”:110, “salery”:2000, “sex”:”W”});<br>db.emps.insert({“name”:”BBB”, “dept”:”部门A”, “tel”:120, “salery”:7000, “sex”:”M”});<br>db.emps.insert({“name”:”CCC”, “dept”:”部门B”, “tel”:130, “salery”:4000, “sex”:”W”});<br>db.emps.insert({“name”:”DDD”, “dept”:”部门B”, “tel”:140, “salery”:1000, “sex”:”M”});<br>db.emps.insert({“name”:”EEE”, “dept”:”部门B”, “tel”:150, “salery”:2000, “sex”:”W”});</p>
@@ -535,10 +529,6 @@
 <p>乘法运算：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.emps.aggregate([&#123;&quot;$project&quot;:&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    &quot;_id&quot;:0,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    &quot;name&quot;:1,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &quot;salery&quot;:&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        &quot;年薪&quot;:&#123;&quot;$multiply&quot;:[&quot;$salery&quot;,12]&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        &#125;&#125;&#125;])</span></pre></td></tr></table></figure>
 
-
-
-
-
 <h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h3><p>MongoDB默认不使用用户名密码，使用密码要具备以下条件：</p>
 <blockquote>
 <ol>
@@ -546,10 +536,9 @@
 <li>设置用户名密码</li>
 </ol>
 </blockquote>
-<h4 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.createUser(&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    &quot;user&quot;:&quot;hanggle&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    &quot;pwd&quot;:&quot;hanggle&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &quot;roles&quot;:[&#123;&quot;role&quot;:&quot;readWrite&quot;, &quot;db&quot;:&quot;mydb&quot;&#125;]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &#125;)</span></pre></td></tr></table></figure>
+<h4 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.createUser(&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    "user":"hanggle",</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    "pwd":"hanggle",</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    "roles":[&#123;"role":"readWrite", "db":"mydb"&#125;]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &#125;)</span></pre></td></tr></table></figure>
 
 <h4 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.changeUserPassword(&quot;mongodb&quot;, &quot;mongodb&quot;)</span></pre></td></tr></table></figure>
-
 
 
         
@@ -568,7 +557,7 @@
             </div>
             <div class="post__prev post__prev--right">
                 
-                <a href="/2019/12/05/docker_compose_base/" title="docker-compose 安装">docker-compose 安装<i class="iconfont icon-next"></i></a>
+                <a href="/2019/12/05/a/" title="demo">demo<i class="iconfont icon-next"></i></a>
                 
             </div>
         </div>
@@ -592,7 +581,7 @@
 
     <div class="sidebar__block">
         <h3 class="block__title">文章分类</h3>
-        <ul class="block-list"><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span class="block-list-count">3</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span class="block-list-count">2</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/other/">other</a><span class="block-list-count">5</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/linux/">linux</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/java/">java</a><span class="block-list-count">5</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/git/">git</a><span class="block-list-count">2</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/demo/">demo</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/React/">React</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/ES/">ES</a><span class="block-list-count">4</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/CI-CD/">CI/CD</a><span class="block-list-count">10</span></li></ul>
+        <ul class="block-list"><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span class="block-list-count">3</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span class="block-list-count">2</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/other/">other</a><span class="block-list-count">5</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/linux/">linux</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/java/">java</a><span class="block-list-count">5</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/git/">git</a><span class="block-list-count">3</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/demo/">demo</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/React/">React</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/ES/">ES</a><span class="block-list-count">4</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/CI-CD/">CI/CD</a><span class="block-list-count">10</span></li></ul>
     </div>
     
     <div class="sidebar__block">
