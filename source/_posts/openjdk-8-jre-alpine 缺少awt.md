@@ -19,7 +19,7 @@ date: 2022-9-14
 
 1. 替换为oracleJDK
 
-2. 在openjdk基础镜像的基础上自己构建包含awt字体的镜像
+2. :boom:在openjdk基础镜像的基础上自己构建包含awt字体的镜像
 
 ```docker
 FROM openjdk:8-jre-alpine
@@ -27,5 +27,3 @@ FROM openjdk:8-jre-alpine
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone
 RUN apk add --update font-adobe-100dpi ttf-dejavu fontconfig
 ```
-
-:joy:
