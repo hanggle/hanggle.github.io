@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     
-        <title>hanggle blog</title>
+        <title>Sharding-Jdbc | hanggle blog</title>
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
@@ -20,7 +20,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="robots" content="all" />
 
-<link rel="canonical" href="https://hanggle.cn/tags/mysql/index.html">
+<link rel="canonical" href="https://hanggle.cn/2022/09/12/sharding-Jdbc/index.html">
 
 <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
 
@@ -43,9 +43,6 @@
 
 
 
-    
-    
-
 
 <!-- CSS -->
 <link rel="stylesheet" href="/scss/base/index.css">
@@ -62,7 +59,7 @@
 
     
     
-    <link rel="stylesheet" href="/scss/views/page/tag.css">
+    <link rel="stylesheet" href="/scss/views/page/post.css">
 
 </head>
 <body ontouchstart>
@@ -113,72 +110,81 @@
         
     <main class="page__container page__main">
     <div class="page__content">
-        <div class="page__posts clearfix">
+        <article class="page__post">
+    
+
+    <header class="post__info">
+        <h1 class="post__title">Sharding-Jdbc</h1>
+
+        <div class="post__mark">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-write"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/Snipaste_2022-09-14_22-24-42.png" target="_blank" rel="noopener">hanggle</a>
+                        </li>
+                    
+                </ul>
+            </div>
             
-                <div class="page__post">
-                    <article itemscope itemtype="http://schema.org/Article" class="page__mini-article">
-    <a itemprop="url"  href="/2022/01/23/Mysql%E5%85%8D%E5%AE%89%E8%A3%85/">    
-        <div class="mini-article__cover">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-time"></i>
+                <ul class="mark__list clearfix">
+                    <li class="mark__item"><span>2022-09-12</span></li>
+                </ul>
+            </div>
+
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-tab"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="/tags/java/">Java</a>
+                        </li>
+                    
+                </ul>
+            </div>
+
             
-                <img itemprop="image" src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/default_cover.png" alt="Mysql 免安装"/>
-            
-            
-            <div itemprop="datePublished" content="" class="mini-article__date">
-                <span class="date__day">23</span>
+        </div>
+    </header>
+
+    <div class="post__content">
+        <h1 id="Sharding-Jdbc"><a href="#Sharding-Jdbc" class="headerlink" title="Sharding-Jdbc"></a>Sharding-Jdbc</h1><p>ShardingSphere-JDBC 定位为轻量级 Java 框架，在 Java 的 JDBC 层提供的额外服务。 它使用客户端直连数据库，以 jar 包形式提供服务，无需额外部署和依赖，可理解为增强版的 JDBC 驱动，完全兼容 JDBC 和各种 ORM 框架。</p>
+<ul>
+<li>适用于任何基于 JDBC 的 ORM 框架，如：JPA, Hibernate, Mybatis, Spring JDBC Template 或直接使用 JDBC；</li>
+<li>支持任何第三方的数据库连接池，如：DBCP, C3P0, BoneCP, HikariCP 等；</li>
+<li>支持任意实现 JDBC 规范的数据库，目前支持 MySQL，PostgreSQL，Oracle，SQLServer 以及任何可使用 JDBC 访问的数据库。</li>
+</ul>
+<p><img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/Snipaste_2022-09-12_22-35-03.png" alt="Snipaste_2022-09-12_22-35-03.png"></p>
+
+
+        
+        <div class="post-announce">
+            感谢您的阅读，本文由
+            <a href="https://hanggle.cn">hanggle</a>
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://hanggle.cn/2022/09/12/sharding-Jdbc/">https://hanggle.cn/2022/09/12/sharding-Jdbc/</a>）
+        </div>
+        
+
+        <div class="post__prevs">
+            <div class="post__prev">
                 
-                    <span class="date__month">一月</span>
+                <a href="/2022/05/08/K8s-3/" title="Kubernetes实战"><i class="iconfont icon-prev"></i>Kubernetes实战</a>
                 
             </div>
-        </div>   
-    </a>
-    <div class="mini-article__info">
-        <h3 itemprop="name" class="mini-article__title">
-            <a itemprop="url" href="/2022/01/23/Mysql%E5%85%8D%E5%AE%89%E8%A3%85/" title="Mysql 免安装">Mysql 免安装</a>
-        </h3>
-        <p class="mini-article__author">by 
-            
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <a itemprop="url" href="https://www.github.com/hanggle" target="_blank">
-                        <span itemprop="name">Hanggle</span>
-                    </a>
-                </span>
-            
-        </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            
-        </p>
-        <div class="min-article__tags">
-            <i class="iconfont icon-tab"></i>
-            <ul class="tags__list clearfix">
+            <div class="post__prev post__prev--right">
                 
-                    <li class="tags__item">
-                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
-                    </li>
+                <a href="/2022/09/14/openjdk-8-jre-alpine%20%E7%BC%BA%E5%B0%91awt/" title="openjdk:8-jre-alpine 缺少awt，font">openjdk:8-jre-alpine 缺少awt，font<i class="iconfont icon-next"></i></a>
                 
-                    <li class="tags__item">
-                        <a href="/tags/mysql/">mysql</a>
-                    </li>
-                
-            </ul>
+            </div>
         </div>
     </div>
 </article>
 
-                </div>
-            
-        </div>
         
         
-        <nav class="page__paginator">
-            <ul class="paginator__list clearfix">
-                
-            <li class="paginator__item">
-                <span>1</span>
-            </li>
-        
-            </ul>
-        </nav>
-    
     </div>
 
     <aside class="page__sidebar">
@@ -454,10 +460,19 @@
     <!-- endbuild -->
 
     
-    
+    <script src="/js/page/post.js"></script>
+
 
     
     
+
+
+
+    <!-- 不蒜子统计 -->
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
 
      
 
