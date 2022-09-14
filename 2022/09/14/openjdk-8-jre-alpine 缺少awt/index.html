@@ -155,12 +155,10 @@
 <ol>
 <li><p>替换为oracleJDK</p>
 </li>
-<li><p>在openjdk基础镜像的基础上自己构建包含awt字体的镜像</p>
+<li><p>:boom:在openjdk基础镜像的基础上自己构建包含awt字体的镜像</p>
 </li>
 </ol>
 <figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> openjdk:<span class="number">8</span>-jre-alpine</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># Change TimeZone</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="bash"> ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; <span class="built_in">echo</span> <span class="string">'Asia/Shanghai'</span> &gt;/etc/timezone</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="bash"> apk add --update font-adobe-100dpi ttf-dejavu fontconfig</span></span></pre></td></tr></table></figure>
-
-<p>:joy:</p>
 
 
         
