@@ -1,6 +1,6 @@
 ---
 title: Activity(一)
-#cover: 
+cover: https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/Snipaste_2022-09-18_23-40-48.png
 author: 
   nick: hanggle
   link: https://www.github.com/hanggle
@@ -12,6 +12,8 @@ tag:  demo
 categories: demo
 date: 2022-9-18
 ---
+
+
 
 
 
