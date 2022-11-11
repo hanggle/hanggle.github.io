@@ -52,7 +52,7 @@
                <!-- <a href="https://github.com/Mrminfive/hexo-theme-skapp" target="_blank">Skapp</a> 2017 powered by
                 <a href="http://hexo.io/" target="_blank">Hexo</a>, made by 
                 <a href="https://github.com/Mrminfive" target="_blank">minfive</a>.-->
-                © 2009-2022 hanggle.cn 版权所有 豫ICP备2022009291号
+                © 2009-2022 hanggle.cn 版权所有 <a href="https://beian.miit.gov.cn" target="_blank">豫ICP备2022009291号-1</a>
             </p>
             <ul class="footer__social-network clearfix">
                 {% if site.data.contact %}
