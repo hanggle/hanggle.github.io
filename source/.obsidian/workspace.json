@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/a.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5277a46a6d2f918d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/es/a 1.md",
+                "file": "_posts/Nacos.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/es/a 1.md",
+                "file": "_posts/Nacos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/es/a 1.md",
+                "file": "_posts/Nacos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/es/a 1.md"
+                "file": "_posts/Nacos.md"
               }
             }
           }
@@ -159,11 +146,39 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5120d4142b12cdad",
+  "active": "65acde2cb5dad638",
   "lastOpenFiles": [
+    "_posts/k8s/Rancher-1.md",
+    "_posts/other/git自动提交github脚本.md",
+    "_posts/mongodb(一).md",
+    "_posts/k8s/openjdk-8-jre-alpine 缺少awt.md",
+    "_posts/React.JS.md",
+    "_posts/springboot_record_1.md",
+    "_posts/sharding-Jdbc.md",
+    "SPI.md",
+    "_posts/SpringBoot2 war包部署.md",
+    "_posts/other/xshell_colour.md",
+    "_posts/other/VirtualBox.md",
+    "_posts/other/Tomcat与Nginx.md",
+    "_posts/activiti/Activiti-1.md",
+    "_posts/activiti",
+    "_posts/other/开源许可证.md",
+    "_posts/other/发布博客脚本.md",
+    "_posts/other",
+    "_posts/k8s/docker_compose_base.md",
     "_posts/a.md",
+    "_posts/base",
+    "_posts/Minfive.md",
+    "_posts/k8s/Dockerfile.md",
+    "_posts/k8s/Docker-1.md",
+    "_posts/k8s/K8s-1.md",
+    "_posts/https/https证书配置-1.md",
+    "_posts/k8s",
+    "_posts/jenkins/Jenkins (一).md",
+    "_posts/https",
+    "_posts/es/ES(1).md",
+    "_posts/jenkins",
     "_posts/es/a 1.md",
-    "_posts/ES(1).md",
     "_posts/es"
   ]
 }
