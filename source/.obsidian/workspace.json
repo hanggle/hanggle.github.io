@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Nacos.md",
+                "file": "_posts/k8s/openjdk-8-jre-alpine 缺少awt.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Nacos.md",
+                "file": "_posts/k8s/openjdk-8-jre-alpine 缺少awt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Nacos.md",
+                "file": "_posts/k8s/openjdk-8-jre-alpine 缺少awt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Nacos.md"
+                "file": "_posts/k8s/openjdk-8-jre-alpine 缺少awt.md"
               }
             }
           }
@@ -148,6 +148,12 @@
   },
   "active": "65acde2cb5dad638",
   "lastOpenFiles": [
+    "_posts/k8s/K8s-2.md",
+    "_posts/k8s/K8s-1.md",
+    "_posts/k8s/Dockerfile.md",
+    "_posts/k8s/Docker-3.md",
+    "_posts/k8s/Docker-2.md",
+    "_posts/Nacos.md",
     "_posts/k8s/Rancher-1.md",
     "_posts/other/git自动提交github脚本.md",
     "_posts/mongodb(一).md",
@@ -169,16 +175,11 @@
     "_posts/a.md",
     "_posts/base",
     "_posts/Minfive.md",
-    "_posts/k8s/Dockerfile.md",
     "_posts/k8s/Docker-1.md",
-    "_posts/k8s/K8s-1.md",
     "_posts/https/https证书配置-1.md",
     "_posts/k8s",
-    "_posts/jenkins/Jenkins (一).md",
     "_posts/https",
-    "_posts/es/ES(1).md",
     "_posts/jenkins",
-    "_posts/es/a 1.md",
     "_posts/es"
   ]
 }

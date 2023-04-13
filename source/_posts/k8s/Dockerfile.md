@@ -3,7 +3,8 @@ title: demo
 #cover: 
 author: 
 nick: hanggle
- link: [hanggle (hanggle) · GitHub](https://www.github.com/hanggle) #editor:
+link: https://www.github.com/hanggle
+#editor:
 
 # name: Minfive
 
