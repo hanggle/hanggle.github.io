@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    
+        <title>MongoDB(一) | hanggle blog</title>
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="[object Object]" />
+<meta name="designer" content="minfive" />
+<meta name="keywords" content="hanggle,spring,spring boot,分布式,数据库,java"/>
+<meta name="description" content="日常学习与兴趣交流的个人博客" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="robots" content="all" />
+
+<link rel="canonical" href="https://hanggle.cn/2019/10/05/mongodb(%E4%B8%80)/index.html">
+
+<link rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Prefetch -->
+
+
+
+
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="/scss/base/index.css">
+
+<!-- RSS -->
+<link rel="alternate" href="/atom.xml" title="hanggle">
+
+<!-- 统计 -->
+<!-- 百度统计 -->
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+    
+    <link rel="stylesheet" href="/scss/views/page/post.css">
+
+</head>
+<body ontouchstart>
+    
+        <!-- loading 页面 -->
+<div id="page-loading" class="page page-loading" style="background-image: url('/img/loading.gif')"></div>
+    
+
+    <div id="page" class="page js-hidden">
+        
+    <!-- 页头 -->
+<header class="page__small-header page__header--small">
+    <nav class="page__navbar">
+        <div class="page__container navbar-container">
+            <a class="page__logo" href="/" title="hanggle" alt="hanggle">
+                <img src="/img/avatar.png" alt="hanggle">
+            </a>
+
+            <nav class="page__nav">
+                <ul class="nav__list clearfix">
+                    
+                        
+                        <li class="nav__item">
+                            <a href="/" alt="首页" title="首页">首页</a>
+                        </li>
+                    
+                        
+                        <li class="nav__item">
+                            <a href="/categories/SpringBoot" alt="SpringBoot" title="SpringBoot">SpringBoot</a>
+                        </li>
+                    
+                        
+                        <li class="nav__item">
+                            <a href="/About" alt="关于" title="关于">关于</a>
+                        </li>
+                    
+                </ul>
+            </nav>
+
+            <button class="page__menu-btn" type="button">
+                <i class="iconfont icon-menu"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+
+
+        
+    <main class="page__container page__main">
+    <div class="page__content">
+        <article class="page__post">
+    
+
+    <header class="post__info">
+        <h1 class="post__title">MongoDB(一)</h1>
+
+        <div class="post__mark">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-write"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="https://www.github.com/hanggle" target="_blank" rel="noopener">hanggle</a>
+                        </li>
+                    
+                </ul>
+            </div>
+            
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-time"></i>
+                <ul class="mark__list clearfix">
+                    <li class="mark__item"><span>2019-10-05</span></li>
+                </ul>
+            </div>
+
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-tab"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                        </li>
+                    
+                        <li class="mark__item">
+                            <a href="/tags/mongodb/">Mongodb</a>
+                        </li>
+                    
+                </ul>
+            </div>
+
+            
+        </div>
+    </header>
+
+    <div class="post__content">
+        <h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h3><h5 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h5><table>
+<thead>
+<tr>
+<th>No</th>
+<th>关系型数据库</th>
+<th>NoSQL数据库</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>数据库</td>
+<td>数据库（类似MySQL）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>表</td>
+<td>集合</td>
+</tr>
+<tr>
+<td>3</td>
+<td>行</td>
+<td>文档</td>
+</tr>
+<tr>
+<td>4</td>
+<td>列</td>
+<td>成员</td>
+</tr>
+<tr>
+<td>5</td>
+<td>主键</td>
+<td>ObjectID(自动维护)</td>
+</tr>
+</tbody></table>
+<p>MogoDB是一款强大、灵活且易于拓展的通用型数据库。它能拓展出非常多的功能，比如二级索引、返回查询、排序、聚合，以及地理空间索引。</p>
+<h5 id="1-1-易于使用"><a href="#1-1-易于使用" class="headerlink" title="1.1 易于使用"></a>1.1 易于使用</h5><p>MongoDB是一个面向文档的数据库，不是关系型数据库。文档中的键和值不再是固定的类型和大小。</p>
+<h5 id="1-2-易于拓展"><a href="#1-2-易于拓展" class="headerlink" title="1.2 易于拓展"></a>1.2 易于拓展</h5><p>业务数据增长到一定程度时需要拓展数据库，有两种方式可以进行拓展：</p>
+<ol>
+<li>纵向扩展。使用性能更强的机器</li>
+<li>横向扩展。将数据分区到不同的机器上</li>
+</ol>
+<p>​    MongoDB采用横向拓展的方式。面向文档的数据模型使它很容易在多台服务器之间进行数据分割。MongoDB能够自动处理跨集群的数据和负载，自动重新分配文档，以及将用户请求分配到正确的机器上。</p>
+<h5 id="1-3-功能丰富"><a href="#1-3-功能丰富" class="headerlink" title="1.3 功能丰富"></a>1.3 功能丰富</h5><p>MongoDB具有以下功能：</p>
+<ul>
+<li><p>索引</p>
+<p>MongoDB支持二级索引，允许多种快速查询，提供唯一索引、复合索引、地理空间索引，以及全文索引。</p>
+</li>
+<li><p>聚合</p>
+<p>MongoDB支持“聚合管道”。用户能够通过简单的片段创建复杂的聚合，并通过数据库自动优化。</p>
+</li>
+<li><p>特殊的集合类型</p>
+<p>MongoDB支持存在时间有限的集合，适用于那些将在某个时刻国企的数据，如会话（session）。MongoDB也支持固定大小的集合，用于保存近期数据，如日志。</p>
+</li>
+<li><p>文件存储</p>
+<p>MongoDB支持一种非常易用的协议，用于存储大文件和文件元数据。</p>
+<p>MongoDB不具备一些关系型数据库很普遍的功能，如连接和复杂多行事务。</p>
+</li>
+</ul>
+<h5 id="1-4-卓越的性能"><a href="#1-4-卓越的性能" class="headerlink" title="1.4 卓越的性能"></a>1.4 卓越的性能</h5><p>​    MongoDB的一个主要目标是提供卓越的性能。MongoDB能对文档动态填充，也能预分配数据文件以利用额外的空间换区稳定的性能。MongoDB把尽可能多的内存用作缓存，试图为每次查询自动选择正确的索引。</p>
+<h3 id="MongoDB-安装"><a href="#MongoDB-安装" class="headerlink" title="MongoDB 安装"></a>MongoDB 安装</h3><ol>
+<li><p>下载</p>
+</li>
+<li><p>配置MongoDB环境变量</p>
+<p>D:\devTools\MongoDB\Server\4.0\bin</p>
+</li>
+<li><p>配置文件存储路径</p>
+<p> 安装目录下新建一个data目录</p>
+</li>
+<li><p>修改配置信息</p>
+<p>D:\devTools\MongoDB 目录下建立mongodb.conf</p>
+<blockquote>
+<p>dbpath=</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="2-MongoDB基础知识"><a href="#2-MongoDB基础知识" class="headerlink" title="2. MongoDB基础知识"></a>2. MongoDB基础知识</h3><h5 id="2-1-文档"><a href="#2-1-文档" class="headerlink" title="2.1 文档"></a>2.1 文档</h5><p><strong>文档</strong>是MongoDB的核心概念。文档就是键值对的一个有序集。比如</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"greeting"</span>: <span class="string">"hello world!"</span>&#125;</span></pre></td></tr></table></figure>
+
+<p>这个文档只有一个键“greeting，其对应的值为”hello world! “。</p>
+<p>文档的键是字符串。除了少数例外情况，键可以使用任意UTF-8字符。</p>
+<ul>
+<li>键不能含有\0 （空字符）。这个字符用于表示键的结尾。</li>
+<li>.和$具有特殊意义，只能在特定的环境下使用。这两个字符被保留，不能使用。</li>
+</ul>
+<p><strong>MongoDB不区分类型，但区分大小写</strong>。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#123;"foo": 3&#125;和&#123;"foo":"3"&#125;是相同的</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#123;"foo":3&#125;和&#123;"Foo":3&#125;是不同的</span></pre></td></tr></table></figure>
+
+<p><strong>MongoDB中不能有重复的键</strong>。</p>
+<h5 id="2-2-集合"><a href="#2-2-集合" class="headerlink" title="2.2 集合"></a>2.2 集合</h5><p>集合是<strong>动态模式</strong>的。这意味着集合里面的文档可以是各式各样的。下面两个文档可以放在同一个集合里：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"greeting"</span>: <span class="string">"hello, world!"</span>&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"foo"</span>: <span class="number">5</span>&#125;</span></pre></td></tr></table></figure>
+
+<p>文档里面的值的类型可以不同，键的类型也可以不同</p>
+<p>那为什么还要使用多个集合呢？</p>
+<ul>
+<li>不同的文档放在同一个集合不利于管理。返回数据时类型混乱等。</li>
+<li>同种类型放在一个集合里，数据更加集中，比混合在一个集合查询更快。</li>
+<li>创建索引时，索引是按照集合类型来定义的。</li>
+</ul>
+<h5 id="2-3-命名"><a href="#2-3-命名" class="headerlink" title="2.3 命名"></a>2.3 命名</h5><p>集合使用名称进行标识。集合名需要满足下列条件任意的UTF-8字符串。</p>
+<ul>
+<li>集合名不能是空字符串（””）。</li>
+<li>集合名不能不能包含\0(空字符)，这个字符标识集合名的结束。</li>
+<li>集合名不能以“system.”开头，这是为系统集合保留的前缀</li>
+<li>用户创建的集合不能再集合名中包含保留字‘$’。因为某些系统生成的集合中包含$。</li>
+</ul>
+<p><strong>子集合</strong></p>
+<p>组织集合的一种惯例是使用“.”分割不同命名空间的子集合。例如一个具有博客功能的应用可能包含两个集合，分别是blog.posts和blog.authors。这是为了使组织结构更清晰，这里的blog集合跟他的子集合是没有任何关系的。</p>
+<h5 id="2-4-数据库"><a href="#2-4-数据库" class="headerlink" title="2.4 数据库"></a>2.4 数据库</h5><p>MongoDB中，多个文档组成集合，而多个集合可以组成数据库。一个MongoDB可以承载多个数据库，每个数据库拥有0个或多个集合。每个数据库都有独立的权限。</p>
+<p>数据库名需满足以下任意UTF-8的字符串</p>
+<ul>
+<li>不能是空字符串（””）</li>
+<li>不能包含 / \ . “ * &lt; &gt; : | ? $  \0 .只是用字母和数字</li>
+<li>数据库名区分大小写。建议全部小写</li>
+<li>数据库名最多64个字节</li>
+</ul>
+<p>数据库最终会变成文件系统中的一个文件，数据库名即对应的文件名，这也是数据库名有诸多限制的原因。</p>
+<p>admin、local、config 这些数据库名是保留的。</p>
+<p><strong>数据库名+集合名=命名空间</strong></p>
+<h5 id="2-5-启动MongoDB"><a href="#2-5-启动MongoDB" class="headerlink" title="2.5 启动MongoDB"></a>2.5 启动MongoDB</h5><h1 id="mongodb命令"><a href="#mongodb命令" class="headerlink" title="mongodb命令"></a>mongodb命令</h1><p>启动并指定数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">mongod --dbpath  d:&#x2F;devtools&#x2F;mongodb.db</span></pre></td></tr></table></figure>
+
+<p>启动并指定数据库和端口号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">mongod --dbpath  d:&#x2F;devtools&#x2F;mongodb.db --port&#x3D;77777</span></pre></td></tr></table></figure>
+
+<p>查看数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">show database</span></pre></td></tr></table></figure>
+
+<p>启动并制定配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">mongod -f d:&#x2F;devtools&#x2F;mongodb&#x2F;mongodb.conf</span></pre></td></tr></table></figure>
+
+<p>使用指定数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">use db1</span></pre></td></tr></table></figure>
+
+<p>1.带条件删除</p>
+<blockquote>
+<p>db.user.remove({“name”:”zhangshan”});</p>
+</blockquote>
+<p>2.删除所有数据</p>
+<blockquote>
+<p>db.user.remove({})</p>
+</blockquote>
+<p>3.删除集合</p>
+<blockquote>
+<p>db.user.drop()</p>
+</blockquote>
+<p>4.删除整个数据库</p>
+<blockquote>
+<p>show dbs;<br>db.user.getDB()<br>db.dropDatabase()</p>
+</blockquote>
+<h1 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h1><h3 id="新增"><a href="#新增" class="headerlink" title="新增"></a>新增</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.insert(&#123;&quot;url&quot;:&quot;www.hanggle.com&quot;&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">db.infos.insert([&#123;&quot;url&quot;:&quot;www.hanggle.com&quot;&#125;, &#123;&quot;url&quot;:&quot;www.hanggle.com&quot;&#125;])</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">for(var i&#x3D;0; i&lt;10; i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    db.infos.insert(&#123;&quot;url&quot;:&quot;www.hanggle.com-&quot;+ i&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><h4 id="普通查询"><a href="#普通查询" class="headerlink" title="普通查询"></a>普通查询</h4><p>查询所有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.find();</span></pre></td></tr></table></figure>
+
+<p>查询url为”<a href="http://www.hanggle.com&quot;的数据" target="_blank" rel="noopener">www.hanggle.com&quot;的数据</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.find(&#123;&quot;url&quot;:&quot;www.hanggle.com&quot;&#125;);</span></pre></td></tr></table></figure>
+
+<p>查询url为”<a href="http://www.hanggle.com&quot;的数据且id不显示" target="_blank" rel="noopener">www.hanggle.com&quot;的数据且id不显示</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.find(&#123;&quot;url&quot;:&quot;www.hanggle.com&quot;&#125;, &#123;&quot;_id&quot;:0&#125;);</span></pre></td></tr></table></figure>
+
+<p>查询url为”<a href="http://www.hanggle.com&quot;的数据,数据漂亮显示" target="_blank" rel="noopener">www.hanggle.com&quot;的数据,数据漂亮显示</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.find(&#123;&quot;url&quot;:&quot;www.hanggle.com&quot;&#125;).pretty();</span></pre></td></tr></table></figure>
+
+<h4 id="关系运算查询"><a href="#关系运算查询" class="headerlink" title="关系运算查询"></a>关系运算查询</h4><table>
+<thead>
+<tr>
+<th>$gt</th>
+<th>$gte</th>
+<th>$ne</th>
+<th>$lt</th>
+<th>$lte</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>大于</td>
+<td>大于等于</td>
+<td>不等于</td>
+<td>小于</td>
+<td>小于等于</td>
+</tr>
+</tbody></table>
+<p>查询age&gt;20的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;age&quot;:&#123;&quot;$gt&quot;:20&#125;&#125;).pretty();</span></pre></td></tr></table></figure>
+
+<p>查询age大于等于20的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;age&quot;:&#123;&quot;$gte&quot;:20&#125;&#125;).pretty();</span></pre></td></tr></table></figure>
+
+<p>查询age不等于20的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;age&quot;:&#123;&quot;$ne&quot;:20&#125;&#125;).pretty();</span></pre></td></tr></table></figure>
+
+<h4 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h4><table>
+<thead>
+<tr>
+<th>$and</th>
+<th>$or</th>
+<th>$not/$nor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>与</td>
+<td>或</td>
+<td>非</td>
+</tr>
+</tbody></table>
+<p>查询age大于等于18，且小于等于20的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;age&quot;: &#123;&quot;$gte&quot;: 18, &quot;$lte&quot;: 20&#125;&#125;)</span></pre></td></tr></table></figure>
+
+<p>查询age&gt;18或score&gt;80的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;$or&quot;: [&#123;&quot;age&quot;: &#123;&quot;$gt&quot;:18&#125;&#125;,&#123;&quot;score&quot;:&#123;&quot;$gt&quot;: 80&#125;&#125;]&#125;)</span></pre></td></tr></table></figure>
+
+<p>查询age&gt;18并且score&lt;80的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;$and&quot;: [&#123;&quot;age&quot;: &#123;&quot;$gt&quot;:18&#125;&#125;,&#123;&quot;score&quot;:&#123;&quot;$lt&quot;: 80&#125;&#125;]&#125;)</span></pre></td></tr></table></figure>
+
+<p>查询age不大于18并且score不小于80的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;$nor&quot;: [&#123;&quot;age&quot;: &#123;&quot;$gt&quot;:18&#125;&#125;,&#123;&quot;score&quot;:&#123;&quot;$lt&quot;: 80&#125;&#125;]&#125;)</span></pre></td></tr></table></figure>
+
+<h4 id="查询数组"><a href="#查询数组" class="headerlink" title="查询数组"></a>查询数组</h4><table>
+<thead>
+<tr>
+<th>$all</th>
+<th>￥</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>查询所有</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>查询数组中包含语文数学的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;course&quot;: &#123;&quot;$all&quot;: [&quot;语文&quot;, &quot;数学&quot;]&#125;&#125;)</span></pre></td></tr></table></figure>
+
+<p>查询数组中坐标1的数据为数学的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;course.1&quot;: &quot;数学&quot;&#125;)</span></pre></td></tr></table></figure>
+
+<p>查询数组size为3的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;course&quot;: &#123;&quot;$size&quot;:3&#125;&#125;)</span></pre></td></tr></table></figure>
+
+<p>– 有问题  查询数组前两条数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;course&quot;: &#123;&quot;$slice&quot;: 2&#125;&#125;)</span></pre></td></tr></table></figure>
+
+<p>– 有问题  查询数组后两条数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;course&quot;: &#123;&quot;$slice&quot;: 2&#125;&#125;)</span></pre></td></tr></table></figure>
+
+<p>– 有问题  查询数组中index1-2坐标数据两条数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;course&quot;: &#123;&quot;$slice&quot;: [1, 2]&#125;&#125;)</span></pre></td></tr></table></figure>
+
+<h4 id="判断一个字段是否存在"><a href="#判断一个字段是否存在" class="headerlink" title="判断一个字段是否存在"></a>判断一个字段是否存在</h4><p>查询存在course的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;course&quot;: &#123;&quot;$exists&quot;: true&#125;&#125;)</span></pre></td></tr></table></figure>
+
+<p>查询不存在course的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;course&quot;: &#123;&quot;$exists&quot;: false&#125;&#125;)</span></pre></td></tr></table></figure>
+
+<h4 id="where-查询"><a href="#where-查询" class="headerlink" title="where 查询"></a>where 查询</h4><p><strong>不建议使用</strong></p>
+<h4 id="正则运算"><a href="#正则运算" class="headerlink" title="正则运算"></a>正则运算</h4><ul>
+<li><p>基础语法：{key: 正则标记}</p>
+</li>
+<li><p>完整语法：{key:{“$regex”:正则标记, “$options”:选项}}。</p>
+<p>对于options主要是设置正则的信息查询的标记：</p>
+<blockquote>
+<ul>
+<li>“i”: 忽略字母大小写</li>
+<li>“m”：多行查找</li>
+<li>“x”: 空白字符串除了被转义的或在字符串类中意外的完全被忽略</li>
+<li>“s”：匹配所有的字符（圆点、“.”）,包括换行内容。</li>
+</ul>
+</blockquote>
+<p>需要注意的是：如果是直接使用（javascript），那么只能使用i和m，而“x”和“s”必须使用$regex</p>
+</li>
+</ul>
+<p>模糊查询那么包含A的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">(1) db.course.find(&#123;&quot;name&quot;: &#x2F;A&#x2F;i&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">(2) db.course.find(&#123;&quot;name&quot;: &#123;&quot;$regex&quot;:&#x2F;A&#x2F;i&#125;&#125;)</span></pre></td></tr></table></figure>
+
+<p>模糊查询数组那么包含“数”的记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find(&#123;&quot;course&quot;: &#123;&quot;$regex&quot;:&#x2F;数&#x2F;i&#125;&#125;)</span></pre></td></tr></table></figure>
+
+<h3 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h3><p>按分数倒序排序（-1），正序排序（1）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find().sort(&#123;&quot;score&quot;: -1&#125;)</span></pre></td></tr></table></figure>
+
+<p>自然排序 倒序排序（-1），正序排序（1）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find().sort(&#123;&quot;$natural&quot;: 1&#125;)</span></pre></td></tr></table></figure>
+
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><p>删除course集合</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.drop()</span></pre></td></tr></table></figure>
+
+<p>删除集合course中url为<a href="http://www.hanggle.com的数据" target="_blank" rel="noopener">www.hanggle.com的数据</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.remove(&#123;&quot;url&quot;:&quot;www.hanggle.com&quot;&#125;);</span></pre></td></tr></table></figure>
+
+<p>删除course中所有数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.user.remove(&#123;&#125;)</span></pre></td></tr></table></figure>
+
+<h3 id="分页显示"><a href="#分页显示" class="headerlink" title="分页显示"></a>分页显示</h3><ul>
+<li>skip(n): 表示跨过多少行</li>
+<li>limit(n): 取出的数据行的个数限制</li>
+</ul>
+<p>按score倒序排序跳过1条取2条</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.course.find().skip(1).limit(2).sort(&#123;&quot;score&quot;: -1&#125;)</span></pre></td></tr></table></figure>
+
+<h3 id="数据更新"><a href="#数据更新" class="headerlink" title="数据更新"></a>数据更新</h3><h4 id="查询索引"><a href="#查询索引" class="headerlink" title="查询索引"></a>查询索引</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.getIndexes()</span></pre></td></tr></table></figure>
+
+<h3 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h3><p>在集合infos上的age列创建升序索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.ensureIndex(&#123;&quot;age&quot;：1&#125;)</span></pre></td></tr></table></figure>
+
+<h3 id="使用索引"><a href="#使用索引" class="headerlink" title="使用索引"></a>使用索引</h3><p>查询age=19的数据，FETCH表示正在使用索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.find(&#123;&quot;age&quot;:&#123;&quot;$eq&quot;:19&#125;&#125;).explain();</span></pre></td></tr></table></figure>
+
+<p>![1561126812376](E:\01 File\node\DB\assets\1561126812376.png)</p>
+<h3 id="！强制使用索引"><a href="#！强制使用索引" class="headerlink" title="！强制使用索引"></a>！强制使用索引</h3><p>sql加上hint() 表示强制使用索引，强制使用索引只能使用已存在的索引。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.find(&#123;&quot;$or&quot;:[&#123;&quot;age&quot;:&#123;&quot;$eq&quot;:19&#125;&#125;,&#123;&quot;name&quot;:&#123;&quot;$eq&quot;:&quot;haha&quot;&#125;&#125;]&#125;).hint().explain();</span></pre></td></tr></table></figure>
+
+<h3 id="删除索引"><a href="#删除索引" class="headerlink" title="删除索引"></a>删除索引</h3><p>删除集合上age列的正序索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.dropIndex(&#123;&quot;age&quot;:1&#125;);</span></pre></td></tr></table></figure>
+
+<h3 id="删除全部索引"><a href="#删除全部索引" class="headerlink" title="删除全部索引"></a>删除全部索引</h3><p>删除infos上除_id其它的所有索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.dropIndexes();</span></pre></td></tr></table></figure>
+
+<h3 id="创建唯一索引"><a href="#创建唯一索引" class="headerlink" title="创建唯一索引"></a>创建唯一索引</h3><p>在infos上创建name唯一索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.ensureIndex(&#123;&quot;name&quot;:1&#125;,&#123;&quot;unique&quot;: true&#125;);</span></pre></td></tr></table></figure>
+
+<p>如果增加重复数据会有以下提示信息</p>
+<blockquote>
+<p>E11000 duplicate key error collection: mydb.infos index: name_1 dup key: { : “张三” }</p>
+</blockquote>
+<h3 id="过期索引"><a href="#过期索引" class="headerlink" title="过期索引"></a>过期索引</h3><p>过期索引用于延时自动珊瑚记录的一种索引。它仅包含一个字段，改字段为Date类型，并且不支持复合索引。可以指定某条记录在延时固定时间后自动删除。数据自动超时删除主要用在系统生成的事件、日志或者会话信息等不需要永久存储的数据。<strong>超时时间是不准确的</strong></p>
+<blockquote>
+<ul>
+<li><strong>注意事项</strong></li>
+</ul>
+<ol>
+<li>TTL索引仅支持一个字段，不能支持复合索引。</li>
+<li>_id字段不支持TTL索引。</li>
+<li>不能再固定大小的集合上创建TTL索引。</li>
+<li>不能通过createIndex()接口来改变expireAfterSeconds的值，可以通过”collMod”命令，或者先删除再创建的方式。</li>
+<li>不能在已经建立索引的字段创建TTL索引。</li>
+</ol>
+</blockquote>
+<p>在phone的time字段上设置过期索引，过期时间为10s</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.phones.ensureIndex(&#123;&quot;time&quot;:1&#125;, &#123;expireAfterSeconds:10&#125;);</span></pre></td></tr></table></figure>
+
+<h3 id="全文索引"><a href="#全文索引" class="headerlink" title="全文索引"></a>全文索引</h3><h3 id="聚合-取得集合数量"><a href="#聚合-取得集合数量" class="headerlink" title="聚合-取得集合数量"></a>聚合-取得集合数量</h3><p>统计info中数据个数，count可以加参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.infos.count();</span></pre></td></tr></table></figure>
+
+<h3 id="聚合-消除重复数据"><a href="#聚合-消除重复数据" class="headerlink" title="聚合-消除重复数据"></a>聚合-消除重复数据</h3><p>查询course中name去重数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.runCommand(&#123;&quot;distinct&quot;:&quot;course&quot;,&quot;key&quot;:&quot;name&quot;&#125;)</span></pre></td></tr></table></figure>
+
+<h3 id="聚合-分组"><a href="#聚合-分组" class="headerlink" title="聚合-分组"></a>聚合-分组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr></table></figure>
+
+<h3 id="聚合框架"><a href="#聚合框架" class="headerlink" title="聚合框架"></a>聚合框架</h3><h4 id="group"><a href="#group" class="headerlink" title="group"></a>group</h4><p>Group查询都是无序的</p>
+<blockquote>
+<p>db.emps.insert({“name”:”AAA”, “dept”:”部门A”, “tel”:110, “salery”:2000, “sex”:”W”});<br>db.emps.insert({“name”:”BBB”, “dept”:”部门A”, “tel”:120, “salery”:7000, “sex”:”M”});<br>db.emps.insert({“name”:”CCC”, “dept”:”部门B”, “tel”:130, “salery”:4000, “sex”:”W”});<br>db.emps.insert({“name”:”DDD”, “dept”:”部门B”, “tel”:140, “salery”:1000, “sex”:”M”});<br>db.emps.insert({“name”:”EEE”, “dept”:”部门B”, “tel”:150, “salery”:2000, “sex”:”W”});</p>
+</blockquote>
+<p>查询emps每个部分的人数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.emps.aggregate([&#123;&quot;$group&quot;:&#123;&quot;_id&quot;:&quot;$dept&quot;, emp_count:&#123;&quot;$sum&quot;: 1&#125;&#125;&#125;]);</span></pre></td></tr></table></figure>
+
+<p>查询每个部门总工资</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.emps.aggregate([&#123;&quot;$group&quot;:&#123;&quot;_id&quot;:&quot;$dept&quot;, salery_count:&#123;&quot;$sum&quot;: &quot;$salery&quot;&#125;&#125;&#125;]);</span></pre></td></tr></table></figure>
+
+<p>查询每个人的平均工资</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.emps.aggregate([&#123;&quot;$group&quot;:&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    &quot;_id&quot;:&quot;$dept&quot;, </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    salery_sum:&#123;&quot;$sum&quot;: &quot;$salery&quot;&#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    salery_avg:&#123;&quot;$avg&quot;: &quot;$salery&quot;&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &#125;&#125;]);</span></pre></td></tr></table></figure>
+
+<p>查询每个分组的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.emps.aggregate([&#123;&quot;$group&quot;:&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    &quot;_id&quot;:&quot;$dept&quot;, </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    sal_data:&#123;&quot;$push&quot;: &quot;$salery&quot;&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &#125;&#125;]);</span></pre></td></tr></table></figure>
+
+<p>查询每个分组最大值和最小值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.emps.aggregate([&#123;&quot;$group&quot;:&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    &quot;_id&quot;:&quot;$dept&quot;, </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    sal_data:&#123;&quot;$push&quot;: &quot;$salery&quot;&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &#125;&#125;]);</span></pre></td></tr></table></figure>
+
+<h4 id="project"><a href="#project" class="headerlink" title="project"></a>project</h4><p>控制_id列不显示，name列显示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.emps.aggregate([&#123;&quot;$project&quot;:&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    &quot;_id&quot;:0,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    &quot;name&quot;:1&#125;&#125;]);</span></pre></td></tr></table></figure>
+
+<p>project使用的是数据库投影机制，投影过程中也可以进行加减乘除运算，</p>
+<p>乘法运算：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.emps.aggregate([&#123;&quot;$project&quot;:&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    &quot;_id&quot;:0,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    &quot;name&quot;:1,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &quot;salery&quot;:&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        &quot;年薪&quot;:&#123;&quot;$multiply&quot;:[&quot;$salery&quot;,12]&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        &#125;&#125;&#125;])</span></pre></td></tr></table></figure>
+
+<h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h3><p>MongoDB默认不使用用户名密码，使用密码要具备以下条件：</p>
+<blockquote>
+<ol>
+<li>服务器启动时打开授权认证</li>
+<li>设置用户名密码</li>
+</ol>
+</blockquote>
+<h4 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.createUser(&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    "user":"hanggle",</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    "pwd":"hanggle",</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    "roles":[&#123;"role":"readWrite", "db":"mydb"&#125;]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &#125;)</span></pre></td></tr></table></figure>
+
+<h4 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">db.changeUserPassword(&quot;mongodb&quot;, &quot;mongodb&quot;)</span></pre></td></tr></table></figure>
+
+
+        
+        <div class="post-announce">
+            感谢您的阅读，本文由
+            <a href="https://hanggle.cn">hanggle</a>
+            版权所有。如若转载，请注明出处：hanggle（<a href="https://hanggle.cn/2019/10/05/mongodb(%E4%B8%80)/">https://hanggle.cn/2019/10/05/mongodb(%E4%B8%80)/</a>）
+        </div>
+        
+
+        <div class="post__prevs">
+            <div class="post__prev">
+                
+                <a href="/2019/05/03/k8s/Docker-2/" title="Docker基本操作"><i class="iconfont icon-prev"></i>Docker基本操作</a>
+                
+            </div>
+            <div class="post__prev post__prev--right">
+                
+                <a href="/2019/12/05/k8s/docker_compose_base/" title="docker-compose 安装">docker-compose 安装<i class="iconfont icon-next"></i></a>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+        
+        
+    </div>
+
+    <aside class="page__sidebar">
+    <!--  -->
+
+    <form id="page-search-from" class="page__search-from" action="/search/">
+        <label class="search-form__item">
+            <input class="input" type="text" name="search" placeholder="Search...">
+            <i class="iconfont icon-search"></i>
+        </label>
+    </form>
+
+
+    <div class="sidebar__block">
+        <h3 class="block__title">文章分类</h3>
+        <ul class="block-list"><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span class="block-list-count">4</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span class="block-list-count">2</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/other/">other</a><span class="block-list-count">5</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/linux/">linux</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/java/">java</a><span class="block-list-count">5</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/git/">git</a><span class="block-list-count">3</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/docker/">docker</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/demo/">demo</a><span class="block-list-count">3</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/SpringBoot/">SpringBoot</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/React/">React</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/ES/">ES</a><span class="block-list-count">4</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/CI-CD/">CI/CD</a><span class="block-list-count">10</span></li></ul>
+    </div>
+    
+    <div class="sidebar__block">
+        <h3 class="block__title">最新文章</h3>
+        
+        <ul class="block-list latest-post-list">
+            
+                    <li class="latest-post-item">
+                        <a href="/2022/09/22/redis%E5%BC%80%E5%90%AF%E8%87%AA%E5%90%AF%E5%8A%A8/" title="Redis windows设置开启自启动">
+                            <div class="item__cover">
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/default_cover.png" alt="Redis windows设置开启自启动" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">Redis windows设置开启自启动</h3>
+                                <span class="item__text">2022-09-22</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2022/09/18/activiti/Activiti-1/" title="Activity(一)">
+                            <div class="item__cover">
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/Snipaste_2022-09-18_23-40-48.png" alt="Activity(一)" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">Activity(一)</h3>
+                                <span class="item__text">2022-09-18</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2022/09/14/k8s/openjdk-8-jre-alpine%20%E7%BC%BA%E5%B0%91awt/" title="openjdk:8-jre-alpine 缺少awt，font">
+                            <div class="item__cover">
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/default_cover.png" alt="openjdk:8-jre-alpine 缺少awt，font" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">openjdk:8-jre-alpine 缺少awt，font</h3>
+                                <span class="item__text">2022-09-14</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2022/09/12/sharding-Jdbc/" title="Sharding-Jdbc">
+                            <div class="item__cover">
+                                <img src="https://hanggle-blog.oss-cn-hangzhou.aliyuncs.com/article/Snipaste_2022-09-14_22-24-42.png" alt="Sharding-Jdbc" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">Sharding-Jdbc</h3>
+                                <span class="item__text">2022-09-12</span>
+                            </div>
+                        </a>
+                    </li>
+                
+        </ul>
+    
+    </div>
+
+    <div class="sidebar__block">
+        <h3 class="block__title">文章标签</h3>
+        
+        <ul class="block-list tag-list clearfix">
+            
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/Flink/">Flink</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/React/">React</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/Spring/">Spring</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/SpringBoot/">SpringBoot</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/VirtualBox/">VirtualBox</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/demo/">demo</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/docker/">docker</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/git/">git</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/https/">https</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/java/">java</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/java8/">java8</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/jekins/">jekins</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/k8s/">k8s</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/mongodb/">mongodb</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/mysql/">mysql</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/nginx/">nginx</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/other/">other</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/redis/">redis</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/shell/">shell</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/spring-boot/">spring boot</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/tocmat/">tocmat</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/tomcat/">tomcat</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/%E5%9F%BA%E7%A1%80/">基础</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</a>
+                    </li>  
+                
+        </ul>
+    
+    </div>
+
+    <!-- <div class="sidebar__block">
+        <h3 class="block__title">友情链接</h3>
+        <ul class="block-list">
+            
+        </ul>
+    </div> -->
+</aside>
+</main>
+
+
+        
+            <!-- 页脚 -->
+<footer class="page__footer">
+    <section class="footer__top">
+        <div class="page__container footer__container">
+            
+            <div class="footer-top__item footer-top__item--2">
+                <h3 class="item__title">关于</h3>
+                <div class="item__content">
+                    <p class="item__text"></p>
+                    <ul class="footer__contact-info">
+                        <li class="contact-info__item">
+                            <i class="iconfont icon-address"></i>
+                            <span>Zhengzhou, China</span>
+                        </li>
+                        <li class="contact-info__item">
+                            <i class="iconfont icon-email2"></i>
+                            <span>hanggle@qq.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+            
+            
+        </div>
+    </section>
+    <section class="footer__bottom">
+        <div class="page__container footer__container">
+            <p class="footer__copyright">©
+               <!-- <a href="https://github.com/Mrminfive/hexo-theme-skapp" target="_blank">Skapp</a> 2017 powered by
+                <a href="http://hexo.io/" target="_blank">Hexo</a>, made by 
+                <a href="https://github.com/Mrminfive" target="_blank">minfive</a>.-->
+                © 2009-2022 hanggle.cn 版权所有 <a href="https://beian.miit.gov.cn" target="_blank">豫ICP备2022009291号-1</a>
+            </p>
+            <ul class="footer__social-network clearfix">
+                
+            </ul>
+        </div>
+    </section>
+</footer>
+        
+
+        
+            <!-- 返回顶部 -->
+<div id="back-top" class="back-top back-top--hidden js-hidden">
+    <i class="iconfont icon-top"></i>
+</div>
+        
+    </div>
+
+    <!-- build:js /js/common.js -->
+        <script type="text/javascript" src="/js/common/utils.js"></script>
+        <script type="text/javascript" src="/js/common/pack.js"></script>
+        <script type="text/javascript" src="/js/common/animation.js"></script>
+        <script type="text/javascript" src="/js/layout/loading.js"></script>
+        <script type="text/javascript" src="/js/layout/header.js"></script>
+        <script type="text/javascript" src="/js/layout/back-top.js"></script>
+        <script type="text/javascript" src="/js/layout/post.js"></script>
+    <!-- endbuild -->
+
+    
+    <script src="/js/page/post.js"></script>
+
+
+    
+    
+
+
+
+    <!-- 不蒜子统计 -->
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+
+     
+
+
+
+
+
+
+
+
+</body>
+</html>
