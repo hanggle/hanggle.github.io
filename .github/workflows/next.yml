@@ -1,0 +1,75 @@
+name: Build and Deploy to Master
+
+on:
+  push:
+    branches:
+      - blog  # 当 blog 分支有提交时触发
+  pull_request:
+    branches:
+      - blog
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整的 git 历史
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build project
+        run: |
+          echo "🚀 开始构建项目..."
+          npm run build:static
+          echo "✅ 项目构建完成！"
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
+          
+      - name: Prepare deployment files
+        run: |
+          echo "📁 准备部署文件..."
+          # 检查 out 目录是否存在
+          if [ -d "out" ]; then
+            echo "✅ 找到 out 目录"
+            # 创建 .nojekyll 文件（GitHub Pages 需要）
+            touch out/.nojekyll
+            # 创建 CNAME 文件（如果有自定义域名）
+            if [ -n "${{ secrets.CUSTOM_DOMAIN }}" ]; then
+              echo "${{ secrets.CUSTOM_DOMAIN }}" > out/CNAME
+              echo "🌐 已添加自定义域名: ${{ secrets.CUSTOM_DOMAIN }}"
+            fi
+            ls -la out/
+          else
+            echo "❌ 未找到 out 目录，构建可能失败"
+            exit 1
+          fi
+        
+      - name: Deploy to master branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out  # Next.js 静态导出目录
+          publish_branch: master
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Deploy: ${{ github.event.head_commit.message }}'
+          
+      - name: Notify deployment status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ 部署成功！站点已更新到 master 分支"
+          else
+            echo "❌ 部署失败，请检查构建日志"
+          fi
