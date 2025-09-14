@@ -1,0 +1,240 @@
+1:"$Sreact.fragment"
+2:I[31362,["/_next/static/chunks/27842a9bf1956628.js"],"default"]
+3:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"default"]
+4:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"default"]
+5:I[22016,["/_next/static/chunks/27842a9bf1956628.js","/_next/static/chunks/2d6d5be5a4d0b156.js","/_next/static/chunks/d4739044ea2ee7bb.js","/_next/static/chunks/89106ff1684e124a.js"],"default"]
+7:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"OutletBoundary"]
+9:I[11533,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"AsyncMetadataOutlet"]
+b:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"ViewportBoundary"]
+d:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"MetadataBoundary"]
+e:"$Sreact.suspense"
+10:I[68027,["/_next/static/chunks/27842a9bf1956628.js"],"default"]
+:HL["/_next/static/chunks/26108d099754a71e.css","style"]
+:HL["/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"b":"sA-Ox68I9eR73eASsYKUZ","p":"","c":["","posts","tailwindcss-tips",""],"i":false,"f":[[["",{"children":["posts",{"children":[["id","tailwindcss-tips","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/26108d099754a71e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/27842a9bf1956628.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":[["$","head",null,{"children":["$","$L2",null,{}]}],["$","body",null,{"className":"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100","children":["$","div",null,{"className":"text-center px-4","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-900 mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-700 mb-4","children":"页面未找到"}],["$","p",null,{"className":"text-gray-600 mb-8 max-w-md mx-auto","children":"抱歉，您访问的页面不存在。"}],["$","$L5",null,{"href":"/","className":"inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors","children":"返回首页"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","tailwindcss-tips","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L6",[["$","script","script-0",{"src":"/_next/static/chunks/2d6d5be5a4d0b156.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/d4739044ea2ee7bb.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/89106ff1684e124a.js","async":true,"nonce":"$undefined"}]],["$","$L7",null,{"children":["$L8",["$","$L9",null,{"promise":"$@a"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Lb",null,{"children":"$Lc"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$Ld",null,{"children":["$","div",null,{"hidden":true,"children":["$","$e",null,{"fallback":null,"children":"$Lf"}]}]}]]}],false]],"m":"$undefined","G":["$10",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/26108d099754a71e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"s":false,"S":true}
+11:I[69397,["/_next/static/chunks/27842a9bf1956628.js","/_next/static/chunks/2d6d5be5a4d0b156.js","/_next/static/chunks/d4739044ea2ee7bb.js","/_next/static/chunks/89106ff1684e124a.js"],"default"]
+12:I[45678,["/_next/static/chunks/27842a9bf1956628.js","/_next/static/chunks/2d6d5be5a4d0b156.js","/_next/static/chunks/d4739044ea2ee7bb.js","/_next/static/chunks/89106ff1684e124a.js"],"default"]
+13:I[93871,["/_next/static/chunks/27842a9bf1956628.js","/_next/static/chunks/2d6d5be5a4d0b156.js","/_next/static/chunks/d4739044ea2ee7bb.js","/_next/static/chunks/89106ff1684e124a.js"],"default"]
+14:T1180,<h1 id="heading-0">TailwindCSS 实用技巧分享</h1>
+<p>TailwindCSS 是一个实用优先的 CSS 框架，它通过提供大量的原子类来帮助开发者快速构建界面。</p>
+<h2 id="heading-1">为什么选择 TailwindCSS？</h2>
+<h3 id="heading-2">优势</h3>
+<ul>
+<li><strong>快速开发</strong> - 无需离开 HTML 即可设计界面</li>
+<li><strong>一致性</strong> - 预定义的设计系统确保视觉一致性</li>
+<li><strong>响应式</strong> - 内置响应式设计支持</li>
+<li><strong>可定制</strong> - 高度可配置的设计系统</li>
+<li><strong>性能</strong> - 只包含使用的样式</li>
+</ul>
+<h3 id="heading-3">与传统 CSS 的对比</h3>
+<pre><code class="language-html" data-language="html">&#x3C;!-- 传统 CSS -->
+&#x3C;div class="card">
+  &#x3C;h2 class="card-title">标题&#x3C;/h2>
+  &#x3C;p class="card-content">内容&#x3C;/p>
+&#x3C;/div>
+
+&#x3C;!-- TailwindCSS -->
+&#x3C;div class="bg-white rounded-lg shadow-md p-6">
+  &#x3C;h2 class="text-xl font-bold mb-4">标题&#x3C;/h2>
+  &#x3C;p class="text-gray-600">内容&#x3C;/p>
+&#x3C;/div>
+</code></pre>
+<h2 id="heading-4">实用技巧</h2>
+<h3 id="heading-5">1. 响应式设计</h3>
+<pre><code class="language-html" data-language="html">&#x3C;div class="w-full md:w-1/2 lg:w-1/3">
+  &#x3C;!-- 移动端全宽，平板半宽，桌面1/3宽 -->
+&#x3C;/div>
+</code></pre>
+<h3 id="heading-6">2. 状态变体</h3>
+<pre><code class="language-html" data-language="html">&#x3C;button class="bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+  点击我
+&#x3C;/button>
+</code></pre>
+<h3 id="heading-7">3. 自定义组件</h3>
+<pre><code class="language-css" data-language="css">@layer components {
+  .btn-primary {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+}
+</code></pre>
+<h3 id="heading-8">4. 暗色模式</h3>
+<pre><code class="language-html" data-language="html">&#x3C;div class="bg-white dark:bg-gray-800 text-black dark:text-white">
+  支持暗色模式的内容
+&#x3C;/div>
+</code></pre>
+<h2 id="heading-9">最佳实践</h2>
+<h3 id="heading-10">1. 合理使用 @apply</h3>
+<pre><code class="language-css" data-language="css">/* 好的做法 - 常用组件 */
+.card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+/* 避免过度使用 */
+.complex-component {
+  @apply bg-white p-4 rounded shadow border border-gray-200 text-gray-800 hover:shadow-lg transition-shadow duration-200 ...;
+}
+</code></pre>
+<h3 id="heading-11">2. 配置定制</h3>
+<pre><code class="language-javascript" data-language="javascript">// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50: '#f0f9ff',
+          500: '#3b82f6',
+          900: '#1e3a8a',
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+    },
+  },
+}
+</code></pre>
+<h3 id="heading-12">3. 使用 Prettier 插件</h3>
+<p>安装并配置 <code>prettier-plugin-tailwindcss</code> 来自动排序类名：</p>
+<pre><code class="language-bash" data-language="bash">npm install -D prettier prettier-plugin-tailwindcss
+</code></pre>
+<h2 id="heading-13">常用模式</h2>
+<h3 id="heading-14">卡片布局</h3>
+<pre><code class="language-html" data-language="html">&#x3C;div class="max-w-sm mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+  &#x3C;div class="md:flex">
+    &#x3C;div class="md:flex-shrink-0">
+      &#x3C;img class="h-48 w-full object-cover md:w-48" src="image.jpg" alt="Image">
+    &#x3C;/div>
+    &#x3C;div class="p-8">
+      &#x3C;div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">标签&#x3C;/div>
+      &#x3C;h3 class="mt-1 text-lg leading-tight font-medium text-black">标题&#x3C;/h3>
+      &#x3C;p class="mt-2 text-gray-500">描述内容...&#x3C;/p>
+    &#x3C;/div>
+  &#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h3 id="heading-15">网格布局</h3>
+<pre><code class="language-html" data-language="html">&#x3C;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  &#x3C;!-- 网格项目 -->
+&#x3C;/div>
+</code></pre>
+<h2 id="heading-16">总结</h2>
+<p>TailwindCSS 通过其原子化的设计理念，让我们能够快速构建美观且一致的用户界面。虽然初学时可能需要适应大量的类名，但一旦熟悉，你会发现它极大地提高了开发效率。</p>
+<p>记住关键是要掌握其设计系统和响应式原则，然后在实践中不断积累经验。</p>
+6:["$","div",null,{"className":"min-h-screen flex flex-col","children":[["$","$L11",null,{"articleId":"tailwindcss-tips","articleTitle":"TailwindCSS 实用技巧分享"}],["$","$L12",null,{"allPosts":[{"id":"typography-showcase","title":"排版效果展示","date":"2024-01-30","excerpt":"展示博客系统优化后的各种排版元素效果，包括标题、段落、引用、列表、图片、表格、链接等。","tags":["排版","设计","测试"],"image":"https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"},{"id":"tailwindcss-tips","title":"TailwindCSS 实用技巧分享","date":"2024-01-25","excerpt":"分享一些 TailwindCSS 的实用技巧和最佳实践，帮助你更高效地编写样式代码。","tags":["TailwindCSS","CSS","前端","样式"],"image":"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"},{"id":"code-highlight-test","title":"代码高亮功能测试","date":"2024-01-25","excerpt":"测试博客系统的代码高亮功能，包含多种编程语言的示例。","tags":["测试","代码高亮","技术"],"image":""},{"id":"nextjs-development-guide","title":"Next.js 开发指南：从入门到实践","date":"2024-01-20","excerpt":"深入了解 Next.js 框架的核心特性，包括服务端渲染、静态生成和 API 路由等功能。","tags":["Next.js","React","前端开发","教程"],"image":"https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"},{"id":"2025-9-7_go","title":"出海出海","date":"2024-01-20","excerpt":"了解出海的一些基础知识","tags":["出海"],"image":"https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"},{"id":"welcome","title":"test","date":"2024-01-15","excerpt":"这是我博客的第一篇文章，介绍了博客的功能和我的写作计划。","tags":["介绍","博客","开始"],"image":""},{"id":"welcome-to-my-blog","title":"欢迎来到我的博客","date":"2024-01-15","excerpt":"这是我博客的第一篇文章，介绍了博客的功能和我的写作计划。","tags":["介绍","博客","开始"],"image":"https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"}]}],["$","div",null,{"className":"pt-16","children":[" ",["$","main",null,{"className":"flex-grow","children":[["$","article",null,{"className":"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16","children":[["$","div",null,{"className":"mb-8","children":["$","$L5",null,{"href":"/","className":"inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors","children":[["$","svg",null,{"className":"w-4 h-4 mr-2","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M15 19l-7-7 7-7"}]}],"返回首页"]}]}],["$","header",null,{"className":"mb-12","children":[["$","h1",null,{"className":"text-4xl font-bold text-gray-900 mb-4","children":"TailwindCSS 实用技巧分享"}],["$","div",null,{"className":"flex flex-wrap items-center gap-4 text-gray-600","children":[["$","time",null,{"className":"text-sm","children":"2024-01-25"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","span","TailwindCSS",{"className":"inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full","children":"TailwindCSS"}],["$","span","CSS",{"className":"inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full","children":"CSS"}],["$","span","前端",{"className":"inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full","children":"前端"}],["$","span","样式",{"className":"inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full","children":"样式"}]]}]]}]]}],["$","$L13",null,{"children":["$","div",null,{"className":"typography-content max-w-none text-gray-700 leading-relaxed","dangerouslySetInnerHTML":{"__html":"$14"}}]}],"$L15"]}],"$L16","$L17"]}]]}],"$L18"]}]
+19:I[46311,["/_next/static/chunks/27842a9bf1956628.js","/_next/static/chunks/2d6d5be5a4d0b156.js","/_next/static/chunks/d4739044ea2ee7bb.js","/_next/static/chunks/89106ff1684e124a.js"],"default"]
+1b:I[8675,["/_next/static/chunks/27842a9bf1956628.js","/_next/static/chunks/2d6d5be5a4d0b156.js","/_next/static/chunks/d4739044ea2ee7bb.js","/_next/static/chunks/89106ff1684e124a.js"],"default"]
+15:["$","div",null,{"className":"mt-16 pt-8 border-t border-gray-200","children":["$","div",null,{"className":"text-center","children":["$","$L5",null,{"href":"/","className":"inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors","children":"查看更多文章"}]}]}]
+1a:T1180,<h1 id="heading-0">TailwindCSS 实用技巧分享</h1>
+<p>TailwindCSS 是一个实用优先的 CSS 框架，它通过提供大量的原子类来帮助开发者快速构建界面。</p>
+<h2 id="heading-1">为什么选择 TailwindCSS？</h2>
+<h3 id="heading-2">优势</h3>
+<ul>
+<li><strong>快速开发</strong> - 无需离开 HTML 即可设计界面</li>
+<li><strong>一致性</strong> - 预定义的设计系统确保视觉一致性</li>
+<li><strong>响应式</strong> - 内置响应式设计支持</li>
+<li><strong>可定制</strong> - 高度可配置的设计系统</li>
+<li><strong>性能</strong> - 只包含使用的样式</li>
+</ul>
+<h3 id="heading-3">与传统 CSS 的对比</h3>
+<pre><code class="language-html" data-language="html">&#x3C;!-- 传统 CSS -->
+&#x3C;div class="card">
+  &#x3C;h2 class="card-title">标题&#x3C;/h2>
+  &#x3C;p class="card-content">内容&#x3C;/p>
+&#x3C;/div>
+
+&#x3C;!-- TailwindCSS -->
+&#x3C;div class="bg-white rounded-lg shadow-md p-6">
+  &#x3C;h2 class="text-xl font-bold mb-4">标题&#x3C;/h2>
+  &#x3C;p class="text-gray-600">内容&#x3C;/p>
+&#x3C;/div>
+</code></pre>
+<h2 id="heading-4">实用技巧</h2>
+<h3 id="heading-5">1. 响应式设计</h3>
+<pre><code class="language-html" data-language="html">&#x3C;div class="w-full md:w-1/2 lg:w-1/3">
+  &#x3C;!-- 移动端全宽，平板半宽，桌面1/3宽 -->
+&#x3C;/div>
+</code></pre>
+<h3 id="heading-6">2. 状态变体</h3>
+<pre><code class="language-html" data-language="html">&#x3C;button class="bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+  点击我
+&#x3C;/button>
+</code></pre>
+<h3 id="heading-7">3. 自定义组件</h3>
+<pre><code class="language-css" data-language="css">@layer components {
+  .btn-primary {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+}
+</code></pre>
+<h3 id="heading-8">4. 暗色模式</h3>
+<pre><code class="language-html" data-language="html">&#x3C;div class="bg-white dark:bg-gray-800 text-black dark:text-white">
+  支持暗色模式的内容
+&#x3C;/div>
+</code></pre>
+<h2 id="heading-9">最佳实践</h2>
+<h3 id="heading-10">1. 合理使用 @apply</h3>
+<pre><code class="language-css" data-language="css">/* 好的做法 - 常用组件 */
+.card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+/* 避免过度使用 */
+.complex-component {
+  @apply bg-white p-4 rounded shadow border border-gray-200 text-gray-800 hover:shadow-lg transition-shadow duration-200 ...;
+}
+</code></pre>
+<h3 id="heading-11">2. 配置定制</h3>
+<pre><code class="language-javascript" data-language="javascript">// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50: '#f0f9ff',
+          500: '#3b82f6',
+          900: '#1e3a8a',
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+    },
+  },
+}
+</code></pre>
+<h3 id="heading-12">3. 使用 Prettier 插件</h3>
+<p>安装并配置 <code>prettier-plugin-tailwindcss</code> 来自动排序类名：</p>
+<pre><code class="language-bash" data-language="bash">npm install -D prettier prettier-plugin-tailwindcss
+</code></pre>
+<h2 id="heading-13">常用模式</h2>
+<h3 id="heading-14">卡片布局</h3>
+<pre><code class="language-html" data-language="html">&#x3C;div class="max-w-sm mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+  &#x3C;div class="md:flex">
+    &#x3C;div class="md:flex-shrink-0">
+      &#x3C;img class="h-48 w-full object-cover md:w-48" src="image.jpg" alt="Image">
+    &#x3C;/div>
+    &#x3C;div class="p-8">
+      &#x3C;div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">标签&#x3C;/div>
+      &#x3C;h3 class="mt-1 text-lg leading-tight font-medium text-black">标题&#x3C;/h3>
+      &#x3C;p class="mt-2 text-gray-500">描述内容...&#x3C;/p>
+    &#x3C;/div>
+  &#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h3 id="heading-15">网格布局</h3>
+<pre><code class="language-html" data-language="html">&#x3C;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  &#x3C;!-- 网格项目 -->
+&#x3C;/div>
+</code></pre>
+<h2 id="heading-16">总结</h2>
+<p>TailwindCSS 通过其原子化的设计理念，让我们能够快速构建美观且一致的用户界面。虽然初学时可能需要适应大量的类名，但一旦熟悉，你会发现它极大地提高了开发效率。</p>
+<p>记住关键是要掌握其设计系统和响应式原则，然后在实践中不断积累经验。</p>
+16:["$","$L19",null,{"content":"$1a"}]
+17:["$","$L1b",null,{}]
+18:["$","footer",null,{"className":"bg-gray-50 border-t border-gray-200","children":["$","div",null,{"className":"max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8","children":["$","div",null,{"className":"text-center","children":[["$","p",null,{"className":"text-gray-600 text-sm","children":"© 2024 我的博客. 保留所有权利."}],["$","p",null,{"className":"text-gray-500 text-xs mt-2","children":"使用 Next.js + TailwindCSS + Markdown 构建"}]]}]}]}]
+c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+1c:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"IconMark"]
+a:{"metadata":[["$","title","0",{"children":"我的博客 - 技术分享与思考"}],["$","meta","1",{"name":"description","content":"分享技术文章、编程经验和开发心得的个人博客"}],["$","meta","2",{"name":"author","content":"博客作者"}],["$","meta","3",{"name":"keywords","content":"技术博客,编程,开发,Next.js,React,TypeScript"}],["$","meta","4",{"name":"creator","content":"博客作者"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","7",{"property":"og:title","content":"我的博客 - 技术分享与思考"}],["$","meta","8",{"property":"og:description","content":"分享技术文章、编程经验和开发心得的个人博客"}],["$","meta","9",{"property":"og:url","content":"http://localhost:3000/"}],["$","meta","10",{"property":"og:site_name","content":"我的博客"}],["$","meta","11",{"property":"og:locale","content":"zh_CN"}],["$","meta","12",{"property":"og:type","content":"website"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"我的博客 - 技术分享与思考"}],["$","meta","15",{"name":"twitter:description","content":"分享技术文章、编程经验和开发心得的个人博客"}],["$","link","16",{"rel":"icon","href":"/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L1c","17",{}]],"error":null,"digest":"$undefined"}
+f:"$a:metadata"

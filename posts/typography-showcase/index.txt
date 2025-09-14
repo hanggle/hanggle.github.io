@@ -1,0 +1,666 @@
+1:"$Sreact.fragment"
+2:I[31362,["/_next/static/chunks/27842a9bf1956628.js"],"default"]
+3:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"default"]
+4:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"default"]
+5:I[22016,["/_next/static/chunks/27842a9bf1956628.js","/_next/static/chunks/2d6d5be5a4d0b156.js","/_next/static/chunks/d4739044ea2ee7bb.js","/_next/static/chunks/89106ff1684e124a.js"],"default"]
+7:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"OutletBoundary"]
+9:I[11533,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"AsyncMetadataOutlet"]
+b:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"ViewportBoundary"]
+d:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"MetadataBoundary"]
+e:"$Sreact.suspense"
+10:I[68027,["/_next/static/chunks/27842a9bf1956628.js"],"default"]
+:HL["/_next/static/chunks/26108d099754a71e.css","style"]
+:HL["/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"b":"sA-Ox68I9eR73eASsYKUZ","p":"","c":["","posts","typography-showcase",""],"i":false,"f":[[["",{"children":["posts",{"children":[["id","typography-showcase","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/26108d099754a71e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/27842a9bf1956628.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":[["$","head",null,{"children":["$","$L2",null,{}]}],["$","body",null,{"className":"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100","children":["$","div",null,{"className":"text-center px-4","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-900 mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-700 mb-4","children":"页面未找到"}],["$","p",null,{"className":"text-gray-600 mb-8 max-w-md mx-auto","children":"抱歉，您访问的页面不存在。"}],["$","$L5",null,{"href":"/","className":"inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors","children":"返回首页"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","typography-showcase","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L6",[["$","script","script-0",{"src":"/_next/static/chunks/2d6d5be5a4d0b156.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/d4739044ea2ee7bb.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/89106ff1684e124a.js","async":true,"nonce":"$undefined"}]],["$","$L7",null,{"children":["$L8",["$","$L9",null,{"promise":"$@a"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Lb",null,{"children":"$Lc"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$Ld",null,{"children":["$","div",null,{"hidden":true,"children":["$","$e",null,{"fallback":null,"children":"$Lf"}]}]}]]}],false]],"m":"$undefined","G":["$10",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/26108d099754a71e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"s":false,"S":true}
+11:I[69397,["/_next/static/chunks/27842a9bf1956628.js","/_next/static/chunks/2d6d5be5a4d0b156.js","/_next/static/chunks/d4739044ea2ee7bb.js","/_next/static/chunks/89106ff1684e124a.js"],"default"]
+12:I[45678,["/_next/static/chunks/27842a9bf1956628.js","/_next/static/chunks/2d6d5be5a4d0b156.js","/_next/static/chunks/d4739044ea2ee7bb.js","/_next/static/chunks/89106ff1684e124a.js"],"default"]
+13:I[93871,["/_next/static/chunks/27842a9bf1956628.js","/_next/static/chunks/2d6d5be5a4d0b156.js","/_next/static/chunks/d4739044ea2ee7bb.js","/_next/static/chunks/89106ff1684e124a.js"],"default"]
+14:T1fde,<h1 id="heading-0">排版效果展示</h1>
+<p>这篇文章用于展示博客系统优化后的各种排版元素效果。通过 <strong>Tailwind Typography</strong> 插件的强化配置，我们实现了更加美观和易读的内容展示。</p>
+<h2 id="heading-1">标题层级展示</h2>
+<h3 id="heading-2">三级标题示例</h3>
+<p>这是三级标题的内容，用于展示中等重要性的章节。</p>
+<h4 id="heading-3">四级标题示例</h4>
+<p>这是四级标题的内容，通常用于子章节。</p>
+<h5 id="heading-4">五级标题示例</h5>
+<p>这是五级标题的内容。</p>
+<h6 id="heading-5">六级标题示例</h6>
+<p>这是六级标题的内容。</p>
+<h2 id="heading-6">段落和文本格式</h2>
+<p>这是一个标准段落的示例。段落具有合适的行高和间距，确保良好的可读性。文本应该流畅自然，让读者能够轻松阅读和理解内容。</p>
+<p>这里有一些文本格式的展示：<strong>这是加粗文本</strong>，<em>这是斜体文本</em>，<del>这是删除线文本</del>。</p>
+<p>你还可以使用 <code>inline code</code> 来突出显示代码片段或技术术语。</p>
+<h2 id="heading-7">链接展示</h2>
+<p>这里有一些链接示例：</p>
+<ul>
+<li><a href="https://nextjs.org/docs">Next.js 官方文档</a></li>
+<li><a href="https://tailwindcss.com">Tailwind CSS 官网</a></li>
+<li><a href="https://react.dev">React 文档</a></li>
+</ul>
+<h2 id="heading-8">引用块</h2>
+<blockquote>
+<p>这是一个简单的引用块示例。引用块通常用于突出显示重要的信息、名言或者来自其他来源的内容。</p>
+<p>引用块可以包含多个段落，并且具有特殊的视觉样式来区分普通文本。</p>
+</blockquote>
+<blockquote>
+<p>💡 <strong>提示：</strong> 这是一个带有表情符号的引用块，可以用来显示提示信息。</p>
+</blockquote>
+<h2 id="heading-9">列表展示</h2>
+<h3 id="heading-10">无序列表</h3>
+<p>日常开发中常用的技术栈：</p>
+<ul>
+<li>前端框架
+<ul>
+<li>React</li>
+<li>Vue.js</li>
+<li>Angular</li>
+</ul>
+</li>
+<li>后端技术
+<ul>
+<li>Node.js</li>
+<li>Python Django</li>
+<li>Java Spring Boot</li>
+</ul>
+</li>
+<li>数据库
+<ul>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>MongoDB</li>
+</ul>
+</li>
+</ul>
+<h3 id="heading-11">有序列表</h3>
+<p>博客开发的步骤：</p>
+<ol>
+<li>项目初始化
+<ol>
+<li>创建 Next.js 项目</li>
+<li>配置 TypeScript</li>
+<li>设置 ESLint</li>
+</ol>
+</li>
+<li>设计系统搭建
+<ol>
+<li>安装 Tailwind CSS</li>
+<li>配置主题色彩</li>
+<li>设置排版样式</li>
+</ol>
+</li>
+<li>功能开发
+<ol>
+<li>文章列表页面</li>
+<li>文章详情页面</li>
+<li>代码高亮功能</li>
+</ol>
+</li>
+<li>部署上线
+<ol>
+<li>构建项目</li>
+<li>选择托管平台</li>
+<li>配置域名</li>
+</ol>
+</li>
+</ol>
+<h2 id="heading-12">代码展示</h2>
+<h3 id="heading-13">内联代码</h3>
+<p>使用 <code>useState</code> Hook 来管理组件状态，通过 <code>useEffect</code> 处理副作用。</p>
+<h3 id="heading-14">代码块</h3>
+<pre><code class="language-javascript" data-language="javascript">// React Hook 示例
+import React, { useState, useEffect } from 'react';
+
+function BlogPost({ postId }) {
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchPost() {
+      try {
+        const response = await fetch(`/api/posts/${postId}`);
+        const postData = await response.json();
+        setPost(postData);
+      } catch (error) {
+        console.error('Failed to fetch post:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchPost();
+  }, [postId]);
+
+  if (loading) {
+    return &#x3C;div>加载中...&#x3C;/div>;
+  }
+
+  return (
+    &#x3C;article>
+      &#x3C;h1>{post?.title}&#x3C;/h1>
+      &#x3C;div dangerouslySetInnerHTML={{ __html: post?.content }} />
+    &#x3C;/article>
+  );
+}
+</code></pre>
+<h2 id="heading-15">表格展示</h2>
+<h3 id="heading-16">技术对比表</h3>
+<table>
+<thead>
+<tr>
+<th>框架/库</th>
+<th>开发者</th>
+<th>发布年份</th>
+<th>特点</th>
+<th>学习难度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>React</td>
+<td>Facebook</td>
+<td>2013</td>
+<td>组件化、虚拟DOM</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>Vue.js</td>
+<td>尤雨溪</td>
+<td>2014</td>
+<td>渐进式、易上手</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>Angular</td>
+<td>Google</td>
+<td>2016</td>
+<td>全功能框架</td>
+<td>困难</td>
+</tr>
+<tr>
+<td>Svelte</td>
+<td>Rich Harris</td>
+<td>2016</td>
+<td>编译时优化</td>
+<td>中等</td>
+</tr>
+</tbody>
+</table>
+<h3 id="heading-17">项目时间计划</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>开始时间</th>
+<th>结束时间</th>
+<th>负责人</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>需求分析</td>
+<td>2024-01-01</td>
+<td>2024-01-07</td>
+<td>产品经理</td>
+<td>✅ 完成</td>
+</tr>
+<tr>
+<td>UI 设计</td>
+<td>2024-01-08</td>
+<td>2024-01-14</td>
+<td>设计师</td>
+<td>✅ 完成</td>
+</tr>
+<tr>
+<td>前端开发</td>
+<td>2024-01-15</td>
+<td>2024-01-28</td>
+<td>前端工程师</td>
+<td>🔄 进行中</td>
+</tr>
+<tr>
+<td>后端开发</td>
+<td>2024-01-15</td>
+<td>2024-01-25</td>
+<td>后端工程师</td>
+<td>🔄 进行中</td>
+</tr>
+<tr>
+<td>测试验收</td>
+<td>2024-01-29</td>
+<td>2024-02-05</td>
+<td>测试工程师</td>
+<td>⏳ 等待</td>
+</tr>
+</tbody>
+</table>
+<h2 id="heading-18">图片展示</h2>
+<p>由于这是 Markdown 文件，图片需要实际的图片文件。以下是图片的语法示例：</p>
+<pre><code class="language-markdown" data-language="markdown">![博客系统架构图](https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=Blog+Architecture)
+</code></pre>
+<h2 id="heading-19">分割线</h2>
+<p>下面是一条分割线：</p>
+<hr>
+<p>分割线可以用来分隔不同的内容区块。</p>
+<h2 id="heading-20">混合内容示例</h2>
+<h3 id="heading-21">开发工作流程</h3>
+<p>在现代前端开发中，我们通常遵循以下工作流程：</p>
+<ol>
+<li>
+<p><strong>需求分析</strong> - 理解产品需求和用户故事</p>
+<blockquote>
+<p>💡 在这个阶段，与产品经理和设计师的沟通非常重要。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>技术选型</strong> - 选择合适的技术栈</p>
+<p>考虑因素包括：</p>
+<ul>
+<li>项目规模和复杂度</li>
+<li>团队技术水平</li>
+<li>性能要求</li>
+<li>维护成本</li>
+</ul>
+</li>
+<li>
+<p><strong>环境搭建</strong> - 创建开发环境</p>
+<pre><code class="language-bash" data-language="bash"># 创建新项目
+npx create-next-app@latest my-blog
+cd my-blog
+
+# 安装依赖
+npm install @tailwindcss/typography
+
+# 启动开发服务器
+npm run dev
+</code></pre>
+</li>
+<li>
+<p><strong>功能开发</strong> - 实现具体功能</p>
+<table>
+<thead>
+<tr>
+<th>功能模块</th>
+<th>优先级</th>
+<th>估时</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首页设计</td>
+<td>高</td>
+<td>2天</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>文章列表</td>
+<td>高</td>
+<td>1天</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>文章详情</td>
+<td>高</td>
+<td>3天</td>
+<td>🔄</td>
+</tr>
+<tr>
+<td>搜索功能</td>
+<td>中</td>
+<td>2天</td>
+<td>⏳</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>测试部署</strong> - 确保代码质量和上线</p>
+</li>
+</ol>
+<p>通过这样的工作流程，我们能够 <strong>高效有序</strong> 地完成项目开发。</p>
+<hr>
+<h2 id="heading-22">总结</h2>
+<p>这篇文章展示了博客系统中各种排版元素的优化效果：</p>
+<ul>
+<li>✨ <strong>标题层级</strong> - 清晰的视觉层次</li>
+<li>📝 <strong>段落文本</strong> - 舒适的阅读体验</li>
+<li>🔗 <strong>链接样式</strong> - 明显的交互反馈</li>
+<li>💬 <strong>引用块</strong> - 突出的信息展示</li>
+<li>📋 <strong>列表</strong> - 有序无序列表的美化</li>
+<li>🏷️ <strong>代码</strong> - 内联代码和代码块的优化</li>
+<li>📊 <strong>表格</strong> - 清晰的数据展示</li>
+<li>🖼️ <strong>图片</strong> - 圆角阴影的视觉效果</li>
+</ul>
+<p>通过 Tailwind Typography 的深度定制，我们实现了专业级的内容排版效果！</p>
+6:["$","div",null,{"className":"min-h-screen flex flex-col","children":[["$","$L11",null,{"articleId":"typography-showcase","articleTitle":"排版效果展示"}],["$","$L12",null,{"allPosts":[{"id":"typography-showcase","title":"排版效果展示","date":"2024-01-30","excerpt":"展示博客系统优化后的各种排版元素效果，包括标题、段落、引用、列表、图片、表格、链接等。","tags":["排版","设计","测试"],"image":"https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"},{"id":"tailwindcss-tips","title":"TailwindCSS 实用技巧分享","date":"2024-01-25","excerpt":"分享一些 TailwindCSS 的实用技巧和最佳实践，帮助你更高效地编写样式代码。","tags":["TailwindCSS","CSS","前端","样式"],"image":"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"},{"id":"code-highlight-test","title":"代码高亮功能测试","date":"2024-01-25","excerpt":"测试博客系统的代码高亮功能，包含多种编程语言的示例。","tags":["测试","代码高亮","技术"],"image":""},{"id":"nextjs-development-guide","title":"Next.js 开发指南：从入门到实践","date":"2024-01-20","excerpt":"深入了解 Next.js 框架的核心特性，包括服务端渲染、静态生成和 API 路由等功能。","tags":["Next.js","React","前端开发","教程"],"image":"https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"},{"id":"2025-9-7_go","title":"出海出海","date":"2024-01-20","excerpt":"了解出海的一些基础知识","tags":["出海"],"image":"https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"},{"id":"welcome","title":"test","date":"2024-01-15","excerpt":"这是我博客的第一篇文章，介绍了博客的功能和我的写作计划。","tags":["介绍","博客","开始"],"image":""},{"id":"welcome-to-my-blog","title":"欢迎来到我的博客","date":"2024-01-15","excerpt":"这是我博客的第一篇文章，介绍了博客的功能和我的写作计划。","tags":["介绍","博客","开始"],"image":"https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"}]}],["$","div",null,{"className":"pt-16","children":[" ",["$","main",null,{"className":"flex-grow","children":[["$","article",null,{"className":"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16","children":[["$","div",null,{"className":"mb-8","children":["$","$L5",null,{"href":"/","className":"inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors","children":[["$","svg",null,{"className":"w-4 h-4 mr-2","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M15 19l-7-7 7-7"}]}],"返回首页"]}]}],["$","header",null,{"className":"mb-12","children":[["$","h1",null,{"className":"text-4xl font-bold text-gray-900 mb-4","children":"排版效果展示"}],["$","div",null,{"className":"flex flex-wrap items-center gap-4 text-gray-600","children":[["$","time",null,{"className":"text-sm","children":"2024-01-30"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","span","排版",{"className":"inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full","children":"排版"}],["$","span","设计",{"className":"inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full","children":"设计"}],["$","span","测试",{"className":"inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full","children":"测试"}]]}]]}]]}],["$","$L13",null,{"children":["$","div",null,{"className":"typography-content max-w-none text-gray-700 leading-relaxed","dangerouslySetInnerHTML":{"__html":"$14"}}]}],"$L15"]}],"$L16","$L17"]}]]}],"$L18"]}]
+19:I[46311,["/_next/static/chunks/27842a9bf1956628.js","/_next/static/chunks/2d6d5be5a4d0b156.js","/_next/static/chunks/d4739044ea2ee7bb.js","/_next/static/chunks/89106ff1684e124a.js"],"default"]
+1b:I[8675,["/_next/static/chunks/27842a9bf1956628.js","/_next/static/chunks/2d6d5be5a4d0b156.js","/_next/static/chunks/d4739044ea2ee7bb.js","/_next/static/chunks/89106ff1684e124a.js"],"default"]
+15:["$","div",null,{"className":"mt-16 pt-8 border-t border-gray-200","children":["$","div",null,{"className":"text-center","children":["$","$L5",null,{"href":"/","className":"inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors","children":"查看更多文章"}]}]}]
+1a:T1fde,<h1 id="heading-0">排版效果展示</h1>
+<p>这篇文章用于展示博客系统优化后的各种排版元素效果。通过 <strong>Tailwind Typography</strong> 插件的强化配置，我们实现了更加美观和易读的内容展示。</p>
+<h2 id="heading-1">标题层级展示</h2>
+<h3 id="heading-2">三级标题示例</h3>
+<p>这是三级标题的内容，用于展示中等重要性的章节。</p>
+<h4 id="heading-3">四级标题示例</h4>
+<p>这是四级标题的内容，通常用于子章节。</p>
+<h5 id="heading-4">五级标题示例</h5>
+<p>这是五级标题的内容。</p>
+<h6 id="heading-5">六级标题示例</h6>
+<p>这是六级标题的内容。</p>
+<h2 id="heading-6">段落和文本格式</h2>
+<p>这是一个标准段落的示例。段落具有合适的行高和间距，确保良好的可读性。文本应该流畅自然，让读者能够轻松阅读和理解内容。</p>
+<p>这里有一些文本格式的展示：<strong>这是加粗文本</strong>，<em>这是斜体文本</em>，<del>这是删除线文本</del>。</p>
+<p>你还可以使用 <code>inline code</code> 来突出显示代码片段或技术术语。</p>
+<h2 id="heading-7">链接展示</h2>
+<p>这里有一些链接示例：</p>
+<ul>
+<li><a href="https://nextjs.org/docs">Next.js 官方文档</a></li>
+<li><a href="https://tailwindcss.com">Tailwind CSS 官网</a></li>
+<li><a href="https://react.dev">React 文档</a></li>
+</ul>
+<h2 id="heading-8">引用块</h2>
+<blockquote>
+<p>这是一个简单的引用块示例。引用块通常用于突出显示重要的信息、名言或者来自其他来源的内容。</p>
+<p>引用块可以包含多个段落，并且具有特殊的视觉样式来区分普通文本。</p>
+</blockquote>
+<blockquote>
+<p>💡 <strong>提示：</strong> 这是一个带有表情符号的引用块，可以用来显示提示信息。</p>
+</blockquote>
+<h2 id="heading-9">列表展示</h2>
+<h3 id="heading-10">无序列表</h3>
+<p>日常开发中常用的技术栈：</p>
+<ul>
+<li>前端框架
+<ul>
+<li>React</li>
+<li>Vue.js</li>
+<li>Angular</li>
+</ul>
+</li>
+<li>后端技术
+<ul>
+<li>Node.js</li>
+<li>Python Django</li>
+<li>Java Spring Boot</li>
+</ul>
+</li>
+<li>数据库
+<ul>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>MongoDB</li>
+</ul>
+</li>
+</ul>
+<h3 id="heading-11">有序列表</h3>
+<p>博客开发的步骤：</p>
+<ol>
+<li>项目初始化
+<ol>
+<li>创建 Next.js 项目</li>
+<li>配置 TypeScript</li>
+<li>设置 ESLint</li>
+</ol>
+</li>
+<li>设计系统搭建
+<ol>
+<li>安装 Tailwind CSS</li>
+<li>配置主题色彩</li>
+<li>设置排版样式</li>
+</ol>
+</li>
+<li>功能开发
+<ol>
+<li>文章列表页面</li>
+<li>文章详情页面</li>
+<li>代码高亮功能</li>
+</ol>
+</li>
+<li>部署上线
+<ol>
+<li>构建项目</li>
+<li>选择托管平台</li>
+<li>配置域名</li>
+</ol>
+</li>
+</ol>
+<h2 id="heading-12">代码展示</h2>
+<h3 id="heading-13">内联代码</h3>
+<p>使用 <code>useState</code> Hook 来管理组件状态，通过 <code>useEffect</code> 处理副作用。</p>
+<h3 id="heading-14">代码块</h3>
+<pre><code class="language-javascript" data-language="javascript">// React Hook 示例
+import React, { useState, useEffect } from 'react';
+
+function BlogPost({ postId }) {
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchPost() {
+      try {
+        const response = await fetch(`/api/posts/${postId}`);
+        const postData = await response.json();
+        setPost(postData);
+      } catch (error) {
+        console.error('Failed to fetch post:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchPost();
+  }, [postId]);
+
+  if (loading) {
+    return &#x3C;div>加载中...&#x3C;/div>;
+  }
+
+  return (
+    &#x3C;article>
+      &#x3C;h1>{post?.title}&#x3C;/h1>
+      &#x3C;div dangerouslySetInnerHTML={{ __html: post?.content }} />
+    &#x3C;/article>
+  );
+}
+</code></pre>
+<h2 id="heading-15">表格展示</h2>
+<h3 id="heading-16">技术对比表</h3>
+<table>
+<thead>
+<tr>
+<th>框架/库</th>
+<th>开发者</th>
+<th>发布年份</th>
+<th>特点</th>
+<th>学习难度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>React</td>
+<td>Facebook</td>
+<td>2013</td>
+<td>组件化、虚拟DOM</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>Vue.js</td>
+<td>尤雨溪</td>
+<td>2014</td>
+<td>渐进式、易上手</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>Angular</td>
+<td>Google</td>
+<td>2016</td>
+<td>全功能框架</td>
+<td>困难</td>
+</tr>
+<tr>
+<td>Svelte</td>
+<td>Rich Harris</td>
+<td>2016</td>
+<td>编译时优化</td>
+<td>中等</td>
+</tr>
+</tbody>
+</table>
+<h3 id="heading-17">项目时间计划</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>开始时间</th>
+<th>结束时间</th>
+<th>负责人</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>需求分析</td>
+<td>2024-01-01</td>
+<td>2024-01-07</td>
+<td>产品经理</td>
+<td>✅ 完成</td>
+</tr>
+<tr>
+<td>UI 设计</td>
+<td>2024-01-08</td>
+<td>2024-01-14</td>
+<td>设计师</td>
+<td>✅ 完成</td>
+</tr>
+<tr>
+<td>前端开发</td>
+<td>2024-01-15</td>
+<td>2024-01-28</td>
+<td>前端工程师</td>
+<td>🔄 进行中</td>
+</tr>
+<tr>
+<td>后端开发</td>
+<td>2024-01-15</td>
+<td>2024-01-25</td>
+<td>后端工程师</td>
+<td>🔄 进行中</td>
+</tr>
+<tr>
+<td>测试验收</td>
+<td>2024-01-29</td>
+<td>2024-02-05</td>
+<td>测试工程师</td>
+<td>⏳ 等待</td>
+</tr>
+</tbody>
+</table>
+<h2 id="heading-18">图片展示</h2>
+<p>由于这是 Markdown 文件，图片需要实际的图片文件。以下是图片的语法示例：</p>
+<pre><code class="language-markdown" data-language="markdown">![博客系统架构图](https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=Blog+Architecture)
+</code></pre>
+<h2 id="heading-19">分割线</h2>
+<p>下面是一条分割线：</p>
+<hr>
+<p>分割线可以用来分隔不同的内容区块。</p>
+<h2 id="heading-20">混合内容示例</h2>
+<h3 id="heading-21">开发工作流程</h3>
+<p>在现代前端开发中，我们通常遵循以下工作流程：</p>
+<ol>
+<li>
+<p><strong>需求分析</strong> - 理解产品需求和用户故事</p>
+<blockquote>
+<p>💡 在这个阶段，与产品经理和设计师的沟通非常重要。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>技术选型</strong> - 选择合适的技术栈</p>
+<p>考虑因素包括：</p>
+<ul>
+<li>项目规模和复杂度</li>
+<li>团队技术水平</li>
+<li>性能要求</li>
+<li>维护成本</li>
+</ul>
+</li>
+<li>
+<p><strong>环境搭建</strong> - 创建开发环境</p>
+<pre><code class="language-bash" data-language="bash"># 创建新项目
+npx create-next-app@latest my-blog
+cd my-blog
+
+# 安装依赖
+npm install @tailwindcss/typography
+
+# 启动开发服务器
+npm run dev
+</code></pre>
+</li>
+<li>
+<p><strong>功能开发</strong> - 实现具体功能</p>
+<table>
+<thead>
+<tr>
+<th>功能模块</th>
+<th>优先级</th>
+<th>估时</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首页设计</td>
+<td>高</td>
+<td>2天</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>文章列表</td>
+<td>高</td>
+<td>1天</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>文章详情</td>
+<td>高</td>
+<td>3天</td>
+<td>🔄</td>
+</tr>
+<tr>
+<td>搜索功能</td>
+<td>中</td>
+<td>2天</td>
+<td>⏳</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>测试部署</strong> - 确保代码质量和上线</p>
+</li>
+</ol>
+<p>通过这样的工作流程，我们能够 <strong>高效有序</strong> 地完成项目开发。</p>
+<hr>
+<h2 id="heading-22">总结</h2>
+<p>这篇文章展示了博客系统中各种排版元素的优化效果：</p>
+<ul>
+<li>✨ <strong>标题层级</strong> - 清晰的视觉层次</li>
+<li>📝 <strong>段落文本</strong> - 舒适的阅读体验</li>
+<li>🔗 <strong>链接样式</strong> - 明显的交互反馈</li>
+<li>💬 <strong>引用块</strong> - 突出的信息展示</li>
+<li>📋 <strong>列表</strong> - 有序无序列表的美化</li>
+<li>🏷️ <strong>代码</strong> - 内联代码和代码块的优化</li>
+<li>📊 <strong>表格</strong> - 清晰的数据展示</li>
+<li>🖼️ <strong>图片</strong> - 圆角阴影的视觉效果</li>
+</ul>
+<p>通过 Tailwind Typography 的深度定制，我们实现了专业级的内容排版效果！</p>
+16:["$","$L19",null,{"content":"$1a"}]
+17:["$","$L1b",null,{}]
+18:["$","footer",null,{"className":"bg-gray-50 border-t border-gray-200","children":["$","div",null,{"className":"max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8","children":["$","div",null,{"className":"text-center","children":[["$","p",null,{"className":"text-gray-600 text-sm","children":"© 2024 我的博客. 保留所有权利."}],["$","p",null,{"className":"text-gray-500 text-xs mt-2","children":"使用 Next.js + TailwindCSS + Markdown 构建"}]]}]}]}]
+c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+1c:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7dd66bdf8a7e5707.js"],"IconMark"]
+a:{"metadata":[["$","title","0",{"children":"我的博客 - 技术分享与思考"}],["$","meta","1",{"name":"description","content":"分享技术文章、编程经验和开发心得的个人博客"}],["$","meta","2",{"name":"author","content":"博客作者"}],["$","meta","3",{"name":"keywords","content":"技术博客,编程,开发,Next.js,React,TypeScript"}],["$","meta","4",{"name":"creator","content":"博客作者"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","7",{"property":"og:title","content":"我的博客 - 技术分享与思考"}],["$","meta","8",{"property":"og:description","content":"分享技术文章、编程经验和开发心得的个人博客"}],["$","meta","9",{"property":"og:url","content":"http://localhost:3000/"}],["$","meta","10",{"property":"og:site_name","content":"我的博客"}],["$","meta","11",{"property":"og:locale","content":"zh_CN"}],["$","meta","12",{"property":"og:type","content":"website"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"我的博客 - 技术分享与思考"}],["$","meta","15",{"name":"twitter:description","content":"分享技术文章、编程经验和开发心得的个人博客"}],["$","link","16",{"rel":"icon","href":"/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L1c","17",{}]],"error":null,"digest":"$undefined"}
+f:"$a:metadata"
