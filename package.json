@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "ESLINT_NO_DEV_ERRORS=true next build --turbopack",
+    "build": "next build --turbopack",
     "export": "next export",
-    "build:static": "ESLINT_NO_DEV_ERRORS=true next build --turbopack && next export",
+    "build:static": "next build --turbopack && next export",
     "start": "next start",
     "lint": "next lint --fix",
     "lint:check": "next lint --max-warnings=0"

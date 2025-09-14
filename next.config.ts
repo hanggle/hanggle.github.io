@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',  // 启用静态导出
   trailingSlash: true,  // 为静态托管添加尾随斜杠
+  skipTrailingSlashRedirect: true,
+  distDir: 'out',  // 输出目录
   eslint: {
     // 在构建时忽略 ESLint 错误
     ignoreDuringBuilds: true,

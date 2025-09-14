@@ -8,15 +8,14 @@ import Pagination from '@/components/Pagination';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 interface HomeProps {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-export default async function Home({ searchParams }: HomeProps) {
-  const params = await searchParams;
+export default function Home({ searchParams }: HomeProps) {
   const allPostsData = getSortedPostsData();
   
   // 获取当前页码，默认为第1页
-  const currentPage = parseInt((params.page as string) || '1', 10);
+  const currentPage = parseInt((searchParams?.page as string) || '1', 10);
   const itemsPerPage = 6;
   
   // 分页处理

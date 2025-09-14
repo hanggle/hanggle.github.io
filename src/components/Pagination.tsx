@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { PaginationInfo, generatePageNumbers } from '@/lib/pagination';
 import { trackPagination } from '@/lib/analytics';
+import { Suspense } from 'react';
 
 interface PaginationProps {
   pagination: PaginationInfo;
@@ -11,14 +12,14 @@ interface PaginationProps {
   showInfo?: boolean;
 }
 
-export default function Pagination({ 
+function PaginationInner({ 
   pagination, 
   basePath = '/' 
 }: PaginationProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   
-  const { currentPage, totalPages, totalItems, itemsPerPage, hasNextPage, hasPrevPage } = pagination;
+  const { currentPage, totalPages, hasNextPage, hasPrevPage } = pagination;
   
   // 如果只有一页，不显示分页
   if (totalPages <= 1) {
@@ -177,5 +178,17 @@ export default function Pagination({
         </div>
       )}
     </div>
+  );
+}
+
+export default function Pagination(props: PaginationProps) {
+  return (
+    <Suspense fallback={
+      <div className="flex justify-center items-center py-8">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+      </div>
+    }>
+      <PaginationInner {...props} />
+    </Suspense>
   );
 }
