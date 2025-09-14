@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "export": "next export",
-    "build:static": "next build --turbopack && next export",
+    "build:static": "next build --turbopack",
     "start": "next start",
     "lint": "next lint --fix",
     "lint:check": "next lint --max-warnings=0"

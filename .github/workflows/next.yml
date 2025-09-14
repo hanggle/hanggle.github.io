@@ -35,7 +35,7 @@ jobs:
       - name: Build project
         run: |
           echo "🚀 开始构建项目..."
-          # 设置环境变量跳过 ESLint 错误
+          # Next.js 15 已集成静态导出功能
           npm run build:static
           echo "✅ 项目构建完成！"
         env:

@@ -1,25 +1,19 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getSortedPostsData } from '@/lib/posts';
-import { paginateData } from '@/lib/pagination';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Pagination from '@/components/Pagination';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 interface HomeProps {
   searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-export default function Home({ searchParams }: HomeProps) {
+export default function Home() {
   const allPostsData = getSortedPostsData();
   
-  // 获取当前页码，默认为第1页
-  const currentPage = parseInt((searchParams?.page as string) || '1', 10);
-  const itemsPerPage = 6;
-  
-  // 分页处理
-  const paginatedResult = paginateData(allPostsData, currentPage, itemsPerPage);
+  // 静态生成显示所有文章
+  const displayPosts = allPostsData;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -42,9 +36,9 @@ export default function Home({ searchParams }: HomeProps) {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-3xl font-bold text-gray-900">最新文章</h2>
-              {paginatedResult.pagination.totalItems > 0 && (
+              {allPostsData.length > 0 && (
                 <div className="text-sm text-gray-500">
-                  共 {paginatedResult.pagination.totalItems} 篇文章
+                  共 {allPostsData.length} 篇文章
                 </div>
               )}
             </div>
@@ -64,7 +58,7 @@ export default function Home({ searchParams }: HomeProps) {
             ) : (
               <>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {paginatedResult.data.map((post) => (
+                  {displayPosts.map((post) => (
                   <article 
                     key={post.id} 
                     className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-100 hover:border-gray-200 flex flex-col h-full"
@@ -165,12 +159,14 @@ export default function Home({ searchParams }: HomeProps) {
                   ))}
                 </div>
                 
-                {/* 分页导航 */}
-                <Pagination 
-                  pagination={paginatedResult.pagination}
-                  basePath="/"
-                  showInfo={true}
-                />
+                {/* 静态生成显示所有文章 */}
+                {allPostsData.length > 6 && (
+                  <div className="mt-12 text-center">
+                    <p className="text-gray-500 text-sm">
+                      显示所有 {allPostsData.length} 篇文章
+                    </p>
+                  </div>
+                )}
               </>
             )}
           </div>
