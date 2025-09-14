@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- 背景圆形 -->
+  <circle cx="60" cy="60" r="50" fill="url(#gradient)" stroke="#2563eb" stroke-width="2"/>
+  
+  <!-- 渐变定义 -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 博客图标 - 书本形状 -->
+  <g transform="translate(60, 60)">
+    <!-- 书本主体 -->
+    <rect x="-18" y="-15" width="36" height="30" rx="2" fill="white" opacity="0.9"/>
+    
+    <!-- 书本页面线条 -->
+    <line x1="-12" y1="-8" x2="12" y2="-8" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+    <line x1="-12" y1="-3" x2="12" y2="-3" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+    <line x1="-12" y1="2" x2="8" y2="2" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+    <line x1="-12" y1="7" x2="10" y2="7" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+    
+    <!-- 书签 -->
+    <rect x="8" y="-15" width="4" height="20" fill="#f59e0b"/>
+    <path d="M8 5 L10 3 L12 5 L12 -15 L8 -15 Z" fill="#f59e0b"/>
+  </g>
+</svg>

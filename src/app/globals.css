@@ -1,0 +1,220 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 自定义排版样式 */
+.typography-content {
+  line-height: 1.75;
+}
+
+.typography-content h1 {
+  @apply text-4xl font-bold text-gray-900 mt-10 mb-6 leading-tight;
+}
+
+.typography-content h2 {
+  @apply text-3xl font-bold text-gray-900 mt-8 mb-4 leading-tight border-b-2 border-gray-200 pb-2;
+}
+
+.typography-content h3 {
+  @apply text-2xl font-semibold text-gray-900 mt-6 mb-3 leading-snug;
+}
+
+.typography-content h4 {
+  @apply text-xl font-semibold text-gray-900 mt-4 mb-2;
+}
+
+.typography-content p {
+  @apply my-5 leading-relaxed;
+}
+
+.typography-content a {
+  @apply text-blue-600 font-medium no-underline hover:text-blue-800 hover:underline transition-colors;
+}
+
+.typography-content strong {
+  @apply font-semibold text-gray-900;
+}
+
+.typography-content em {
+  @apply italic;
+}
+
+.typography-content code {
+  @apply bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono;
+}
+
+.typography-content pre {
+  @apply bg-[#0d1117] text-[#e6edf3] rounded-xl p-0 overflow-hidden my-8 border border-[#30363d] shadow-xl transition-all duration-300 hover:shadow-2xl hover:border-[#656d76];
+}
+
+.typography-content pre code {
+  @apply bg-transparent text-inherit p-0 font-mono text-sm leading-relaxed;
+}
+
+/* Enhanced code block styling */
+.typography-content pre {
+  position: relative;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.typography-content pre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background: linear-gradient(180deg, rgba(13, 17, 23, 0.8) 0%, rgba(13, 17, 23, 0) 100%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Line numbers styling */
+.typography-content pre .linenumber {
+  min-width: 2.5rem !important;
+  padding-right: 0.75rem !important;
+  padding-left: 0.75rem !important;
+  color: #7d8590 !important;
+  background-color: #0d1117 !important;
+  border-right: 1px solid #30363d !important;
+  margin-right: 1rem !important;
+  text-align: right !important;
+  font-size: 0.75rem !important;
+  user-select: none !important;
+  font-family: inherit !important;
+}
+
+/* Syntax highlighting improvements */
+.typography-content pre .token.comment,
+.typography-content pre .token.prolog,
+.typography-content pre .token.doctype,
+.typography-content pre .token.cdata {
+  color: #8b949e;
+}
+
+.typography-content pre .token.punctuation {
+  color: #c9d1d9;
+}
+
+.typography-content pre .token.property,
+.typography-content pre .token.tag,
+.typography-content pre .token.boolean,
+.typography-content pre .token.number,
+.typography-content pre .token.constant,
+.typography-content pre .token.symbol,
+.typography-content pre .token.deleted {
+  color: #79c0ff;
+}
+
+.typography-content pre .token.selector,
+.typography-content pre .token.attr-name,
+.typography-content pre .token.string,
+.typography-content pre .token.char,
+.typography-content pre .token.builtin,
+.typography-content pre .token.inserted {
+  color: #a5d6ff;
+}
+
+.typography-content pre .token.operator,
+.typography-content pre .token.entity,
+.typography-content pre .token.url,
+.typography-content pre .language-css .token.string,
+.typography-content pre .style .token.string {
+  color: #d2a8ff;
+}
+
+.typography-content pre .token.atrule,
+.typography-content pre .token.attr-value,
+.typography-content pre .token.keyword {
+  color: #ff7b72;
+}
+
+.typography-content pre .token.function,
+.typography-content pre .token.class-name {
+  color: #d2a8ff;
+}
+
+.typography-content pre .token.regex,
+.typography-content pre .token.important,
+.typography-content pre .token.variable {
+  color: #ffa657;
+}
+
+/* Scrollbar styling for code blocks */
+.typography-content pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.typography-content pre::-webkit-scrollbar-track {
+  background: #0d1117;
+  border-radius: 4px;
+}
+
+.typography-content pre::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+  border: 2px solid #0d1117;
+}
+
+.typography-content pre::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+.typography-content blockquote {
+  @apply border-l-4 border-blue-500 bg-blue-50 px-6 py-4 italic text-gray-700 rounded-r-lg my-8;
+}
+
+.typography-content ul {
+  @apply list-disc pl-6 my-6 space-y-2;
+}
+
+.typography-content ol {
+  @apply list-decimal pl-6 my-6 space-y-2;
+}
+
+.typography-content li {
+  @apply leading-relaxed;
+}
+
+.typography-content table {
+  @apply w-full border-collapse border border-gray-300 text-sm shadow-sm rounded-lg overflow-hidden my-8;
+}
+
+.typography-content th {
+  @apply bg-gray-50 text-gray-900 font-semibold border border-gray-300 px-4 py-3 text-left;
+}
+
+.typography-content td {
+  @apply border border-gray-300 px-4 py-3 text-gray-700;
+}
+
+.typography-content img {
+  @apply rounded-xl shadow-lg border border-gray-200 mx-auto my-8;
+}
+
+.typography-content hr {
+  @apply border-gray-300 my-12;
+}
