@@ -13,8 +13,7 @@ interface PaginationProps {
 
 export default function Pagination({ 
   pagination, 
-  basePath = '/', 
-  showInfo = true 
+  basePath = '/' 
 }: PaginationProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -45,10 +44,6 @@ export default function Pagination({
   const handlePageClick = (page: number) => {
     trackPagination(page, totalPages);
   };
-  
-  // 计算显示的项目范围
-  const startItem = (currentPage - 1) * itemsPerPage + 1;
-  const endItem = Math.min(currentPage * itemsPerPage, totalItems);
   
   return (
     <div className="flex flex-col items-center space-y-6 mt-16 px-4">

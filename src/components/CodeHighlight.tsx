@@ -50,17 +50,17 @@ export default function CodeHighlight({ children }: CodeHighlightProps) {
         const code = codeElement.textContent || '';
         
         // 生成唯一ID
-        const id = `code-block-${index}-${Date.now()}`;
+        const blockId = `code-block-${index}-${Date.now()}`;
         
         // 标记为已处理
         pre.dataset.processed = 'true';
-        pre.dataset.blockId = id;
+        pre.dataset.blockId = blockId;
         
         foundBlocks.push({
           language,
           code,
           element: pre,
-          id
+          id: blockId
         });
       });
       

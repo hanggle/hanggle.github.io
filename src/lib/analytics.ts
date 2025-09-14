@@ -6,7 +6,7 @@ export const isAnalyticsEnabled = GA_TRACKING_ID && process.env.NODE_ENV === 'pr
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: unknown[]) => void;
   }
 }
 

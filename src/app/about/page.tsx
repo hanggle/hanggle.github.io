@@ -124,7 +124,7 @@ export default function About() {
             </p>
 
             <blockquote>
-              <p>"写作是思维的工具，分享是成长的阶梯。"</p>
+              <p>&ldquo;写作是思维的工具，分享是成长的阶梯。&rdquo;</p>
             </blockquote>
 
             <p className="text-center">
