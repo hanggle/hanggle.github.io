@@ -9,8 +9,8 @@
     "start": "next start",
     "lint": "next lint --fix",
     "lint:check": "next lint --max-warnings=0",
-    "deploy:cf": "node scripts/deploy-cloudflare.js",
-    "deploy:cf:prod": "node scripts/deploy-cloudflare.js --production",
+    "deploy:cf": "wrangler pages deploy out --project-name=hanggle-blog",
+    "deploy:cf:prod": "wrangler pages deploy out --project-name=hanggle-blog --production",
     "preview:cf": "wrangler pages dev out --port=8080"
   },
   "dependencies": {
