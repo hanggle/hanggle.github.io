@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,  // 为静态托管添加尾随斜杠
   skipTrailingSlashRedirect: true,
   distDir: 'out',  // 输出目录
+  reactStrictMode: true,
   eslint: {
     // 在构建时忽略 ESLint 错误
     ignoreDuringBuilds: true,

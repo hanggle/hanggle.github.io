@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "build:static": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
+    "build:static": "next build",
     "start": "next start",
     "lint": "next lint --fix",
     "lint:check": "next lint --max-warnings=0"
