@@ -1,7 +1,7 @@
 {
-  "name": "my-worker",
+  "name": "blog",
   "compatibility_date": "2025-09-01",
   "assets": {
-    "directory": "./"
+    "directory": "./dist"
   }
 }
