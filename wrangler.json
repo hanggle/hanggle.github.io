@@ -4,7 +4,7 @@
   "pages_build_output_dir": "./out",
   "assets": {
     "directory": "./out",
-    "binding": "ASSETS"
+    "binding": "STATIC_ASSETS"
   },
   "vars": {
     "ENVIRONMENT": "production"
