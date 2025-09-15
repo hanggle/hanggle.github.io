@@ -8,7 +8,10 @@
     "build:static": "next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "lint:check": "next lint --max-warnings=0"
+    "lint:check": "next lint --max-warnings=0",
+    "deploy:cf": "node scripts/deploy-cloudflare.js",
+    "deploy:cf:prod": "node scripts/deploy-cloudflare.js --production",
+    "preview:cf": "wrangler pages dev out --port=8080"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",

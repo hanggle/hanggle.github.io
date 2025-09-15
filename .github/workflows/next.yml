@@ -63,6 +63,16 @@ jobs:
             exit 1
           fi
         
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: hanggle-blog
+          directory: out
+          # 可选：生产环境部署
+          production: ${{ github.ref == 'refs/heads/blog' }}
+          
       - name: Deploy to master branch
         uses: peaceiris/actions-gh-pages@v3
         with:

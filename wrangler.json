@@ -1,0 +1,20 @@
+{
+  "name": "hanggle-blog",
+  "compatibility_date": "2024-12-01",
+  "pages_build_output_dir": "./out",
+  "assets": {
+    "directory": "./out",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "ENVIRONMENT": "production"
+  },
+  "build": {
+    "command": "npm run build",
+    "cwd": "./"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "node_compat": true
+}
