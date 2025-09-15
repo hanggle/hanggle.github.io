@@ -70,7 +70,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: hanggle-blog
           directory: out
-          # 可选：生产环境部署
+          # 生产环境部署
           production: ${{ github.ref == 'refs/heads/blog' }}
           
       - name: Deploy to master branch

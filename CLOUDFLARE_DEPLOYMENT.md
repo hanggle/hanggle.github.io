@@ -30,11 +30,14 @@ npm install -g wrangler
 # 登录 Cloudflare
 wrangler login
 
-# 创建 Pages 项目
+# 创建 Pages 项目（首次部署）
 wrangler pages project create hanggle-blog
 
-# 部署
+# 部署到 Pages（预览环境）
 wrangler pages deploy out --project-name=hanggle-blog
+
+# 部署到 Pages（生产环境）
+wrangler pages deploy out --project-name=hanggle-blog --production
 ```
 
 ### 3. 自动部署配置

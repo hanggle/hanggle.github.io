@@ -36,8 +36,8 @@ try {
   // 3. 部署到 Cloudflare Pages
   console.log('\n🌐 部署到 Cloudflare Pages...');
   const deployCommand = process.argv.includes('--production') 
-    ? 'wrangler pages deploy out --project-name=hanggle-blog --compatibility-date=2024-12-01'
-    : 'wrangler pages deploy out --project-name=hanggle-blog --compatibility-date=2024-12-01';
+    ? 'wrangler pages deploy out --project-name=hanggle-blog --production'
+    : 'wrangler pages deploy out --project-name=hanggle-blog';
     
   execSync(deployCommand, { stdio: 'inherit' });
   
