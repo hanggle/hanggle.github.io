@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tailwindcss-tips.md",
+                "file": "test.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "tailwindcss-tips"
+              "title": "test"
             }
           }
         ],
@@ -197,14 +197,14 @@
   },
   "active": "7be6b593b1e83826",
   "lastOpenFiles": [
+    "tailwindcss-tips.md",
+    "nextjs-development-guide.md",
+    "test.md",
+    "git_2025-9-23.md",
     "typography-showcase.md",
     "welcome.md",
     "welcome-to-my-blog.md",
-    "test.md",
-    "tailwindcss-tips.md",
-    "nextjs-development-guide.md",
     "2025-9-7_go.md",
-    "code-highlight-test.md",
-    "git_2025-9-23.md"
+    "code-highlight-test.md"
   ]
 }
