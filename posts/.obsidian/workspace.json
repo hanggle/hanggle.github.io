@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test.md",
+                "file": "2025-9-7_go.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "test"
+              "title": "2025-9-7_go"
             }
           }
         ],
@@ -197,14 +197,14 @@
   },
   "active": "7be6b593b1e83826",
   "lastOpenFiles": [
+    "code-highlight-test.md",
+    "welcome-to-my-blog.md",
+    "welcome.md",
+    "typography-showcase.md",
+    "test.md",
     "tailwindcss-tips.md",
     "nextjs-development-guide.md",
-    "test.md",
     "git_2025-9-23.md",
-    "typography-showcase.md",
-    "welcome.md",
-    "welcome-to-my-blog.md",
-    "2025-9-7_go.md",
-    "code-highlight-test.md"
+    "2025-9-7_go.md"
   ]
 }
