@@ -1,6 +1,6 @@
 # Google Analytics 4 集成指南
 
-本博客已集成Google Analytics 4 (GA4)统计功能，可以跟踪网站访问量、用户行为等重要指标。
+本笔记已集成Google Analytics 4 (GA4)统计功能，可以跟踪网站访问量、用户行为等重要指标。
 
 ## 🚀 快速配置
 

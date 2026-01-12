@@ -35,7 +35,7 @@ export default function About() {
                   头像
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">欢迎来到我的博客</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">欢迎来到我的笔记</h2>
                   <p className="text-gray-600 text-lg">一个热爱编程的开发者</p>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export default function About() {
             </p>
             <ul>
               <li><strong>开源项目</strong> - 积极参与和维护开源项目</li>
-              <li><strong>技术写作</strong> - 通过博客分享技术知识和经验</li>
+              <li><strong>技术写作</strong> - 通过笔记分享技术知识和经验</li>
               <li><strong>持续学习</strong> - 关注最新的技术趋势和最佳实践</li>
               <li><strong>代码质量</strong> - 追求简洁、可维护的代码</li>
             </ul>
@@ -114,9 +114,9 @@ export default function About() {
               </div>
             </div>
 
-            <h2>关于这个博客</h2>
+            <h2>关于这个笔记</h2>
             <p>
-              这个博客使用 <strong>Next.js 15</strong>、<strong>TailwindCSS</strong> 和 <strong>Markdown</strong> 构建。
+              这个笔记使用 <strong>Next.js 15</strong>、<strong>TailwindCSS</strong> 和 <strong>Markdown</strong> 构建。
               所有文章都以 Markdown 格式编写，支持代码高亮、数学公式和丰富的排版样式。
             </p>
             <p>
@@ -128,7 +128,7 @@ export default function About() {
             </blockquote>
 
             <p className="text-center">
-              感谢你花时间了解我，期待在博客中与你分享更多精彩内容！
+              感谢你花时间了解我，期待在笔记中与你分享更多精彩内容！
             </p>
           </article>
         </div>

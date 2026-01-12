@@ -113,7 +113,7 @@ export default function Navbar({ allPosts = [] }: NavbarProps) {
               <div className="relative">
                 <Image
                   src="./icon_128.png"
-                  alt="博客Logo"
+                  alt="笔记Logo"
                   width={40}
                   height={40}
                   className="transition-transform group-hover:scale-105"
@@ -124,7 +124,7 @@ export default function Navbar({ allPosts = [] }: NavbarProps) {
               {/* 文字Logo */}
               <div className="hidden sm:block">
                 <div className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                  hanggle的博客
+                  hanggle的笔记
                 </div>
                 <div className="text-xs text-gray-500 font-normal">
                   Tech Blog

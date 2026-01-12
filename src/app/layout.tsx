@@ -15,26 +15,26 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "我的博客 - 技术分享与思考",
-    template: "%s | 我的博客"
+    default: "我的笔记 - 技术分享与思考",
+    template: "%s | 我的笔记"
   },
-  description: "分享技术文章、编程经验和开发心得的个人博客",
-  keywords: ["技术博客", "编程", "开发", "Next.js", "React", "TypeScript"],
-  authors: [{ name: "博客作者" }],
-  creator: "博客作者",
+  description: "分享技术文章、编程经验和开发心得的个人笔记",
+  keywords: ["技术笔记", "编程", "开发", "Next.js", "React", "TypeScript"],
+  authors: [{ name: "笔记作者" }],
+  creator: "笔记作者",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   openGraph: {
     type: "website",
     locale: "zh_CN",
     url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-    title: "我的博客 - 技术分享与思考",
-    description: "分享技术文章、编程经验和开发心得的个人博客",
-    siteName: "我的博客",
+    title: "我的笔记 - 技术分享与思考",
+    description: "分享技术文章、编程经验和开发心得的个人笔记",
+    siteName: "我的笔记",
   },
   twitter: {
     card: "summary_large_image",
-    title: "我的博客 - 技术分享与思考",
-    description: "分享技术文章、编程经验和开发心得的个人博客",
+    title: "我的笔记 - 技术分享与思考",
+    description: "分享技术文章、编程经验和开发心得的个人笔记",
   },
   robots: {
     index: true,

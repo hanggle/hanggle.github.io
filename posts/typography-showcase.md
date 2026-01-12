@@ -1,14 +1,14 @@
 ---
 title: "排版效果展示"
 date: "2024-01-30"
-excerpt: "展示博客系统优化后的各种排版元素效果，包括标题、段落、引用、列表、图片、表格、链接等。"
+excerpt: "展示笔记系统优化后的各种排版元素效果，包括标题、段落、引用、列表、图片、表格、链接等。"
 tags: ["排版", "设计", "测试"]
 image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
 ---
 
 # 排版效果展示
 
-这篇文章用于展示博客系统优化后的各种排版元素效果。通过 **Tailwind Typography** 插件的强化配置，我们实现了更加美观和易读的内容展示。
+这篇文章用于展示笔记系统优化后的各种排版元素效果。通过 **Tailwind Typography** 插件的强化配置，我们实现了更加美观和易读的内容展示。
 
 ## 标题层级展示
 
@@ -68,7 +68,7 @@ image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.
 
 ### 有序列表
 
-博客开发的步骤：
+笔记开发的步骤：
 
 1. 项目初始化
    1. 创建 Next.js 项目
@@ -157,7 +157,7 @@ function BlogPost({ postId }) {
 由于这是 Markdown 文件，图片需要实际的图片文件。以下是图片的语法示例：
 
 ```markdown
-![博客系统架构图](https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=Blog+Architecture)
+![笔记系统架构图](https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=Blog+Architecture)
 ```
 
 ## 分割线
@@ -217,7 +217,7 @@ function BlogPost({ postId }) {
 
 ## 总结
 
-这篇文章展示了博客系统中各种排版元素的优化效果：
+这篇文章展示了笔记系统中各种排版元素的优化效果：
 
 - ✨ **标题层级** - 清晰的视觉层次
 - 📝 **段落文本** - 舒适的阅读体验  

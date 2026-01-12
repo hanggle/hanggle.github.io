@@ -1,7 +1,7 @@
 ---
 title: "代码高亮功能测试"
 date: "2024-01-25"
-excerpt: "测试博客系统的代码高亮功能，包含多种编程语言的示例。"
+excerpt: "测试笔记系统的代码高亮功能，包含多种编程语言的示例。"
 tags:
   - "测试"
   - "代码高亮"
@@ -10,7 +10,7 @@ tags:
 
 # 代码高亮功能测试
 
-这个页面用于测试博客系统的代码高亮功能，包含多种编程语言的代码示例。
+这个页面用于测试笔记系统的代码高亮功能，包含多种编程语言的代码示例。
 
 ## JavaScript 示例
 
@@ -321,9 +321,9 @@ body {
 
 ```json
 {
-  "name": "个人博客系统",
+  "name": "个人笔记系统",
   "version": "1.0.0",
-  "description": "使用 Next.js + TailwindCSS + Markdown 构建的现代化博客系统",
+  "description": "使用 Next.js + TailwindCSS + Markdown 构建的现代化笔记系统",
   "main": "src/app/page.tsx",
   "scripts": {
     "dev": "next dev",
@@ -351,7 +351,7 @@ body {
     "eslint-config-next": "^14.0.0"
   },
   "keywords": [
-    "博客",
+    "笔记",
     "Next.js",
     "React",
     "TailwindCSS",

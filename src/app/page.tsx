@@ -21,7 +21,7 @@ export default function Home() {
         <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-20">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              欢迎来到我的博客
+              欢迎来到我的笔记
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               分享技术心得、生活感悟和学习笔记
