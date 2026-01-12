@@ -10,7 +10,7 @@
     </linearGradient>
   </defs>
   
-  <!-- 博客图标 - 书本形状 -->
+  <!-- 笔记图标 - 书本形状 -->
   <g transform="translate(60, 60)">
     <!-- 书本主体 -->
     <rect x="-18" y="-15" width="36" height="30" rx="2" fill="white" opacity="0.9"/>
